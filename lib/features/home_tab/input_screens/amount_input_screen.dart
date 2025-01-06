@@ -2,49 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/event_type_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
-// 검색 결과를 위한 데이터 모델
-class Transaction {
-  final String id;
-  final String date;
-  final int amount;
-  final String type;
-  final String counterpart;
-  final String relation;
-  final String relationDetail;
-  final String label;
-
-  Transaction({
-    required this.id,
-    required this.date,
-    required this.amount,
-    required this.type,
-    required this.counterpart,
-    required this.relation,
-    required this.relationDetail,
-    required this.label,
-  });
-
-  factory Transaction.fromJson(Map<String, dynamic> json) {
-    return Transaction(
-      id: json['id'] ?? '',
-      date: json['date'] ?? '',
-      amount: json['amount'] ?? 0,
-      type: json['type'] ?? '',
-      counterpart: json['counterpart'] ?? '',
-      relation: json['relation'] ?? '',
-      relationDetail: json['relation_detail'] ?? '',
-      label: json['label'] ?? '',
-    );
-  }
-}
-
 class TransactionsData {
   final String nickname;
-  final List<Transaction> transactions;
+  final List<UnifiedTransaction> transactions;
 
   TransactionsData({
     required this.nickname,
@@ -55,7 +20,8 @@ class TransactionsData {
     return TransactionsData(
       nickname: json['nickname'] ?? '',
       transactions: (json['transactions'] as List)
-          .map((transaction) => Transaction.fromJson(transaction))
+          .map((transaction) =>
+              UnifiedTransaction.fromJson(transaction as Map<String, dynamic>))
           .toList(),
     );
   }
@@ -73,7 +39,7 @@ class _AmountInputScreenState extends State<AmountInputScreen>
   late TabController _tabController;
   final TextEditingController _amountController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
-  List<Transaction> filteredTransactions = [];
+  List<UnifiedTransaction> filteredTransactions = [];
   TransactionsData? transactionsData;
 
   @override
@@ -95,7 +61,7 @@ class _AmountInputScreenState extends State<AmountInputScreen>
         transactionsData = TransactionsData.fromJson(jsonData);
       });
     } catch (e) {
-      print('Error loading transactions: $e');
+      debugPrint('Error loading transactions: $e');
     }
   }
 
@@ -113,9 +79,9 @@ class _AmountInputScreenState extends State<AmountInputScreen>
     setState(() {
       filteredTransactions = transactionsData!.transactions
           .where((transaction) =>
-              transaction.counterpart.contains(_nameController.text))
+              (transaction.counterpart ?? '').contains(_nameController.text))
           .where((transaction) =>
-              seenCounterparts.add(transaction.counterpart)) // 중복 제거
+              seenCounterparts.add(transaction.counterpart ?? '')) // 중복 제거
           .toList()
         ..sort((a, b) => b.date.compareTo(a.date)); // 날짜 기준 내림차순 정렬
     });
@@ -129,14 +95,6 @@ class _AmountInputScreenState extends State<AmountInputScreen>
     super.dispose();
   }
 
-  void _handleChipPress(String amount) {
-    String numericAmount = amount.replaceAll(RegExp(r'[^0-9]'), '');
-    int newAmount = int.parse(numericAmount);
-    int currentAmount = int.tryParse(_amountController.text) ?? 0;
-
-    _amountController.text = (currentAmount + newAmount).toString();
-  }
-
   void _resetAmount() {
     _amountController.text = '';
   }
@@ -148,7 +106,11 @@ class _AmountInputScreenState extends State<AmountInputScreen>
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            context.go('/home'); // 홈 화면으로 직접 이동
+            if (Navigator.canPop(context)) {
+              context.pop(); // GoRouter 뒤로가기
+            } else {
+              Navigator.pop(context); // 기본 Navigator로 처리
+            }
           },
         ),
         bottom: TabBar(
@@ -247,9 +209,8 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                     final transaction = filteredTransactions[index];
                     return InkWell(
                       onTap: () {
-                        // counterpart 이름을 TextField에 자동으로 채워줌
                         setState(() {
-                          _nameController.text = transaction.counterpart;
+                          _nameController.text = transaction.counterpart ?? '';
                         });
                       },
                       child: Padding(
@@ -261,7 +222,7 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                             Expanded(
                               flex: 2, // 이름이 조금 더 넓게 차지하도록 설정
                               child: Text(
-                                transaction.counterpart,
+                                transaction.counterpart ?? '알 수 없음',
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -272,9 +233,9 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                             Expanded(
                               flex: 4, // 최근 거래 정보
                               child: Text(
-                                transaction.relationDetail.isNotEmpty
-                                    ? ' ${transaction.relation} • ${transaction.relationDetail}  ${transaction.label}'
-                                    : ' ${transaction.relation}  ${transaction.label}',
+                                transaction.relationDetail?.isNotEmpty == true
+                                    ? '${transaction.relation ?? ''} • ${transaction.relationDetail}'
+                                    : transaction.relation ?? '',
                                 style: const TextStyle(fontSize: 14),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -282,7 +243,8 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                             Expanded(
                               flex: 3,
                               child: Text(
-                                ' ${transaction.date}',
+                                DateFormat('yyyy-MM-dd')
+                                    .format(transaction.date),
                                 style: const TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey,
@@ -332,7 +294,6 @@ class _AmountInputScreenState extends State<AmountInputScreen>
   }
 
   Widget _buildAmountChips() {
-    // 금액 리스트를 숫자 기반으로 변경 후 포맷팅
     final amounts = [10000, 30000, 50000, 100000, 500000];
     return Row(
       children: [
@@ -349,33 +310,27 @@ class _AmountInputScreenState extends State<AmountInputScreen>
     );
   }
 
-// NumberFormat을 사용해 금액을 포맷팅하는 함수
   String formatCurrency(int amount) {
     final formatter = NumberFormat('#,###원', 'ko_KR');
     return formatter.format(amount);
   }
 
-// Chip을 생성하는 함수
   Widget _buildChip(String amount) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          // TextField의 현재 값 가져오기
           final currentAmount = int.tryParse(
                 _amountController.text.replaceAll(',', '').replaceAll('원', ''),
               ) ??
               0;
 
-          // Chip에서 선택된 금액 파싱
           final selectedAmount = int.tryParse(
                 amount.replaceAll(RegExp(r'[^0-9]'), ''),
               ) ??
               0;
 
-          // 새로운 값 계산
           final updatedAmount = currentAmount + selectedAmount;
 
-          // TextField의 컨트롤러 업데이트
           _amountController.text = formatCurrency(updatedAmount);
         });
       },
