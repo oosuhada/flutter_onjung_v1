@@ -77,7 +77,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           try {
             debugPrint('Attempting to navigate to amount input screen...');
 
-            context.go('/amountInput'); // 올바른 경로로 이동
+            // 스택에 쌓이도록 push 사용
+            context.push('/amountInput');
+
             debugPrint('Navigation successful');
           } catch (e) {
             debugPrint('Navigation error occurred: $e');
