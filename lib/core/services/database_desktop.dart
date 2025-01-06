@@ -37,19 +37,20 @@ class DesktopDatabaseHelper implements DatabaseInterface {
     debugPrint('테이블 생성 시작');
     try {
       await db.execute('''
-    CREATE TABLE gift_records(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        amount INTEGER NOT NULL,
-        isSent INTEGER NOT NULL,
+      CREATE TABLE transactions(
+        id TEXT PRIMARY KEY,
+        type TEXT NOT NULL,
         date TEXT NOT NULL,
-        method TEXT,
-        receiverName TEXT,
-        eventType TEXT,
-        didVisit INTEGER,
-        gift TEXT,
-        memo TEXT,
-        contact TEXT
-    )
+        title TEXT NOT NULL,
+        amount INTEGER NOT NULL,
+        method TEXT NOT NULL,
+        counterpart TEXT,
+        relation TEXT,
+        relationDetail TEXT,
+        memberInfo TEXT, 
+        scheduleInfo TEXT,
+        activityInfo TEXT
+      )
     ''');
       debugPrint('테이블 생성 완료');
     } catch (e, stackTrace) {
@@ -59,27 +60,37 @@ class DesktopDatabaseHelper implements DatabaseInterface {
     }
   }
 
-  //   Future<void> _createDB(Database db, int version) async {
-  //   await db.execute('''
-  // CREATE TABLE gift_records(
-  //   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  //   amount INTEGER NOT NULL,           // 금액 (필수)
-  //   isSent INTEGER NOT NULL,          // 보내기/받기 구분 (필수)
-  //   date TEXT NOT NULL,               // 날짜 (필수)
-  //   method TEXT,                      // 지불 방법 (선택)
-  //   receiverName TEXT,                // 받는 사람 (선택)
-  //   eventType TEXT,                   // 이벤트 종류 (선택)
-  //   didVisit INTEGER,                 // 방문 여부 (선택)
-  //   gift TEXT,                        // 선물 정보 (선택)
-  //   memo TEXT,                        // 메모 (선택)
-  //   contact TEXT                      // 연락처 (선택)
-  // )
-  // ''');
-  // }
+// Future<void> _createDB(Database db, int version) async {
+//   debugPrint('테이블 생성 시작');
+//   try {
+//     await db.execute('''
+//       CREATE TABLE transactions(
+//         id TEXT PRIMARY KEY,
+//         type TEXT NOT NULL, -- 'sent' 또는 'received'
+//         date TEXT NOT NULL,
+//         title TEXT NOT NULL,
+//         amount INTEGER NOT NULL,
+//         method TEXT NOT NULL, -- 결제 방법
+//         counterpart TEXT, -- 거래 상대 이름
+//         relation TEXT, -- 거래 상대와의 관계
+//         relationDetail TEXT, -- 관계 상세 설명
+//         memberInfo TEXT, -- 관련된 멤버 정보 (JSON 문자열)
+//         scheduleInfo TEXT, -- 관련된 스케줄 정보 (JSON 문자열)
+//         activityInfo TEXT -- 관련된 활동 정보 (JSON 문자열)
+//       )
+//     ''');
+//     debugPrint('테이블 생성 완료');
+//   } catch (e, stackTrace) {
+//     debugPrint('테이블 생성 실패: $e');
+//     debugPrint('스택트레이스: $stackTrace');
+//     rethrow;
+//   }
+// }
 
   @override
   Future<int> insertRecord(Map<String, dynamic> record) async {
     final db = _database;
+    await db?.insert('transactions', record); // 'transactions'은 테이블 이름
     if (db == null) throw Exception('Database not initialized');
     return await db.insert('gift_records', record);
   }
