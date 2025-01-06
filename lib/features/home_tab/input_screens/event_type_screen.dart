@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/services/database_provider.dart';
-import 'package:flutter_onjung_v1/data/home_tab/payment_record.dart';
+import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/date_selection_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -75,18 +75,19 @@ class _EventTypeScreenState extends State<EventTypeScreen> {
     final PaymentMethod method =
         PaymentMethod.cash; // 사용 가능한 결제 수단으로 설정 (예: cash)
 
-    final record = PaymentRecord(
-      id: recordId, // 필수 매개변수 id 추가
-      receiverName: widget.receiverName, // 필수 매개변수 receiverName 추가
-      amount: widget.amount,
-      isSent: widget.isSent,
-      eventType: selectedEvent!,
+    final transaction = UnifiedTransaction(
+      id: recordId,
+      type: widget.isSent ? 'sent' : 'received',
       date: selectedDate,
-      method: method, // 필수 매개변수 method 추가
-      didVisit: null,
-      gift: null,
-      memo: null,
-      contact: null,
+      label: selectedEvent!,
+      amount: widget.amount,
+      method: method,
+      counterpart: widget.receiverName,
+      relation: null, // 관계 정보 추가 가능
+      relationDetail: null, // 관계 상세 정보 추가 가능
+      memberInfo: null, // 관련된 멤버 데이터
+      scheduleInfo: null, // 스케줄 데이터 추가 가능
+      activityInfo: null, // 활동 데이터 추가 가능
     );
 
     try {
@@ -94,10 +95,10 @@ class _EventTypeScreenState extends State<EventTypeScreen> {
       final db = await DatabaseProvider.instance.database;
       debugPrint('데이터베이스 연결 성공');
 
-      final recordMap = record.toMap();
-      debugPrint('저장할 데이터: $recordMap');
+      final transactionMap = transaction.toJson(); // 변수 이름 수정
+      debugPrint('저장할 데이터: $transactionMap');
 
-      await db.insertRecord(recordMap);
+      await db.insertRecord(transactionMap); // `record`를 `transactionMap`으로 수정
       debugPrint('DB에 데이터 저장 성공');
 
       if (!mounted) {
@@ -109,11 +110,6 @@ class _EventTypeScreenState extends State<EventTypeScreen> {
       if (context.mounted) {
         context.go('/home'); // 홈 화면으로 직접 이동
         debugPrint('메인 화면으로 이동 완료 (popUntil)');
-
-        // 또는 방법 2: go + pushReplacement 사용
-        // context.go('/');
-        // context.pushReplacement('/');
-        // debugPrint('메인 화면으로 이동 완료 (go + pushReplacement)');
       } else {
         debugPrint('context가 더 이상 유효하지 않음');
       }
