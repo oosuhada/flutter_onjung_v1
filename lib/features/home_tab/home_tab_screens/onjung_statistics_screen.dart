@@ -25,8 +25,7 @@ class _OnjungStatisticsScreenState extends State<OnjungStatisticsScreen> {
 
   Future<void> _loadData() async {
     await _messageHelper.loadData(
-      userProfileFilePath: 'assets/user_profiles_network.json',
-      transactionFilePath: 'assets/dummy_transactions_network.json',
+      transactionFilePaths: ['assets/dummy_transactions_network.json'],
     );
 
     _filterMessages();
