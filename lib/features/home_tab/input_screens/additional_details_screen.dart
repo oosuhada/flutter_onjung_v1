@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/services/database_provider.dart';
-import 'package:flutter_onjung_v1/data/home_tab/payment_record.dart';
+import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
 
 class AdditionalDetailsScreen extends StatefulWidget {
   final int amount; // 금액
@@ -39,32 +39,35 @@ class _AdditionalDetailsScreenState extends State<AdditionalDetailsScreen> {
   }
 
   Future<void> _saveRecord() async {
-    // ID 생성 (예: UUID 또는 특정 규칙에 따라 생성)
-    final String recordId =
-        DateTime.now().millisecondsSinceEpoch.toString(); // 임시 ID 생성 방식
-    final PaymentMethod method =
-        PaymentMethod.cash; // 사용 가능한 결제 수단으로 설정 (예: cash)
+    // ID 생성
+    final String recordId = DateTime.now().millisecondsSinceEpoch.toString();
+    final PaymentMethod method = PaymentMethod.cash;
 
-    final record = PaymentRecord(
-      id: recordId, // 필수 매개변수 id 추가
-      receiverName: widget.receiverName, // 필수 매개변수 receiverName 추가
-      amount: widget.amount,
-      isSent: widget.isSent,
-      eventType: widget.eventType,
+    // UnifiedTransaction 생성
+    final transaction = UnifiedTransaction(
+      id: recordId,
+      type: widget.isSent ? 'sent' : 'received',
       date: widget.date,
-      method: method, // 필수 매개변수 method 추가
-      didVisit: null,
-      gift: null,
-      memo: null,
-      contact: null,
+      label: widget.eventType,
+      amount: widget.amount,
+      method: method,
+      counterpart: widget.receiverName,
+      relation: null,
+      relationDetail: null,
+      memberInfo: null,
+      scheduleInfo: null,
+      activityInfo: null,
     );
 
     try {
+      // 데이터베이스에 삽입
       final db = await DatabaseProvider.instance.database;
-      await db.insertRecord(record.toMap());
+      await db.insertRecord(transaction.toJson()); // toJson()을 사용해 삽입
 
+      // 저장 후 이전 화면으로 이동
       Navigator.of(context).popUntil((route) => route.isFirst);
     } catch (e) {
+      // 오류 처리
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('저장 중 오류가 발생했습니다.')),
       );
