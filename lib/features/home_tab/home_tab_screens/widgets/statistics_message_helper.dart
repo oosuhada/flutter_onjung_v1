@@ -6,37 +6,25 @@ import 'package:flutter/services.dart';
 
 class StatisticsMessageHelper {
   final List<Map<String, dynamic>> _transactions = [];
-  final Map<String, String> _userProfiles = {};
   final List<String> ageGroups = ['20대', '30대', '40대', '50대', '60대'];
   final List<String> relations = ['가족', '친구', '지인', '직장 동료'];
   final List<String> labels = ['결혼식', '생일', '장례식', '환갑', '집들이', '돌잔치'];
 
-  Future<void> loadData({
-    required String transactionFilePath,
-    required String userProfileFilePath,
-  }) async {
+  Future<void> loadData({required List<String> transactionFilePaths}) async {
     try {
-      final transactionString =
-          await rootBundle.loadString(transactionFilePath);
-      final transactionData = json.decode(transactionString) as List;
+      for (final filePath in transactionFilePaths) {
+        final transactionString = await rootBundle.loadString(filePath);
+        final transactionData = json.decode(transactionString) as List;
 
-      for (var userData in transactionData) {
-        if (userData['transactions'] != null) {
-          final transactions = userData['transactions'] as List;
-          _transactions.addAll(transactions.cast<Map<String, dynamic>>());
+        for (var userData in transactionData) {
+          if (userData['transactions'] != null) {
+            final transactions = userData['transactions'] as List;
+            _transactions.addAll(transactions.cast<Map<String, dynamic>>());
+          }
         }
       }
 
-      final userProfileString =
-          await rootBundle.loadString(userProfileFilePath);
-      final profiles = json.decode(userProfileString) as List;
-
-      for (var profile in profiles) {
-        _userProfiles[profile['nickname']] = profile['age_group'];
-      }
-
       debugPrint('Loaded transactions: ${_transactions.length}');
-      debugPrint('Loaded profiles: ${_userProfiles.length}');
     } catch (e) {
       debugPrint('데이터 로드 중 오류 발생: $e');
       rethrow;
@@ -50,10 +38,8 @@ class StatisticsMessageHelper {
   }) {
     try {
       final filteredData = _transactions.where((transaction) {
-        final counterpartProfile = _userProfiles[transaction['counterpart']];
-
         final matchesAgeGroup =
-            ageGroup == null || counterpartProfile == ageGroup;
+            ageGroup == null || transaction['age_group'] == ageGroup;
         final matchesRelation =
             relation == null || transaction['relation'] == relation;
         final matchesLabel = label == null || transaction['label'] == label;
@@ -86,7 +72,6 @@ class StatisticsMessageHelper {
   List<String> filterMessages() {
     final List<String> allMessages = [];
 
-    // 각 연령대에 대해 메시지를 생성
     for (var ageGroup in ageGroups) {
       for (var relation in [null, ...relations]) {
         for (var label in [null, ...labels]) {
@@ -103,7 +88,6 @@ class StatisticsMessageHelper {
       }
     }
 
-    // 전체 데이터(연령대 필터링 없음)에 대한 메시지 추가
     for (var relation in [null, ...relations]) {
       for (var label in [null, ...labels]) {
         final messages = generateMessages(
