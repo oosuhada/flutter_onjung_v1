@@ -4,12 +4,16 @@ import 'package:flutter/material.dart';
 class GroupHeaderSection extends StatelessWidget {
   final String nickname;
   final int totalGroups;
+  final String sortOption;
+  final ValueChanged<String> onSortChanged;
 
   const GroupHeaderSection({
-    Key? key,
+    super.key,
     required this.nickname,
     required this.totalGroups,
-  }) : super(key: key);
+    required this.sortOption,
+    required this.onSortChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +59,16 @@ class GroupHeaderSection extends StatelessWidget {
               Row(
                 children: [
                   TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () => onSortChanged('name'),
                     icon: const Icon(Icons.sort, size: 20),
-                    label: const Text('이름순'),
+                    label: Text(
+                      '이름순',
+                      style: TextStyle(
+                        fontWeight: sortOption == 'name'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
                   ),
                   TextButton.icon(
                     onPressed: () {},

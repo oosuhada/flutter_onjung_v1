@@ -12,10 +12,12 @@ import 'member_profile_tab.dart';
 // member_detail_screen.dart 수정
 class MemberDetailScreen extends StatefulWidget {
   final String counterpartId;
+  final List transactions;
 
   const MemberDetailScreen({
     super.key,
     required this.counterpartId,
+    required this.transactions,
   });
 
   @override
@@ -57,7 +59,11 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
         throw Exception('Invalid counterpart ID');
       }
 
-      final String targetCounterpart = counterpartsList[index];
+      final String targetCounterpart = groupedTransactions.entries
+          .firstWhere(
+              (entry) => entry.value.first['id'] == widget.counterpartId)
+          .key;
+
       final transactions = groupedTransactions[targetCounterpart]!;
       final firstTransaction = transactions.first;
 

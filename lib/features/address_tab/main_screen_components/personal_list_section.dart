@@ -50,8 +50,7 @@ class PersonalListSectionState extends State<PersonalListSection> {
       final List<Map<String, dynamic>> processedData =
           groupedTransactions.entries.map((entry) {
         final firstTransaction = entry.value.first;
-        final counterpartId =
-            counterpartsList.indexOf(entry.key).toString(); // 0-based index 사용
+        final counterpartId = entry.value.first['id']; // 고유 ID 사용
 
         return {
           'counterpartId': counterpartId, // counterpartId로 변경
@@ -188,10 +187,12 @@ class PersonalListSectionState extends State<PersonalListSection> {
           isThreeLine: true,
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
-            final counterpartId = data['counterpartId']; // 수정된 키 사용
-            debugPrint(
-                'Navigating to member detail with counterpartId: $counterpartId');
-            context.push('/membersDetail', extra: counterpartId);
+            final counterpartId = data['counterpartId']; // 고유 ID
+            final transactions = data['transactions'];
+            context.push('/membersDetail', extra: {
+              'counterpartId': counterpartId,
+              'transactions': transactions,
+            });
           },
         );
       },

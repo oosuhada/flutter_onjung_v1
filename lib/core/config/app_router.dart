@@ -161,9 +161,21 @@ final goRouter = GoRouter(
     GoRoute(
       path: '/membersDetail',
       builder: (context, state) {
-        // state.extra에서 counterpartId 추출
-        final counterpartId = state.extra as String;
-        return MemberDetailScreen(counterpartId: counterpartId);
+        final extra = state.extra as Map<String, dynamic>?;
+
+        if (extra == null) {
+          return Scaffold(
+            body: Center(child: Text('No data provided for Member Detail')),
+          );
+        }
+
+        final counterpartId = extra['counterpartId'] as String;
+        final transactions = extra['transactions'] as List;
+
+        return MemberDetailScreen(
+          counterpartId: counterpartId,
+          transactions: transactions, // transactions 전달
+        );
       },
     ),
   ],

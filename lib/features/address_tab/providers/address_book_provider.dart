@@ -10,11 +10,27 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 // 기본 AddressBook 관리를 위한 프로바이더
 class AddressBookProvider with ChangeNotifier {
   List<Member> _members = [];
-  List<Group> _groups = [];
+  final List<SocialGroup> _groups = [];
   String _nickname = '르탄이'; // 기본 사용자 닉네임 값
+  bool _isInitialized = false; // 초기화 상태 추적
+  bool get isInitialized => _isInitialized;
+
+  AddressBookProvider() {
+    // 생성자에서 데이터 로딩 시작
+    _initializeData();
+  }
+
+  // 초기화 메서드
+  Future<void> _initializeData() async {
+    if (!_isInitialized) {
+      await loadMembersFromTransactions();
+      await loadGroupsFromTransactions();
+      _isInitialized = true;
+    }
+  }
 
   List<Member> get members => [..._members];
-  List<Group> get groups => [..._groups];
+  List<SocialGroup> get groups => [..._groups];
   // 내 닉네임을 가져오는 getter
   String get nickname => _nickname;
 
@@ -22,6 +38,13 @@ class AddressBookProvider with ChangeNotifier {
   // 닉네임이 변경될 때마다 UI에 알림
   set nickname(String value) {
     _nickname = value;
+    notifyListeners();
+  }
+
+  // 데이터 리로드 메서드 추가
+  Future<void> reloadData() async {
+    await loadMembersFromTransactions();
+    await loadGroupsFromTransactions();
     notifyListeners();
   }
 
@@ -47,7 +70,7 @@ class AddressBookProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void addGroup(Group group) {
+  void addGroup(SocialGroup group) {
     _groups.add(group);
     notifyListeners();
   }
@@ -104,6 +127,103 @@ class AddressBookProvider with ChangeNotifier {
       default:
         return Relationship.other;
     }
+  }
+
+  Future<void> loadGroupsFromTransactions() async {
+    try {
+      debugPrint('🔄 Starting to load groups...');
+      final String jsonString =
+          await rootBundle.loadString('assets/dummy_transactions_group.json');
+      debugPrint('📄 JSON loaded successfully');
+
+      final Map<String, dynamic> jsonData = json.decode(jsonString);
+      final List<dynamic> groupsData = jsonData['communities'] as List<dynamic>;
+      _groups.clear();
+
+      for (var groupData in groupsData) {
+        // 거래 내역을 GroupTransaction으로 변환
+        final transactions = (groupData['transactions'] as List<dynamic>?)
+                ?.map((txnData) => GroupTransaction(
+                      groupTransactionId: txnData['groupTransactionId'],
+                      groupTransactionDate:
+                          DateTime.parse(txnData['groupTransactionDate']),
+                      groupTransactionAmount:
+                          txnData['groupTransactionAmount'].toDouble(),
+                      groupTransactionEventType:
+                          txnData['groupTransactionEventType'],
+                      groupTransactionMemo: txnData['groupTransactionMemo'],
+                      groupTransactionIsReceived:
+                          txnData['groupTransactionIsReceived'],
+                    ))
+                .toList() ??
+            [];
+
+        // 모든 멤버에게 동일한 거래 내역을 할당
+        final members = (groupData['members'] as List<dynamic>?)
+                ?.map((memberData) => GroupMember(
+                      groupMemberId: memberData['groupMemberId']?.toString() ??
+                          memberData['phone']?.toString() ??
+                          '', // phone을 fallback ID로 사용
+                      groupMemberName:
+                          memberData['name']?.toString() ?? 'Unknown',
+                      groupMemberPhoneNumber:
+                          memberData['phone']?.toString() ?? '',
+                      groupMemberAge: memberData['age'] as int?,
+                      groupMemberRegion: memberData['region']?.toString(),
+                      groupMemberJoinedDate: DateTime.now(),
+                      groupMemberTransactions: transactions, // 각 멤버에게 거래 내역 할당
+                    ))
+                .toList() ??
+            [];
+
+        final groupName = groupData['name']?.toString() ?? 'Unknown Group';
+        _groups.add(SocialGroup(
+          groupId: groupName, // 그룹 이름을 ID로 사용
+          groupName: groupName,
+          groupDescription: groupData['description']?.toString() ?? '설명이 없습니다.',
+          groupType: _determineGroupType(groupName),
+          groupCreatedDate: DateTime.now(),
+          groupMembers: members,
+        ));
+      }
+
+      debugPrint('Successfully loaded ${_groups.length} groups');
+      _isInitialized = true;
+      notifyListeners();
+    } catch (e, stackTrace) {
+      debugPrint('Error loading groups from transactions: $e');
+      debugPrint('Stack trace: $stackTrace');
+      _groups.clear();
+      _isInitialized = true;
+      notifyListeners();
+    }
+  }
+
+// 그룹 이름에서 타입을 추정하는 헬퍼 메서드
+  GroupType _determineGroupType(String groupName) {
+    groupName = groupName.toLowerCase();
+    if (groupName.contains('초등학교') ||
+        groupName.contains('중학교') ||
+        groupName.contains('고등학교') ||
+        groupName.contains('대학교')) {
+      return GroupType.schoolAlumni;
+    } else if (groupName.contains('동문회')) {
+      return GroupType.workAlumni;
+    } else if (groupName.contains('동호회')) {
+      return GroupType.hobby;
+    } else if (groupName.contains('가족')) {
+      return GroupType.family;
+    } else {
+      return GroupType.other;
+    }
+  }
+
+// 닉네임으로 총 그룹 수 조회
+  int getTotalGroupsForNickname(String nickname) {
+    return _groups.where((group) {
+      return group.groupMembers
+          .any((member) => member.groupMemberName == nickname);
+    }).length;
   }
 }
 
