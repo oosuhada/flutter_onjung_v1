@@ -3,15 +3,14 @@ import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_d
 import 'package:flutter_onjung_v1/features/address_tab/main_screens/address_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
-import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/my_onjung_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/onjung_statistics_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
+import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/my_onjung_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/loading_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/onboarding_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/signup_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/terms_and_conditions_dialog.dart';
-import 'package:flutter_onjung_v1/features/onjung_tab/screens/onjung_tab_screen.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoute {
@@ -97,7 +96,7 @@ final goRouter = GoRouter(
       name: AppRoute.myOnjung.name,
       builder: (context, state) {
         debugPrint('🚀 MyOnjungScreen으로 이동 - state: $state');
-        return const MyOnjungScreen();
+        return MyOnjungTabScreen();
       },
     ),
     GoRoute(
@@ -136,20 +135,20 @@ final goRouter = GoRouter(
         },
       ),
     ),
-    GoRoute(
-      path: AppRoute.onjung.path,
-      name: AppRoute.onjung.name,
-      builder: (context, state) => const OnjungTabScreen(),
-      pageBuilder: (context, state) => CustomTransitionPage(
-        child: const OnjungTabScreen(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: animation,
-            child: child,
-          );
-        },
-      ),
-    ),
+    // GoRoute(
+    //   path: AppRoute.onjung.path,
+    //   name: AppRoute.onjung.name,
+    //   builder: (context, state) => const OnjungTabScreen(),
+    //   pageBuilder: (context, state) => CustomTransitionPage(
+    //     child: const OnjungTabScreen(),
+    //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+    //       return FadeTransition(
+    //         opacity: animation,
+    //         child: child,
+    //       );
+    //     },
+    //   ),
+    // ),
     GoRoute(
       path: AppRoute.amountInput.path,
       name: AppRoute.amountInput.name,
