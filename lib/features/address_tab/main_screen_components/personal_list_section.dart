@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
-import 'package:flutter_onjung_v1/data/%08shared/member.dart';
+import 'package:flutter_onjung_v1/data/shared/member.dart';
 import 'package:go_router/go_router.dart';
 
 class PersonalListSection extends StatefulWidget {
