@@ -1,6 +1,6 @@
 // providers/calendar_provider.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:table_calendar/table_calendar.dart';
 
