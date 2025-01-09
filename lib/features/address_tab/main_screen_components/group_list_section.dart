@@ -1,6 +1,6 @@
 // group_list_section.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/data/%08shared/group.dart';
+import 'package:flutter_onjung_v1/data/shared/group.dart';
 import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/group_detail_screen.dart';
 import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_history_tab.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
