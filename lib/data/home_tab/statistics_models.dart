@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 
 class PeriodRange {
   final int startYear;
