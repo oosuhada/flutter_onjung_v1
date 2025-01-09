@@ -6,7 +6,11 @@ import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_onjung
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/onjung_statistics_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
+import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/create_event_type_screen.dart';
+import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/event_details_screen.dart';
+import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/guest_management_screen.dart';
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/my_onjung_tab_screen.dart';
+import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/visitor_log_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/loading_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/onboarding_screen.dart';
@@ -27,6 +31,10 @@ enum AppRoute {
   addressMemberDetail('/addressMemberDetail'),
   calendarTab('/calendarTab'),
   onjungTab('/onjungTab'),
+  onjungCreate('/onjungCreate'),
+  onjungEvent('/onjungEvent/:id'),
+  onjungGuests('/onjungGuests'),
+  onjungVisitorLog('/onjungVisitorLog'),
   amountInput('/amountInput');
 
   final String path;
@@ -170,6 +178,44 @@ final goRouter = GoRouter(
           counterpartId: counterpartId,
           transactions: transactions,
         );
+      },
+    ),
+    GoRoute(
+      path: AppRoute.onjungCreate.path,
+      name: AppRoute.onjungCreate.name,
+      builder: (context, state) => const CreateEventTypeScreen(),
+    ),
+    GoRoute(
+      path: '/onjungEvent/:eventId', // URL에 :eventId로 변경
+      name: AppRoute.onjungEvent.name,
+      builder: (context, state) {
+        final eventId = state.pathParameters['eventId']; // eventId 가져오기
+        if (eventId == null) {
+          throw Exception('Event ID is required');
+        }
+        return EventDetailsScreen(eventId: eventId);
+      },
+    ),
+    GoRoute(
+      path: '/onjungGuests/:eventId', // GuestManagementScreen에 eventId 전달
+      name: AppRoute.onjungGuests.name,
+      builder: (context, state) {
+        final eventId = state.pathParameters['eventId']; // eventId 가져오기
+        if (eventId == null) {
+          throw Exception('Event ID is required');
+        }
+        return GuestManagementScreen(eventId: eventId);
+      },
+    ),
+    GoRoute(
+      path: '/onjungVisitorLog/:eventId', // VisitorLogScreen에 eventId 전달
+      name: AppRoute.onjungVisitorLog.name,
+      builder: (context, state) {
+        final eventId = state.pathParameters['eventId']; // eventId 가져오기
+        if (eventId == null) {
+          throw Exception('Event ID is required');
+        }
+        return VisitorLogScreen(eventId: eventId);
       },
     ),
   ],
