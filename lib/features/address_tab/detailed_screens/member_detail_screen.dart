@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_onjung_v1/data/%08shared/member.dart';
-import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/member.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 import 'package:go_router/go_router.dart';
 
 import 'member_history_tab.dart';
