@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/features/shared_drawer_tab/drawer_menu.dart';
-import 'package:flutter_onjung_v1/shared/widgets/bottom_navigation_bar.dart';
-import 'package:flutter_onjung_v1/shared/widgets/notification_screen.dart';
+import 'package:flutter_onjung_v1/shared/shared_widgets/bottom_navigation_bar.dart';
+import 'package:flutter_onjung_v1/shared/shared_widgets/notification_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 

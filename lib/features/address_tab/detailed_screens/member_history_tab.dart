@@ -4,7 +4,7 @@ import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_history_list_section.dart';
 import 'package:flutter_onjung_v1/features/address_tab/providers/address_book_provider.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
-import 'package:flutter_onjung_v1/shared/widgets/custom_date_picker.dart';
+import 'package:flutter_onjung_v1/shared/shared_widgets/custom_date_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
