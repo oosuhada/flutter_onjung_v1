@@ -1,42 +1,52 @@
+// login_screen.dart
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_onjung_v1/core/services/firebase_auth_service.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/profile_set_up_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatelessWidget {
+import 'email_sign_in_screen.dart';
+
+class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () => context.pop(),
         ),
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            showModalBottomSheet(
-              context: context,
-              isScrollControlled: true,
-              backgroundColor: Colors.transparent, // 백그라운드 색상 제거
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-              ),
-              builder: (context) => const LoginOptionsDialog(),
-            );
-          },
+          onPressed: () => _showLoginOptions(context, ref),
           child: const Text("로그인 옵션 보기"),
         ),
       ),
     );
   }
+
+  void _showLoginOptions(BuildContext context, WidgetRef ref) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (context) => LoginOptionsDialog(ref: ref),
+    );
+  }
 }
 
 class LoginOptionsDialog extends StatelessWidget {
-  const LoginOptionsDialog({super.key});
+  final WidgetRef ref;
+
+  const LoginOptionsDialog({super.key, required this.ref});
 
   @override
   Widget build(BuildContext context) {
@@ -56,44 +66,44 @@ class LoginOptionsDialog extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   _buildCircleButton(
-                    color: Colors.yellow,
-                    icon: Icons.chat_bubble,
+                    context: context,
+                    color: const Color(0xFFFEDC3F),
+                    assetPath: 'assets/logo/kakao_logo.png',
                     onTap: () {
-                      // 카카오 로그인 처리
+                      // 카카오 로그인 구현 예정
                     },
                   ),
                   _buildCircleButton(
-                    color: Colors.green,
-                    icon: Icons.tag_faces,
+                    context: context,
+                    color: const Color(0xFF03C75A),
+                    assetPath: 'assets/logo/naver_logo.png',
                     onTap: () {
-                      // 네이버 로그인 처리
+                      // 네이버 로그인 구현 예정
                     },
                   ),
                   _buildCircleButton(
-                    color: Colors.blue,
-                    icon: Icons.g_translate,
-                    onTap: () {
-                      // 구글 로그인 처리
-                    },
+                    context: context,
+                    color: Colors.white,
+                    assetPath: 'assets/logo/logo_google.png',
+                    onTap: () => _handleGoogleSignIn(context),
                   ),
                   _buildCircleButton(
+                    context: context,
                     color: Colors.black,
-                    icon: Icons.apple,
+                    assetPath: 'assets/logo/logo_apple.png',
                     onTap: () {
-                      // 애플 로그인 처리
+                      // 애플 로그인 구현 예정
                     },
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 32), // 소셜 로그인 버튼 간격 조정
+            const SizedBox(height: 32),
             SizedBox(
               width: double.infinity,
               height: 52,
               child: OutlinedButton.icon(
-                onPressed: () {
-                  // 이메일 로그인 처리
-                },
+                onPressed: () => _navigateToEmailSignIn(context),
                 icon: const Icon(Icons.email),
                 label: const Text("이메일로 로그인"),
                 style: OutlinedButton.styleFrom(
@@ -112,21 +122,70 @@ class LoginOptionsDialog extends StatelessWidget {
   }
 
   Widget _buildCircleButton({
+    required BuildContext context,
     required Color color,
-    required IconData icon,
+    required String assetPath,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 56, // 버튼 크기 조정
-        height: 56,
+        width: 60.0,
+        height: 60.0,
         decoration: BoxDecoration(
           color: color,
           shape: BoxShape.circle,
+          border: color == Colors.white
+              ? Border.all(color: Colors.grey.shade300)
+              : null,
         ),
-        child: Icon(icon, color: Colors.white, size: 24),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(assetPath),
+        ),
       ),
+    );
+  }
+
+  Future<void> _handleGoogleSignIn(BuildContext context) async {
+    try {
+      final authService = ref.read(authServiceProvider);
+      final userCredential = await authService.signInWithGoogle();
+
+      if (userCredential != null) {
+        // 사용자 프로필 존재 여부 확인
+        final userDoc = await FirebaseFirestore.instance
+            .collection('users')
+            .doc(userCredential.user!.uid)
+            .get();
+
+        if (context.mounted) {
+          if (!userDoc.exists) {
+            // 신규 사용자 - 프로필 설정으로 이동
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ProfileSetupScreen()),
+            );
+          } else {
+            // 기존 사용자 - 메인 화면으로 이동
+            context.go('/main');
+          }
+        }
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('구글 로그인에 실패했습니다.')),
+        );
+      }
+    }
+  }
+
+  void _navigateToEmailSignIn(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const EmailSignInScreen()),
     );
   }
 }

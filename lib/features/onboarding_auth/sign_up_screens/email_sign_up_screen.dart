@@ -1,8 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/core/services/firebase_auth_service.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/local_validator.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/network_validator.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widgets/custom_text_form_field.dart';
 
@@ -27,7 +30,7 @@ class _EmailSignUpScreenState extends ConsumerState<EmailSignUpScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            context.pop(); // Navigator.pop(context) 대신 사용
           },
         ),
         title: const Text('이메일로 회원가입'),
@@ -42,46 +45,57 @@ class _EmailSignUpScreenState extends ConsumerState<EmailSignUpScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  CustomTextFormField(
-                    name: 'email',
-                    controller: _emailController,
-                    label: '이메일',
-                    hint: 'example@email.com',
-                    keyboardType: TextInputType.emailAddress,
-                    validator: (value) => LocalValidatorHelper.validateEmail(
-                      value,
-                      'ko',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: CustomTextFormField(
+                      name: 'email',
+                      controller: _emailController,
+                      label: '이메일',
+                      hint: 'example@email.com',
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) => LocalValidatorHelper.validateEmail(
+                        value,
+                        'ko',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                     ),
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
                   const SizedBox(height: 16),
-                  CustomTextFormField(
-                    name: 'password',
-                    controller: _passwordController,
-                    label: '비밀번호',
-                    hint: '8자 이상 입력해주세요',
-                    obscureText: true,
-                    validator: (value) => LocalValidatorHelper.validatePassword(
-                      value,
-                      'ko',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: CustomTextFormField(
+                      name: 'password',
+                      controller: _passwordController,
+                      label: '비밀번호',
+                      hint: '8자 이상 입력해주세요',
+                      obscureText: true,
+                      validator: (value) =>
+                          LocalValidatorHelper.validatePassword(
+                        value,
+                        'ko',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                     ),
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
                   const SizedBox(height: 16),
-                  CustomTextFormField(
-                    name: 'confirmPassword',
-                    controller: _confirmPasswordController,
-                    label: '비밀번호 확인',
-                    hint: '비밀번호를 한번 더 입력해주세요',
-                    obscureText: true,
-                    validator: (value) =>
-                        LocalValidatorHelper.validateConfirmPassword(
-                      value,
-                      _passwordController.text,
-                      'ko',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: CustomTextFormField(
+                      name: 'confirmPassword',
+                      controller: _confirmPasswordController,
+                      label: '비밀번호 확인',
+                      hint: '비밀번호를 한번 더 입력해주세요',
+                      obscureText: true,
+                      validator: (value) =>
+                          LocalValidatorHelper.validateConfirmPassword(
+                        value,
+                        _passwordController.text,
+                        'ko',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                     ),
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
+                  const SizedBox(height: 16),
                   const SizedBox(height: 16),
                   SizedBox(
                     height: 50,
@@ -103,7 +117,8 @@ class _EmailSignUpScreenState extends ConsumerState<EmailSignUpScreen> {
                   const SizedBox(height: 16),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/email-signin');
+                      // Navigator.pushReplacement 대신 context.replace 사용
+                      context.replace(AppRoute.emailSignin.path);
                     },
                     child: const Text('이미 계정이 있으신가요? 로그인'),
                   ),
@@ -139,21 +154,34 @@ class _EmailSignUpScreenState extends ConsumerState<EmailSignUpScreen> {
           }
           return;
         }
-
         final userCredential = await authService.signUpWithEmail(
           _emailController.text,
           _passwordController.text,
         );
 
         if (userCredential != null && mounted) {
+          // null이면 이 조건문을 통과하지 못합니다
           Navigator.pushReplacementNamed(context, '/profile-setup');
         }
       } catch (e) {
         if (mounted) {
+          // Firebase 오류 메시지를 사용자에게 보여줌
+          String errorMessage = '회원가입에 실패했습니다.';
+          if (e is FirebaseAuthException) {
+            switch (e.code) {
+              case 'email-already-in-use':
+                errorMessage = '이미 사용 중인 이메일입니다.';
+                break;
+              case 'weak-password':
+                errorMessage = '비밀번호가 너무 약합니다.';
+                break;
+              case 'invalid-email':
+                errorMessage = '유효하지 않은 이메일 형식입니다.';
+                break;
+            }
+          }
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: const Text('회원가입에 실패했습니다. 다시 시도해주세요.'),
-            ),
+            SnackBar(content: Text(errorMessage)),
           );
         }
       } finally {

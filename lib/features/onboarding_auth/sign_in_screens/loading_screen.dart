@@ -57,7 +57,11 @@ class _LoadingScreenState extends ConsumerState<LoadingScreen> {
             ),
             const SizedBox(height: 48),
             const SizedBox(height: 48),
-            const CircularProgressIndicator(),
+            const CircularProgressIndicator(
+              valueColor:
+                  AlwaysStoppedAnimation<Color>(Colors.orange), // 또는 다른 색상
+              strokeWidth: 3,
+            ),
             const SizedBox(height: 24),
             const Text(
               '잠시만 기다려주세요...',

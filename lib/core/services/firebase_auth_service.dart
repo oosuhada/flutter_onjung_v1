@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -57,15 +58,15 @@ class FirebaseAuthService {
   // }
 
   // 이메일/비밀번호 회원가입
-  Future<UserCredential?> signUpWithEmail(String email, String password) async {
+  Future<UserCredential> signUpWithEmail(String email, String password) async {
     try {
       return await _auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
     } catch (e) {
-      print('이메일 회원가입 실패: $e');
-      return null;
+      debugPrint('이메일 회원가입 실패: $e');
+      rethrow; // 에러를 다시 던져서 호출자가 처리하도록 함
     }
   }
 

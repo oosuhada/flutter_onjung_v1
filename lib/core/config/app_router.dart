@@ -11,6 +11,7 @@ import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/event_details_s
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/guest_management_screen.dart';
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/my_onjung_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/visitor_log_screen.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/email_sign_in_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/loading_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/login_options_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/onboarding_screen.dart';
@@ -26,6 +27,7 @@ enum AppRoute {
   authTerms('/authTerms'),
   authSignup('/authSignup'),
   emailSignup('/emailSignup'),
+  emailSignin('/emailSignin'),
   homeTab('/homeTab'),
   homeOnjungSummary('/homeOnjungSummary'),
   homeOnjungStatistics('/homeOnjungStatistics'),
@@ -94,6 +96,14 @@ final goRouter = GoRouter(
       builder: (context, state) {
         debugPrint('🚀 EmailSignUpScreen으로 이동 - state: $state');
         return const EmailSignUpScreen();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.emailSignin.path,
+      name: AppRoute.emailSignin.name,
+      builder: (context, state) {
+        debugPrint('🚀 EmailSignUpScreen으로 이동 - state: $state');
+        return const EmailSignInScreen();
       },
     ),
     GoRoute(
