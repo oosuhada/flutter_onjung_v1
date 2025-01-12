@@ -1,8 +1,8 @@
 // settings_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/config/app_settings_manager.dart';
-import 'package:flutter_onjung_v1/core/services/database_mobile.dart';
-import 'package:flutter_onjung_v1/core/services/database_provider.dart';
+import 'package:flutter_onjung_v1/core/database_services/database_mobile.dart';
+import 'package:flutter_onjung_v1/core/database_services/database_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SettingsPage extends ConsumerStatefulWidget {
