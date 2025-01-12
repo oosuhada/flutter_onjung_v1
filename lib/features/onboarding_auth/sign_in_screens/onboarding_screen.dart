@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/terms_and_conditions_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/login_options_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/terms_and_conditions_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/onboarding_view_widget.dart';
 import 'package:go_router/go_router.dart';
 
