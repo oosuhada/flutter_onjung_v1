@@ -1,44 +1,96 @@
-# Onjung v1
+# Onjung
 
-경조사와 인간관계에서 오가는 기록을 **개인 통계·관계별 평균·캘린더·주소록** 관점으로 정리하는 Flutter 앱 아이디어를 구현한 프로젝트입니다.
+> 경조사에서 오간 마음을 사람·상황·시간과 함께 기억하는 관계 장부.
 
-A Flutter product experiment for organizing social-event records through personal statistics, relationship averages, calendar views, and an address-book-oriented workflow.
+Onjung(온정)은 결혼식, 장례식, 돌잔치, 생일, 개업 같은 경조사에서 **누구와 어떤 마음을 주고받았는지** 기록하고 다시 찾기 위한 Flutter 모바일 앱입니다. 단순 금액 장부가 아니라 상대와의 관계, 경조사 종류, 날짜, 메모, 이전 기록과 다가오는 일정을 함께 보며 다음 관계 행동을 자연스럽게 결정하는 것이 제품의 중심입니다.
 
-## UI Preview / 구현 화면
+이 저장소의 초기 구현에는 경조사비 입력, 주소록 관계 기록, 캘린더, 통계, Firebase 인증, SQLite 저장, 내가 주최하는 경조사의 하객/방명록 관리까지 확장하려던 실제 개발 흔적이 남아 있습니다. 현재 `main`은 그 원래 제품 목적을 유지하면서, backend 상태와 무관하게 즉시 체험 가능한 portfolio-ready 모바일 흐름으로 다시 완성한 버전입니다.
 
-![Onjung portfolio preview](https://raw.githubusercontent.com/oosuhada/portfoli-oh/main/project/projects/project4-cover.png)
+## Preview
 
-2025 개인 포트폴리오에 보존된 실제 Onjung project cover입니다. Flutter를 직접 실행하지 않아도 당시 제품의 visual direction을 확인할 수 있습니다.
+<p align="center">
+  <img src=".github/assets/portfolio/01-home.png" width="210" alt="Onjung home" />
+  <img src=".github/assets/portfolio/02-records.png" width="210" alt="Onjung records" />
+  <img src=".github/assets/portfolio/03-record-detail.png" width="210" alt="Onjung record detail" />
+</p>
 
-This is the real Onjung project cover preserved in the 2025 portfolio archive, included so the interface can be understood without running Flutter.
+<p align="center">
+  <img src=".github/assets/portfolio/04-add-record.png" width="210" alt="Add an Onjung record" />
+  <img src=".github/assets/portfolio/05-my-onjung.png" width="210" alt="My Onjung insights" />
+</p>
 
-## Features / 주요 구현
+All preview images were captured from an **Android 15 / API 35 emulator at 1080×2400**, not Flutter Web.
 
-- Onboarding / login / signup 화면
-- 개인 Onjung 통계 화면
-- 관계별 평균 및 최근 사용 통계
-- chart/summary card 기반 dashboard UI
-- Calendar tab
-- Address tab
-- Onjung record tab
-- hamburger navigation / app routing / theme 구성
+## What it does
 
-## Structure / 구조
+- **Relationship-first ledger** — 보낸 온정과 받은 온정을 사람, 관계, 경조사, 날짜와 함께 기록합니다.
+- **Onjung records** — 최근 기록을 탐색하고 보냄/받음 기준으로 빠르게 구분합니다.
+- **Record detail** — 금액만 보지 않고 당시 상황, 메모, 관계 히스토리를 함께 확인합니다.
+- **Quick record** — 방향, 상대, 관계, 경조사, 금액, 메모를 한 흐름에서 입력하고 즉시 기록 목록에 반영합니다.
+- **Calendar context** — 날짜별 기록과 다가오는 경조사를 함께 확인합니다.
+- **My Onjung** — 보낸/받은 총액, 관계 인사이트, 자주 만나는 관계를 요약합니다.
+- **Deterministic demo mode** — Firebase/API가 비어 있거나 오래된 backend가 응답하지 않아도 핵심 제품 흐름이 항상 살아 있습니다.
+
+## User flow
+
+대표 사용자 여정은 실제 navigation과 state update로 연결되어 있습니다.
+
+`Home → 온정록 → 온정 상세 → 빠른 온정 기록 → 저장 → 갱신된 온정록 → 내 온정 / 캘린더`
+
+Android Emulator QA에서는 5개의 초기 기록에서 새 결혼식 기록을 저장한 뒤 **6개의 기록**으로 즉시 갱신되고, 이어서 관계 인사이트 화면까지 이동하는 흐름을 검증했습니다.
+
+## Architecture
+
+현재 지원하는 portfolio runtime은 작고 명확하게 구성했습니다.
 
 ```text
-lib/
-├── core/                    # router, theme
-├── data/                    # dummy data and statistics models
-└── features/
-    ├── onboarding_auth/
-    ├── home_tab/
-    ├── calendar_tab/
-    ├── address_tab/
-    ├── onjung_tab/
-    └── main_screen.dart
+lib/main.dart
+  └─ ProviderScope
+      └─ lib/portfolio/onjung_portfolio_app.dart
+          ├─ Material 3 UI + navigation
+          ├─ Riverpod StateNotifier
+          └─ lib/portfolio/data/onjung_demo_repository.dart
+              └─ deterministic domain sample data
 ```
 
-이 저장소는 Onjung 제품 아이디어의 첫 mobile implementation이며, 이후 `flutter_onjung_web_test`에서 주소록·캘린더·빠른 입력·방명록 등 더 넓은 web/mobile surface를 실험했습니다.
+기존 개발 과정의 `lib/core`, `lib/data`, `lib/features`, `lib/shared` 아래에는 Firebase/Auth, SQLite, 주소록, 캘린더, 통계, 하객 관리 등 원래 구현이 보존되어 있습니다. 현재 앱 진입점은 이 오래된 backend 의존성에 묶이지 않으며, portfolio runtime은 별도 deterministic repository를 사용합니다. 따라서 인증 서버나 Firestore 상태 때문에 앱이 흰 화면·무한 로딩·빈 화면으로 끝나지 않습니다.
 
-This repository is the first mobile implementation of the Onjung concept; the later web-test repository explores a broader ceremony-book and guest-book surface.
+## Tech Stack
 
+- Flutter 3.27 / Dart 3.6
+- Material 3 + Pretendard
+- Riverpod (`StateNotifier`)
+- `intl`
+- Android API 35
+- Original implementation history: GoRouter, Firebase Auth / Firestore / Remote Config, SQLite, Table Calendar, Flutter Map
+
+## Run
+
+```bash
+flutter pub get
+flutter run
+```
+
+Portfolio/demo flow에는 별도 API key나 로그인 계정이 필요하지 않습니다.
+
+## Validation
+
+2026-08-20 기준 canonical runtime에서 다음을 확인했습니다.
+
+```bash
+flutter pub get
+flutter analyze
+flutter test
+flutter build apk --debug
+```
+
+- `flutter analyze`: **No issues found**
+- `flutter test`: core journey widget test 통과
+- Android debug APK: `build/app/outputs/flutter-apk/app-debug.apk` 생성 성공
+- Android Emulator: API 35, 1080×2400
+- Runtime QA: Home → list → detail → add/save → updated list → My Onjung navigation 확인
+- Runtime log: Flutter exception, RenderFlex overflow, asset load failure 없음
+
+## Product history
+
+Onjung은 처음부터 marketplace나 SNS가 아니라, 한국의 경조사 문화에서 오가는 금액과 마음을 **관계의 맥락으로 기억하기 위한 앱**으로 개발되었습니다. 이번 정리는 그 제품 아이디어를 바꾸는 대신, 기존 구현의 핵심을 유지하면서 오늘 다시 실행해도 제품처럼 보이고 탐색 가능한 모바일 경험으로 다듬는 데 초점을 맞췄습니다.

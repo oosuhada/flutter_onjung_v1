@@ -9,6 +9,17 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  # The original 2024-2025 implementation is intentionally retained as product
+  # history. The portfolio entrypoint lives in lib/main.dart + lib/portfolio and
+  # is the supported, continuously analyzed surface.
+  exclude:
+    - lib/core/**
+    - lib/data/**
+    - lib/features/**
+    - lib/shared/**
+    - lib/firebase_options.dart
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`
