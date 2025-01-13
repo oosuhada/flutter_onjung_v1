@@ -1,0 +1,4013 @@
+{
+    "nickname": "르탄이",
+    "communities": [
+        {
+            "name": "서울 동자초등학교 동창회 34기",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 6816,
+                    "name": "강건우",
+                    "phone": "010-034-7469",
+                    "age": 38,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 5128,
+                    "name": "이서연",
+                    "phone": "010-343-5591",
+                    "age": 26,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 3652,
+                    "name": "박정남",
+                    "phone": "010-461-6497",
+                    "age": 48,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 9322,
+                    "name": "김명숙",
+                    "phone": "010-517-0021",
+                    "age": 44,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 4888,
+                    "name": "이은경",
+                    "phone": "010-4153-2143",
+                    "age": 33,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 3555,
+                    "name": "최영길",
+                    "phone": "010-214-6090",
+                    "age": 34,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 6182,
+                    "name": "이지후",
+                    "phone": "010-638-7931",
+                    "age": 42,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 9025,
+                    "name": "김지민",
+                    "phone": "010-386-0609",
+                    "age": 41,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 6966,
+                    "name": "최영호",
+                    "phone": "010-606-1353",
+                    "age": 20,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 1265,
+                    "name": "르탄이",
+                    "phone": "010-634-2197",
+                    "age": 24,
+                    "region": "서울특별시 종로구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_0_0",
+                    "groupTransactionDate": "2022-08-01T20:22:57",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_1",
+                    "groupTransactionDate": "2023-12-21T19:16:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_2",
+                    "groupTransactionDate": "2022-11-27T10:29:51",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_3",
+                    "groupTransactionDate": "2022-01-08T01:37:29",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_4",
+                    "groupTransactionDate": "2023-11-02T15:29:50",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_5",
+                    "groupTransactionDate": "2020-10-15T17:51:32",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_6",
+                    "groupTransactionDate": "2020-08-05T23:34:19",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_7",
+                    "groupTransactionDate": "2024-09-12T18:15:14",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_8",
+                    "groupTransactionDate": "2020-09-15T18:45:09",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_9",
+                    "groupTransactionDate": "2020-04-19T13:08:53",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_10",
+                    "groupTransactionDate": "2022-12-13T05:12:02",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_11",
+                    "groupTransactionDate": "2021-01-21T17:12:39",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_12",
+                    "groupTransactionDate": "2020-08-28T20:35:42",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_13",
+                    "groupTransactionDate": "2020-05-17T01:17:00",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_14",
+                    "groupTransactionDate": "2024-10-25T16:40:37",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_15",
+                    "groupTransactionDate": "2024-09-16T00:34:50",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_16",
+                    "groupTransactionDate": "2020-07-08T10:01:00",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_17",
+                    "groupTransactionDate": "2024-02-05T05:32:37",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_18",
+                    "groupTransactionDate": "2020-05-26T08:06:21",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_19",
+                    "groupTransactionDate": "2020-10-28T10:54:09",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_20",
+                    "groupTransactionDate": "2024-02-24T06:03:34",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_21",
+                    "groupTransactionDate": "2024-05-17T12:18:21",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_22",
+                    "groupTransactionDate": "2023-05-10T20:37:36",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_23",
+                    "groupTransactionDate": "2020-06-15T19:01:49",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_24",
+                    "groupTransactionDate": "2021-08-06T09:17:16",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_25",
+                    "groupTransactionDate": "2022-12-06T06:04:28",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_26",
+                    "groupTransactionDate": "2020-05-22T09:38:48",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_27",
+                    "groupTransactionDate": "2022-09-10T09:00:02",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_28",
+                    "groupTransactionDate": "2024-08-02T21:36:20",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_29",
+                    "groupTransactionDate": "2024-05-16T06:49:32",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_30",
+                    "groupTransactionDate": "2022-08-21T02:46:18",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_31",
+                    "groupTransactionDate": "2022-10-30T15:02:47",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_32",
+                    "groupTransactionDate": "2021-10-08T05:19:04",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_33",
+                    "groupTransactionDate": "2021-03-06T07:14:05",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_34",
+                    "groupTransactionDate": "2020-03-11T15:19:14",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_35",
+                    "groupTransactionDate": "2024-01-05T19:00:35",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_36",
+                    "groupTransactionDate": "2024-04-15T01:06:38",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_37",
+                    "groupTransactionDate": "2021-12-02T10:31:19",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_38",
+                    "groupTransactionDate": "2020-05-04T05:22:19",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_39",
+                    "groupTransactionDate": "2020-07-19T23:29:59",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_40",
+                    "groupTransactionDate": "2023-04-20T18:48:53",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_41",
+                    "groupTransactionDate": "2022-03-05T19:11:22",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_42",
+                    "groupTransactionDate": "2024-10-24T03:18:05",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_43",
+                    "groupTransactionDate": "2024-04-16T01:02:48",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_0_44",
+                    "groupTransactionDate": "2020-05-05T17:26:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_0_45",
+                    "groupTransactionDate": "2022-04-23T16:12:30",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                }
+            ]
+        },
+        {
+            "name": "서울 단대부중 동창회 45기",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 3112,
+                    "name": "양지연",
+                    "phone": "010-984-6992",
+                    "age": 34,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 1523,
+                    "name": "안은지",
+                    "phone": "010-751-9870",
+                    "age": 42,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 8988,
+                    "name": "박숙자",
+                    "phone": "010-838-2839",
+                    "age": 37,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 6948,
+                    "name": "박영길",
+                    "phone": "010-977-4247",
+                    "age": 48,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 5282,
+                    "name": "남윤서",
+                    "phone": "010-1088-0330",
+                    "age": 33,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 1235,
+                    "name": "김정자",
+                    "phone": "010-553-7506",
+                    "age": 42,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 5346,
+                    "name": "최상현",
+                    "phone": "010-267-1215",
+                    "age": 28,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 7248,
+                    "name": "김현준",
+                    "phone": "010-873-3329",
+                    "age": 29,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 3515,
+                    "name": "황재호",
+                    "phone": "010-888-9967",
+                    "age": 33,
+                    "region": "경상남도 진주시"
+                },
+                {
+                    "groupMemberId": 7382,
+                    "name": "박광수",
+                    "phone": "010-861-4029",
+                    "age": 30,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 6433,
+                    "name": "황민지",
+                    "phone": "010-456-8053",
+                    "age": 30,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 6272,
+                    "name": "심미경",
+                    "phone": "010-251-8930",
+                    "age": 34,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 8612,
+                    "name": "이경희",
+                    "phone": "010-387-2159",
+                    "age": 46,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 3696,
+                    "name": "이준영",
+                    "phone": "010-743-7218",
+                    "age": 41,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 6290,
+                    "name": "르탄이",
+                    "phone": "010-3476-5226",
+                    "age": 50,
+                    "region": "서울특별시 마포구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_1_0",
+                    "groupTransactionDate": "2020-05-19T20:39:01",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_1",
+                    "groupTransactionDate": "2020-09-15T21:18:53",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_2",
+                    "groupTransactionDate": "2023-07-18T20:25:54",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_3",
+                    "groupTransactionDate": "2021-01-22T17:40:43",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_4",
+                    "groupTransactionDate": "2022-05-26T21:47:27",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_5",
+                    "groupTransactionDate": "2020-01-12T14:23:26",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_6",
+                    "groupTransactionDate": "2021-07-31T00:55:53",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_7",
+                    "groupTransactionDate": "2024-03-06T08:22:42",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_8",
+                    "groupTransactionDate": "2020-04-24T06:35:39",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_9",
+                    "groupTransactionDate": "2024-05-05T22:08:30",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_10",
+                    "groupTransactionDate": "2023-11-26T22:43:39",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_11",
+                    "groupTransactionDate": "2024-09-12T15:13:59",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_12",
+                    "groupTransactionDate": "2021-02-11T19:42:20",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_13",
+                    "groupTransactionDate": "2023-12-01T10:20:27",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_14",
+                    "groupTransactionDate": "2023-06-22T04:45:10",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_15",
+                    "groupTransactionDate": "2020-12-13T18:25:00",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_16",
+                    "groupTransactionDate": "2020-03-25T07:58:34",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_17",
+                    "groupTransactionDate": "2021-01-28T10:27:15",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_18",
+                    "groupTransactionDate": "2022-01-26T00:46:52",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_19",
+                    "groupTransactionDate": "2024-05-31T22:55:42",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_20",
+                    "groupTransactionDate": "2025-01-03T00:25:06",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_21",
+                    "groupTransactionDate": "2022-12-27T18:21:15",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_22",
+                    "groupTransactionDate": "2024-02-09T22:16:13",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_23",
+                    "groupTransactionDate": "2023-04-07T01:50:23",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_24",
+                    "groupTransactionDate": "2021-07-16T14:30:13",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_25",
+                    "groupTransactionDate": "2022-09-16T17:01:32",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_26",
+                    "groupTransactionDate": "2021-10-24T11:16:41",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_27",
+                    "groupTransactionDate": "2025-01-18T12:32:15",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_28",
+                    "groupTransactionDate": "2022-09-03T11:12:20",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_29",
+                    "groupTransactionDate": "2023-06-23T14:24:08",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_30",
+                    "groupTransactionDate": "2020-10-04T04:19:31",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_31",
+                    "groupTransactionDate": "2022-02-15T11:01:52",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_32",
+                    "groupTransactionDate": "2023-08-05T20:55:30",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_33",
+                    "groupTransactionDate": "2024-04-09T05:34:39",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_34",
+                    "groupTransactionDate": "2020-05-04T04:38:23",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_35",
+                    "groupTransactionDate": "2022-12-27T19:00:30",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_36",
+                    "groupTransactionDate": "2023-01-10T20:32:30",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_37",
+                    "groupTransactionDate": "2020-12-28T23:02:30",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_38",
+                    "groupTransactionDate": "2021-12-08T15:57:40",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_39",
+                    "groupTransactionDate": "2022-03-24T00:32:17",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_40",
+                    "groupTransactionDate": "2021-05-24T23:14:56",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_41",
+                    "groupTransactionDate": "2024-05-04T15:26:09",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_42",
+                    "groupTransactionDate": "2022-11-24T05:39:53",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_1_43",
+                    "groupTransactionDate": "2023-10-02T10:33:43",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_44",
+                    "groupTransactionDate": "2021-09-23T05:13:04",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_45",
+                    "groupTransactionDate": "2020-02-13T12:39:51",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_1_46",
+                    "groupTransactionDate": "2022-09-22T08:33:27",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                }
+            ]
+        },
+        {
+            "name": "서울 단대부고 동창회 48기",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 4182,
+                    "name": "이영숙",
+                    "phone": "010-429-2999",
+                    "age": 20,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 5265,
+                    "name": "박현우",
+                    "phone": "010-104-2818",
+                    "age": 42,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 6841,
+                    "name": "이은서",
+                    "phone": "010-339-5704",
+                    "age": 40,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 4715,
+                    "name": "고준영",
+                    "phone": "010-594-6082",
+                    "age": 26,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 3993,
+                    "name": "이은정",
+                    "phone": "010-871-0234",
+                    "age": 23,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 1473,
+                    "name": "김영진",
+                    "phone": "010-1492-7454",
+                    "age": 38,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 4625,
+                    "name": "르탄이",
+                    "phone": "010-140-0003",
+                    "age": 33,
+                    "region": "서울특별시 송파구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_2_0",
+                    "groupTransactionDate": "2023-01-15T04:07:22",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_1",
+                    "groupTransactionDate": "2022-03-03T20:05:34",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_2",
+                    "groupTransactionDate": "2022-07-29T09:43:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_3",
+                    "groupTransactionDate": "2023-03-24T02:47:09",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_4",
+                    "groupTransactionDate": "2024-10-14T06:49:45",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_5",
+                    "groupTransactionDate": "2024-12-22T19:29:39",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_6",
+                    "groupTransactionDate": "2023-01-04T13:39:53",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_7",
+                    "groupTransactionDate": "2024-11-17T03:50:00",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_8",
+                    "groupTransactionDate": "2023-11-07T21:47:04",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_9",
+                    "groupTransactionDate": "2022-08-29T09:46:06",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_10",
+                    "groupTransactionDate": "2024-07-23T10:29:47",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_11",
+                    "groupTransactionDate": "2023-03-10T01:37:21",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_12",
+                    "groupTransactionDate": "2021-04-01T09:22:52",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_13",
+                    "groupTransactionDate": "2020-07-21T12:54:04",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_14",
+                    "groupTransactionDate": "2021-01-16T10:43:58",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_15",
+                    "groupTransactionDate": "2022-02-14T07:49:27",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_16",
+                    "groupTransactionDate": "2022-11-06T21:30:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_17",
+                    "groupTransactionDate": "2024-02-24T14:34:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_18",
+                    "groupTransactionDate": "2023-03-26T19:09:26",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_19",
+                    "groupTransactionDate": "2022-01-07T11:58:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_20",
+                    "groupTransactionDate": "2022-07-21T04:57:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_21",
+                    "groupTransactionDate": "2021-10-01T08:32:53",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_22",
+                    "groupTransactionDate": "2024-05-29T04:26:58",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_23",
+                    "groupTransactionDate": "2023-10-12T05:15:21",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_24",
+                    "groupTransactionDate": "2020-11-30T21:04:55",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_25",
+                    "groupTransactionDate": "2020-04-28T05:54:46",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_26",
+                    "groupTransactionDate": "2021-03-01T09:00:13",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_27",
+                    "groupTransactionDate": "2024-01-11T08:59:32",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_28",
+                    "groupTransactionDate": "2021-05-01T13:22:26",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_2_29",
+                    "groupTransactionDate": "2023-05-07T20:03:50",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_2_30",
+                    "groupTransactionDate": "2022-09-29T17:39:12",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                }
+            ]
+        },
+        {
+            "name": "한국외대 동창회 56기",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 6374,
+                    "name": "김하은",
+                    "phone": "010-105-5025",
+                    "age": 35,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 9446,
+                    "name": "권영진",
+                    "phone": "010-717-1694",
+                    "age": 28,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 1855,
+                    "name": "이영진",
+                    "phone": "010-714-7586",
+                    "age": 43,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 9347,
+                    "name": "김선영",
+                    "phone": "010-095-4873",
+                    "age": 47,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 5349,
+                    "name": "김순옥",
+                    "phone": "010-400-3295",
+                    "age": 37,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 2998,
+                    "name": "박은정",
+                    "phone": "010-925-4879",
+                    "age": 48,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 1665,
+                    "name": "김명숙",
+                    "phone": "010-210-7003",
+                    "age": 39,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 7422,
+                    "name": "르탄이",
+                    "phone": "010-413-9942",
+                    "age": 31,
+                    "region": "경상남도 김해시"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_3_0",
+                    "groupTransactionDate": "2023-05-06T09:12:37",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_1",
+                    "groupTransactionDate": "2023-07-21T02:36:40",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_2",
+                    "groupTransactionDate": "2021-09-20T00:36:26",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_3",
+                    "groupTransactionDate": "2020-06-18T05:26:30",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_4",
+                    "groupTransactionDate": "2023-02-26T06:13:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_5",
+                    "groupTransactionDate": "2022-03-31T10:17:38",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_6",
+                    "groupTransactionDate": "2022-06-23T18:01:04",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_7",
+                    "groupTransactionDate": "2022-03-24T01:47:54",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_8",
+                    "groupTransactionDate": "2021-10-10T09:21:07",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_9",
+                    "groupTransactionDate": "2023-01-20T21:51:26",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_10",
+                    "groupTransactionDate": "2023-08-07T07:16:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_11",
+                    "groupTransactionDate": "2024-09-17T13:04:18",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_12",
+                    "groupTransactionDate": "2020-02-12T22:19:48",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_13",
+                    "groupTransactionDate": "2022-11-09T05:26:12",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_14",
+                    "groupTransactionDate": "2020-12-06T13:50:57",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_15",
+                    "groupTransactionDate": "2020-10-21T11:43:59",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_16",
+                    "groupTransactionDate": "2021-08-14T05:31:52",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_17",
+                    "groupTransactionDate": "2022-10-25T11:43:14",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_18",
+                    "groupTransactionDate": "2021-01-27T22:07:02",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_19",
+                    "groupTransactionDate": "2020-09-01T01:49:13",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_20",
+                    "groupTransactionDate": "2022-06-14T22:03:57",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_21",
+                    "groupTransactionDate": "2022-08-28T20:49:19",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_22",
+                    "groupTransactionDate": "2024-11-23T04:43:26",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_23",
+                    "groupTransactionDate": "2024-02-12T22:17:46",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_24",
+                    "groupTransactionDate": "2024-06-12T03:09:31",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_25",
+                    "groupTransactionDate": "2023-06-05T08:37:13",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_26",
+                    "groupTransactionDate": "2020-05-09T09:32:19",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_27",
+                    "groupTransactionDate": "2021-01-15T22:12:54",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_28",
+                    "groupTransactionDate": "2024-04-05T03:44:38",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_29",
+                    "groupTransactionDate": "2023-08-15T13:01:30",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_30",
+                    "groupTransactionDate": "2024-05-19T05:31:47",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_31",
+                    "groupTransactionDate": "2020-06-15T05:07:15",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_32",
+                    "groupTransactionDate": "2023-06-03T11:29:52",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_33",
+                    "groupTransactionDate": "2020-03-07T21:19:15",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_34",
+                    "groupTransactionDate": "2024-10-24T20:04:33",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_35",
+                    "groupTransactionDate": "2020-04-09T21:01:59",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_36",
+                    "groupTransactionDate": "2023-05-19T01:27:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_37",
+                    "groupTransactionDate": "2024-04-19T22:22:38",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_38",
+                    "groupTransactionDate": "2022-09-29T02:46:14",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_3_39",
+                    "groupTransactionDate": "2021-01-10T15:54:45",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_3_40",
+                    "groupTransactionDate": "2024-03-07T15:15:59",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                }
+            ]
+        },
+        {
+            "name": "마케팅 학회 모임",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 2038,
+                    "name": "이영환",
+                    "phone": "010-2027-1257",
+                    "age": 42,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 7696,
+                    "name": "김하은",
+                    "phone": "010-371-3168",
+                    "age": 39,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 2578,
+                    "name": "이건우",
+                    "phone": "010-6467-5093",
+                    "age": 44,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 4411,
+                    "name": "박현지",
+                    "phone": "010-806-4422",
+                    "age": 48,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 2921,
+                    "name": "장민지",
+                    "phone": "010-557-8099",
+                    "age": 46,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 5123,
+                    "name": "윤하은",
+                    "phone": "010-5755-1142",
+                    "age": 31,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 7070,
+                    "name": "김하은",
+                    "phone": "010-883-8103",
+                    "age": 50,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 5386,
+                    "name": "김정훈",
+                    "phone": "010-480-4046",
+                    "age": 29,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 4074,
+                    "name": "최경자",
+                    "phone": "010-025-7876",
+                    "age": 48,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 7660,
+                    "name": "박수진",
+                    "phone": "010-044-9748",
+                    "age": 26,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 7772,
+                    "name": "르탄이",
+                    "phone": "010-123-5986",
+                    "age": 40,
+                    "region": "서울특별시 송파구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_4_0",
+                    "groupTransactionDate": "2020-02-11T16:18:09",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_1",
+                    "groupTransactionDate": "2025-01-18T13:00:01",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_2",
+                    "groupTransactionDate": "2022-05-06T21:34:15",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_3",
+                    "groupTransactionDate": "2023-12-21T08:18:17",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_4",
+                    "groupTransactionDate": "2023-07-08T14:45:27",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_5",
+                    "groupTransactionDate": "2024-12-19T05:53:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_6",
+                    "groupTransactionDate": "2022-02-05T11:45:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_7",
+                    "groupTransactionDate": "2021-03-24T05:51:00",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_8",
+                    "groupTransactionDate": "2024-07-30T00:32:50",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_9",
+                    "groupTransactionDate": "2023-11-09T12:33:10",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_10",
+                    "groupTransactionDate": "2022-01-18T17:34:02",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_11",
+                    "groupTransactionDate": "2021-02-28T05:24:32",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_12",
+                    "groupTransactionDate": "2021-07-02T20:32:22",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_13",
+                    "groupTransactionDate": "2021-02-23T14:51:35",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_14",
+                    "groupTransactionDate": "2025-01-16T13:47:44",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_15",
+                    "groupTransactionDate": "2022-06-29T17:12:16",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_16",
+                    "groupTransactionDate": "2022-02-23T10:50:22",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_17",
+                    "groupTransactionDate": "2020-04-29T09:03:27",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_18",
+                    "groupTransactionDate": "2021-11-16T07:52:31",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_19",
+                    "groupTransactionDate": "2020-10-29T23:59:53",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_20",
+                    "groupTransactionDate": "2023-05-12T14:12:32",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_21",
+                    "groupTransactionDate": "2022-12-25T00:25:06",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_22",
+                    "groupTransactionDate": "2020-10-14T22:25:59",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_23",
+                    "groupTransactionDate": "2022-04-13T05:03:05",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_24",
+                    "groupTransactionDate": "2023-03-17T14:34:25",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_25",
+                    "groupTransactionDate": "2024-08-12T22:34:06",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_26",
+                    "groupTransactionDate": "2020-12-26T07:49:24",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_27",
+                    "groupTransactionDate": "2024-05-12T22:27:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_28",
+                    "groupTransactionDate": "2021-02-11T11:47:29",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_29",
+                    "groupTransactionDate": "2024-04-27T03:21:19",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_30",
+                    "groupTransactionDate": "2023-09-28T09:33:50",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_31",
+                    "groupTransactionDate": "2021-10-21T12:51:11",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_32",
+                    "groupTransactionDate": "2020-11-16T17:29:50",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_33",
+                    "groupTransactionDate": "2024-03-23T13:30:53",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_34",
+                    "groupTransactionDate": "2024-02-17T01:24:12",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_35",
+                    "groupTransactionDate": "2020-01-21T13:11:57",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_36",
+                    "groupTransactionDate": "2022-05-09T16:01:54",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_37",
+                    "groupTransactionDate": "2023-04-01T15:28:45",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_38",
+                    "groupTransactionDate": "2021-07-18T12:06:40",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_39",
+                    "groupTransactionDate": "2023-09-18T21:30:32",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_4_40",
+                    "groupTransactionDate": "2022-09-23T05:35:24",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_41",
+                    "groupTransactionDate": "2023-12-10T19:39:37",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_4_42",
+                    "groupTransactionDate": "2023-10-18T13:02:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                }
+            ]
+        },
+        {
+            "name": "주말 등산 모임",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 2575,
+                    "name": "최상철",
+                    "phone": "010-996-8681",
+                    "age": 31,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 7006,
+                    "name": "이정자",
+                    "phone": "010-671-2575",
+                    "age": 50,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 2292,
+                    "name": "최수빈",
+                    "phone": "010-468-7478",
+                    "age": 50,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 5702,
+                    "name": "허상훈",
+                    "phone": "010-099-5040",
+                    "age": 26,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 3263,
+                    "name": "송지원",
+                    "phone": "010-330-1705",
+                    "age": 46,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 4184,
+                    "name": "이성훈",
+                    "phone": "010-444-5992",
+                    "age": 23,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 4667,
+                    "name": "이서현",
+                    "phone": "010-326-1046",
+                    "age": 38,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 4631,
+                    "name": "김영숙",
+                    "phone": "010-5004-4516",
+                    "age": 37,
+                    "region": "경상남도 진주시"
+                },
+                {
+                    "groupMemberId": 8272,
+                    "name": "박준혁",
+                    "phone": "010-227-9306",
+                    "age": 20,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 7286,
+                    "name": "강예원",
+                    "phone": "010-2864-9592",
+                    "age": 46,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 6061,
+                    "name": "르탄이",
+                    "phone": "010-803-8073",
+                    "age": 39,
+                    "region": "서울특별시 강남구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_5_0",
+                    "groupTransactionDate": "2022-04-01T01:25:09",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_1",
+                    "groupTransactionDate": "2021-12-22T22:50:37",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_2",
+                    "groupTransactionDate": "2022-09-27T09:27:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_3",
+                    "groupTransactionDate": "2022-10-29T09:40:11",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_4",
+                    "groupTransactionDate": "2020-04-25T23:32:15",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_5",
+                    "groupTransactionDate": "2023-02-06T23:52:01",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_6",
+                    "groupTransactionDate": "2021-04-28T12:33:34",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_7",
+                    "groupTransactionDate": "2021-03-18T05:33:52",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_8",
+                    "groupTransactionDate": "2023-12-15T14:29:08",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_9",
+                    "groupTransactionDate": "2024-01-12T14:28:29",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_10",
+                    "groupTransactionDate": "2022-12-08T20:59:25",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_11",
+                    "groupTransactionDate": "2022-10-13T09:12:43",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_12",
+                    "groupTransactionDate": "2021-11-02T14:01:08",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_13",
+                    "groupTransactionDate": "2020-05-17T21:49:02",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_14",
+                    "groupTransactionDate": "2023-03-12T19:17:59",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_15",
+                    "groupTransactionDate": "2024-05-11T21:51:35",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_16",
+                    "groupTransactionDate": "2024-02-22T05:43:02",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_17",
+                    "groupTransactionDate": "2021-08-17T22:18:30",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_18",
+                    "groupTransactionDate": "2022-01-22T15:44:24",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_19",
+                    "groupTransactionDate": "2022-06-15T09:03:12",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_20",
+                    "groupTransactionDate": "2020-11-11T07:51:25",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_21",
+                    "groupTransactionDate": "2022-10-03T12:14:00",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_22",
+                    "groupTransactionDate": "2024-11-03T23:23:14",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_23",
+                    "groupTransactionDate": "2021-08-08T17:17:11",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_24",
+                    "groupTransactionDate": "2020-06-05T22:39:22",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_25",
+                    "groupTransactionDate": "2024-11-24T06:11:51",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_26",
+                    "groupTransactionDate": "2023-02-04T17:20:07",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_27",
+                    "groupTransactionDate": "2023-07-25T10:59:40",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_28",
+                    "groupTransactionDate": "2023-06-22T10:30:03",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_29",
+                    "groupTransactionDate": "2022-01-22T15:38:45",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_30",
+                    "groupTransactionDate": "2024-02-04T05:04:05",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_31",
+                    "groupTransactionDate": "2021-06-19T09:39:34",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_5_32",
+                    "groupTransactionDate": "2024-12-28T18:23:29",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_33",
+                    "groupTransactionDate": "2022-06-09T18:49:49",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_5_34",
+                    "groupTransactionDate": "2022-05-04T22:10:19",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                }
+            ]
+        },
+        {
+            "name": "카투사 14군번 모임",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 5472,
+                    "name": "이도윤",
+                    "phone": "010-247-7708",
+                    "age": 47,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 7552,
+                    "name": "김현우",
+                    "phone": "010-563-2044",
+                    "age": 28,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 6303,
+                    "name": "최서연",
+                    "phone": "010-964-5751",
+                    "age": 37,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 7131,
+                    "name": "장보람",
+                    "phone": "010-294-2400",
+                    "age": 26,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 6941,
+                    "name": "김지영",
+                    "phone": "010-737-2676",
+                    "age": 21,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 3611,
+                    "name": "권시우",
+                    "phone": "010-834-3780",
+                    "age": 38,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 4400,
+                    "name": "주현준",
+                    "phone": "010-726-1095",
+                    "age": 39,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 5544,
+                    "name": "우미경",
+                    "phone": "010-878-0751",
+                    "age": 35,
+                    "region": "경상남도 진주시"
+                },
+                {
+                    "groupMemberId": 9705,
+                    "name": "이보람",
+                    "phone": "010-414-8534",
+                    "age": 46,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 7065,
+                    "name": "르탄이",
+                    "phone": "010-617-6299",
+                    "age": 45,
+                    "region": "경상남도 진주시"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_6_0",
+                    "groupTransactionDate": "2022-10-09T13:05:49",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_1",
+                    "groupTransactionDate": "2024-05-18T10:04:45",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_2",
+                    "groupTransactionDate": "2021-03-26T16:37:31",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_3",
+                    "groupTransactionDate": "2024-09-10T23:46:58",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_4",
+                    "groupTransactionDate": "2023-09-08T18:02:43",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_5",
+                    "groupTransactionDate": "2023-01-23T15:01:13",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_6",
+                    "groupTransactionDate": "2023-10-24T20:53:51",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_7",
+                    "groupTransactionDate": "2023-01-13T05:05:28",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_8",
+                    "groupTransactionDate": "2023-04-09T03:20:05",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_9",
+                    "groupTransactionDate": "2020-11-14T05:31:19",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_10",
+                    "groupTransactionDate": "2023-03-14T07:27:50",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_11",
+                    "groupTransactionDate": "2024-12-30T19:20:55",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_12",
+                    "groupTransactionDate": "2021-06-14T19:24:52",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_13",
+                    "groupTransactionDate": "2023-05-02T00:36:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_14",
+                    "groupTransactionDate": "2023-06-10T04:31:47",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_15",
+                    "groupTransactionDate": "2022-04-01T06:12:35",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_16",
+                    "groupTransactionDate": "2020-08-12T11:09:30",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_17",
+                    "groupTransactionDate": "2020-08-01T17:49:18",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_18",
+                    "groupTransactionDate": "2020-03-14T22:33:38",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_19",
+                    "groupTransactionDate": "2023-09-28T12:49:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_20",
+                    "groupTransactionDate": "2021-08-06T18:16:19",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_21",
+                    "groupTransactionDate": "2021-06-16T15:15:27",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_22",
+                    "groupTransactionDate": "2022-07-24T23:34:29",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_23",
+                    "groupTransactionDate": "2020-12-01T20:14:49",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_24",
+                    "groupTransactionDate": "2020-12-16T22:23:57",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_25",
+                    "groupTransactionDate": "2020-09-02T05:13:20",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_26",
+                    "groupTransactionDate": "2023-08-17T03:48:13",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_27",
+                    "groupTransactionDate": "2022-04-19T05:23:49",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_28",
+                    "groupTransactionDate": "2022-08-13T09:53:00",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_29",
+                    "groupTransactionDate": "2024-01-05T19:58:23",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_30",
+                    "groupTransactionDate": "2023-06-03T20:08:23",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_31",
+                    "groupTransactionDate": "2024-12-12T22:28:26",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_32",
+                    "groupTransactionDate": "2023-08-21T14:18:19",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_33",
+                    "groupTransactionDate": "2024-08-24T20:16:40",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_34",
+                    "groupTransactionDate": "2023-08-26T01:53:47",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_35",
+                    "groupTransactionDate": "2021-03-19T13:29:32",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_36",
+                    "groupTransactionDate": "2021-10-19T07:32:21",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_37",
+                    "groupTransactionDate": "2022-02-09T13:44:54",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_38",
+                    "groupTransactionDate": "2020-01-20T12:29:50",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_39",
+                    "groupTransactionDate": "2022-10-13T19:15:28",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_6_40",
+                    "groupTransactionDate": "2022-05-18T19:00:36",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_41",
+                    "groupTransactionDate": "2023-09-21T16:13:25",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_6_42",
+                    "groupTransactionDate": "2020-06-10T12:32:46",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                }
+            ]
+        },
+        {
+            "name": "연남동 자영업 모임",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 4696,
+                    "name": "김춘자",
+                    "phone": "010-760-4630",
+                    "age": 28,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 8278,
+                    "name": "이영순",
+                    "phone": "010-7082-1857",
+                    "age": 46,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 6039,
+                    "name": "양민재",
+                    "phone": "010-449-3205",
+                    "age": 28,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 7105,
+                    "name": "이민준",
+                    "phone": "010-573-9667",
+                    "age": 26,
+                    "region": "경상남도 창원시"
+                },
+                {
+                    "groupMemberId": 5332,
+                    "name": "박민석",
+                    "phone": "010-850-4599",
+                    "age": 45,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 5380,
+                    "name": "르탄이",
+                    "phone": "010-198-0162",
+                    "age": 43,
+                    "region": "서울특별시 송파구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_7_0",
+                    "groupTransactionDate": "2021-11-10T22:19:47",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_1",
+                    "groupTransactionDate": "2020-11-10T16:58:13",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_2",
+                    "groupTransactionDate": "2023-10-06T21:02:15",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_3",
+                    "groupTransactionDate": "2022-03-29T23:59:15",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_4",
+                    "groupTransactionDate": "2023-07-03T14:00:29",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_5",
+                    "groupTransactionDate": "2023-01-16T04:31:11",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_6",
+                    "groupTransactionDate": "2020-09-18T06:31:34",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_7",
+                    "groupTransactionDate": "2021-10-04T23:53:34",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_8",
+                    "groupTransactionDate": "2021-08-10T14:12:55",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_9",
+                    "groupTransactionDate": "2021-10-12T13:27:43",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_10",
+                    "groupTransactionDate": "2023-03-19T04:14:04",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_11",
+                    "groupTransactionDate": "2022-06-18T00:03:01",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_12",
+                    "groupTransactionDate": "2023-08-06T08:44:08",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_13",
+                    "groupTransactionDate": "2020-11-13T22:29:55",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_14",
+                    "groupTransactionDate": "2024-04-27T12:24:41",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_15",
+                    "groupTransactionDate": "2025-01-02T08:02:55",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_16",
+                    "groupTransactionDate": "2020-06-17T23:37:51",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_17",
+                    "groupTransactionDate": "2022-02-11T19:40:45",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_18",
+                    "groupTransactionDate": "2021-01-05T09:02:22",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_19",
+                    "groupTransactionDate": "2020-04-14T21:57:53",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_20",
+                    "groupTransactionDate": "2022-08-07T16:00:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_21",
+                    "groupTransactionDate": "2021-09-05T04:35:33",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_22",
+                    "groupTransactionDate": "2020-09-15T09:22:58",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_23",
+                    "groupTransactionDate": "2021-01-04T11:38:28",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_24",
+                    "groupTransactionDate": "2021-07-28T19:49:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_25",
+                    "groupTransactionDate": "2023-04-13T22:02:08",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_26",
+                    "groupTransactionDate": "2020-11-05T23:55:10",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_27",
+                    "groupTransactionDate": "2020-07-04T00:02:06",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_28",
+                    "groupTransactionDate": "2020-04-22T18:05:46",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_29",
+                    "groupTransactionDate": "2020-08-31T10:10:05",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_30",
+                    "groupTransactionDate": "2020-11-10T08:09:17",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_31",
+                    "groupTransactionDate": "2024-07-02T00:11:31",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_32",
+                    "groupTransactionDate": "2020-03-29T15:40:45",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_33",
+                    "groupTransactionDate": "2023-05-31T21:39:52",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_7_34",
+                    "groupTransactionDate": "2022-07-14T19:20:36",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_35",
+                    "groupTransactionDate": "2023-08-22T08:18:42",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_36",
+                    "groupTransactionDate": "2022-01-28T23:31:53",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_37",
+                    "groupTransactionDate": "2022-03-11T06:12:21",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_7_38",
+                    "groupTransactionDate": "2020-02-21T12:50:32",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                }
+            ]
+        },
+        {
+            "name": "자산 운용가 모임",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 2447,
+                    "name": "김경희",
+                    "phone": "010-417-6247",
+                    "age": 28,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 2109,
+                    "name": "윤영희",
+                    "phone": "010-177-5416",
+                    "age": 41,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 5238,
+                    "name": "서아름",
+                    "phone": "010-257-3108",
+                    "age": 36,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 4720,
+                    "name": "박정수",
+                    "phone": "010-608-2168",
+                    "age": 37,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 3043,
+                    "name": "오진우",
+                    "phone": "010-270-7455",
+                    "age": 25,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 2003,
+                    "name": "김미정",
+                    "phone": "010-818-5424",
+                    "age": 32,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 9369,
+                    "name": "오정훈",
+                    "phone": "010-9982-8389",
+                    "age": 50,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 4743,
+                    "name": "이영자",
+                    "phone": "010-084-6661",
+                    "age": 21,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 2485,
+                    "name": "정정희",
+                    "phone": "010-922-8252",
+                    "age": 25,
+                    "region": "경상남도 진주시"
+                },
+                {
+                    "groupMemberId": 6675,
+                    "name": "김혜진",
+                    "phone": "010-365-9926",
+                    "age": 44,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 7222,
+                    "name": "르탄이",
+                    "phone": "010-831-8628",
+                    "age": 22,
+                    "region": "서울특별시 서초구"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_8_0",
+                    "groupTransactionDate": "2021-02-28T04:38:16",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_1",
+                    "groupTransactionDate": "2023-06-13T09:30:36",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_2",
+                    "groupTransactionDate": "2023-10-01T15:31:20",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_3",
+                    "groupTransactionDate": "2020-12-28T15:39:24",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_4",
+                    "groupTransactionDate": "2024-04-25T06:47:25",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_5",
+                    "groupTransactionDate": "2024-10-07T23:59:37",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_6",
+                    "groupTransactionDate": "2024-01-07T20:05:15",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_7",
+                    "groupTransactionDate": "2021-03-16T17:14:02",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_8",
+                    "groupTransactionDate": "2021-08-12T17:56:09",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_9",
+                    "groupTransactionDate": "2024-05-30T09:16:57",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_10",
+                    "groupTransactionDate": "2020-12-21T09:57:07",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_11",
+                    "groupTransactionDate": "2020-11-05T12:34:24",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_12",
+                    "groupTransactionDate": "2022-08-14T23:47:58",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_13",
+                    "groupTransactionDate": "2021-03-02T00:55:28",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_14",
+                    "groupTransactionDate": "2021-01-10T15:03:20",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_15",
+                    "groupTransactionDate": "2024-09-08T21:00:45",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_16",
+                    "groupTransactionDate": "2021-12-08T04:18:33",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_17",
+                    "groupTransactionDate": "2024-12-07T09:58:25",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_18",
+                    "groupTransactionDate": "2023-09-17T22:51:39",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_19",
+                    "groupTransactionDate": "2021-11-19T11:38:35",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_20",
+                    "groupTransactionDate": "2021-02-22T17:10:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_21",
+                    "groupTransactionDate": "2023-02-06T01:07:48",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_22",
+                    "groupTransactionDate": "2021-06-01T11:55:23",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_23",
+                    "groupTransactionDate": "2024-10-08T09:56:49",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_24",
+                    "groupTransactionDate": "2022-03-15T15:11:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_25",
+                    "groupTransactionDate": "2023-10-12T16:06:09",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_26",
+                    "groupTransactionDate": "2023-02-04T21:24:47",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_27",
+                    "groupTransactionDate": "2023-07-30T17:40:48",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_28",
+                    "groupTransactionDate": "2023-11-19T08:48:50",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_29",
+                    "groupTransactionDate": "2020-07-25T00:22:22",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_8_30",
+                    "groupTransactionDate": "2023-11-13T21:01:01",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_31",
+                    "groupTransactionDate": "2024-01-28T08:22:28",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_8_32",
+                    "groupTransactionDate": "2020-11-19T15:58:38",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "경조사비 메모",
+                    "groupTransactionIsReceived": true
+                }
+            ]
+        },
+        {
+            "name": "수도권 자산 운용가 모임 10기",
+            "description": "르탄이 님의 그룹 설명입니다.",
+            "members": [
+                {
+                    "groupMemberId": 6270,
+                    "name": "이병철",
+                    "phone": "017-054-1847",
+                    "age": 39,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 2327,
+                    "name": "조경자",
+                    "phone": "044-084-6014",
+                    "age": 22,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 8672,
+                    "name": "김서영",
+                    "phone": "033-062-0152",
+                    "age": 25,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 8801,
+                    "name": "김하윤",
+                    "phone": "064-711-6153",
+                    "age": 46,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 5345,
+                    "name": "권지훈",
+                    "phone": "032-140-7536",
+                    "age": 40,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 1315,
+                    "name": "김지원",
+                    "phone": "02-8302-7516",
+                    "age": 48,
+                    "region": "서울특별시 강남구"
+                },
+                {
+                    "groupMemberId": 8268,
+                    "name": "최정웅",
+                    "phone": "019-633-3671",
+                    "age": 26,
+                    "region": "서울특별시 송파구"
+                },
+                {
+                    "groupMemberId": 2617,
+                    "name": "박병철",
+                    "phone": "042-142-3032",
+                    "age": 22,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 8512,
+                    "name": "송미경",
+                    "phone": "052-806-6935",
+                    "age": 38,
+                    "region": "경상남도 진주시"
+                },
+                {
+                    "groupMemberId": 2469,
+                    "name": "배은정",
+                    "phone": "064-715-6092",
+                    "age": 29,
+                    "region": "서울특별시 서초구"
+                },
+                {
+                    "groupMemberId": 5292,
+                    "name": "김영순",
+                    "phone": "055-242-3012",
+                    "age": 27,
+                    "region": "서울특별시 종로구"
+                },
+                {
+                    "groupMemberId": 6269,
+                    "name": "이상철",
+                    "phone": "044-862-2147",
+                    "age": 21,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 8615,
+                    "name": "이정훈",
+                    "phone": "010-0782-1730",
+                    "age": 42,
+                    "region": "경상남도 김해시"
+                },
+                {
+                    "groupMemberId": 4186,
+                    "name": "김지은",
+                    "phone": "062-031-8937",
+                    "age": 48,
+                    "region": "서울특별시 마포구"
+                },
+                {
+                    "groupMemberId": 8480,
+                    "name": "르탄이",
+                    "phone": "033-075-0512",
+                    "age": 41,
+                    "region": "경상남도 창원시"
+                }
+            ],
+            "transactions": [
+                {
+                    "groupTransactionId": "txn_9_0",
+                    "groupTransactionDate": "2020-07-27T00:08:21",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quos labore harum minima sequi enim.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_1",
+                    "groupTransactionDate": "2020-05-21T08:18:38",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Impedit itaque officiis mollitia quasi a.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_2",
+                    "groupTransactionDate": "2024-08-07T04:51:51",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Accusamus possimus magnam illo explicabo saepe.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_3",
+                    "groupTransactionDate": "2022-05-05T22:39:05",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Facilis fugit debitis quis facere doloremque.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_4",
+                    "groupTransactionDate": "2023-06-02T08:56:01",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Ullam commodi sequi ex a aut.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_5",
+                    "groupTransactionDate": "2024-09-02T12:23:05",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Rem ipsum praesentium explicabo ab exercitationem.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_6",
+                    "groupTransactionDate": "2022-07-24T17:59:43",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Facere recusandae libero fugit.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_7",
+                    "groupTransactionDate": "2022-07-29T03:45:49",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Harum eaque eaque deleniti blanditiis aperiam libero non.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_8",
+                    "groupTransactionDate": "2024-01-03T02:24:31",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Occaecati eum molestias odit dolorem mollitia natus.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_9",
+                    "groupTransactionDate": "2024-09-28T04:11:36",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Reiciendis quae animi temporibus similique quasi.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_10",
+                    "groupTransactionDate": "2024-11-12T22:14:13",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Doloremque delectus maxime quaerat beatae.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_11",
+                    "groupTransactionDate": "2023-02-09T22:56:38",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Sunt voluptas totam nemo.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_12",
+                    "groupTransactionDate": "2021-11-01T00:04:08",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Iste sunt voluptas totam quasi quae commodi.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_13",
+                    "groupTransactionDate": "2024-02-20T19:00:26",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Ab fugiat pariatur rem fugit.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_14",
+                    "groupTransactionDate": "2021-08-07T08:33:11",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Temporibus deleniti quo dolorem voluptatum tempore dolorum iste.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_15",
+                    "groupTransactionDate": "2022-11-05T00:42:35",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quaerat error officia aliquid illum.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_16",
+                    "groupTransactionDate": "2021-08-22T07:50:50",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Nostrum beatae dolore et quis corporis.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_17",
+                    "groupTransactionDate": "2024-10-23T12:26:23",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Quas omnis ipsa.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_18",
+                    "groupTransactionDate": "2021-05-17T06:14:17",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Magnam id et aperiam perferendis.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_19",
+                    "groupTransactionDate": "2020-05-24T10:08:37",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Commodi deleniti praesentium.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_20",
+                    "groupTransactionDate": "2020-08-15T21:01:31",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Natus minima consectetur tenetur tempora reiciendis consequatur eos.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_21",
+                    "groupTransactionDate": "2023-01-13T04:21:46",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quisquam dolores voluptatibus reiciendis vero corporis.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_22",
+                    "groupTransactionDate": "2024-02-15T19:17:54",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Amet commodi provident.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_23",
+                    "groupTransactionDate": "2024-01-23T07:39:06",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Ipsa nulla dolor aspernatur soluta placeat fugiat.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_24",
+                    "groupTransactionDate": "2021-06-19T04:34:38",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Voluptatem cupiditate tempora sequi sequi.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_25",
+                    "groupTransactionDate": "2020-07-18T15:20:54",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Iste officia velit tenetur fugit iure nemo.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_26",
+                    "groupTransactionDate": "2020-12-28T11:09:02",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quos incidunt porro.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_27",
+                    "groupTransactionDate": "2023-01-18T13:09:00",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Sapiente totam nostrum illum vel.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_28",
+                    "groupTransactionDate": "2024-06-01T18:57:02",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Expedita accusamus reprehenderit nesciunt facilis voluptatibus.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_29",
+                    "groupTransactionDate": "2021-04-19T20:45:37",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Ducimus eaque tempore earum autem.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_30",
+                    "groupTransactionDate": "2023-09-24T18:34:16",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Est aliquam placeat earum sequi consequatur quae commodi.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_31",
+                    "groupTransactionDate": "2023-08-28T14:49:14",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Nesciunt alias laboriosam dicta.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_32",
+                    "groupTransactionDate": "2022-07-20T08:36:27",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Blanditiis placeat alias ipsum sequi tempore eum.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_33",
+                    "groupTransactionDate": "2021-07-05T07:18:56",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Eaque molestias molestiae deleniti cum explicabo.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_34",
+                    "groupTransactionDate": "2021-03-06T03:49:36",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Consequuntur odio officiis velit delectus libero animi.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_35",
+                    "groupTransactionDate": "2023-01-17T08:23:56",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Esse porro quos voluptate eum adipisci possimus.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_36",
+                    "groupTransactionDate": "2020-03-26T22:30:34",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Veniam excepturi dolores nobis molestiae dolorum.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_37",
+                    "groupTransactionDate": "2021-10-21T15:59:27",
+                    "groupTransactionEventType": "생일",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Perspiciatis suscipit laudantium perspiciatis aut alias atque recusandae.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_38",
+                    "groupTransactionDate": "2020-05-10T01:28:25",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quos adipisci molestiae harum.",
+                    "groupTransactionIsReceived": true
+                },
+                {
+                    "groupTransactionId": "txn_9_39",
+                    "groupTransactionDate": "2022-04-25T22:38:20",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 100000,
+                    "groupTransactionMemo": "Nihil magni quaerat officia deleniti.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_40",
+                    "groupTransactionDate": "2021-08-24T12:29:34",
+                    "groupTransactionEventType": "결혼",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Eos quaerat enim alias mollitia sed.",
+                    "groupTransactionIsReceived": false
+                },
+                {
+                    "groupTransactionId": "txn_9_41",
+                    "groupTransactionDate": "2024-02-05T22:57:18",
+                    "groupTransactionEventType": "장례",
+                    "groupTransactionAmount": 50000,
+                    "groupTransactionMemo": "Quis beatae non quod nihil quibusdam voluptatibus error.",
+                    "groupTransactionIsReceived": false
+                }
+            ]
+        }
+    ]
+}
