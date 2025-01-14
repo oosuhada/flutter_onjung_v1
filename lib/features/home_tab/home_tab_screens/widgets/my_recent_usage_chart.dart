@@ -1,6 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/data/statistics_models.dart';
+import 'package:flutter_onjung_v1/data/home_tab/statistics_models.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tabbed_screen.dart';
 
 class RecentUsageChart extends StatelessWidget {
