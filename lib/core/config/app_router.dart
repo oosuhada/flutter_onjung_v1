@@ -1,10 +1,11 @@
-// lib/core/routes/app_router.dart
+import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/features/address_tab/screens/address_tab_screen.dart';
+import 'package:flutter_onjung_v1/features/address_tab/screens/member_detail_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/my_onjung_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/onjung_statistics_screen.dart';
-import 'package:flutter_onjung_v1/features/main_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/loading_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/onboarding_screen.dart';
@@ -19,89 +20,151 @@ enum AppRoute {
   login('/login'),
   terms('/terms'),
   signup('/signup'),
-  main('/main'),
-  home('/main/home'),
-  myOnjung('/main/myOnjung'),
-  onjungStatistics('/main/onjungStatistics'),
-  address('/main/address'),
-  calendar('/main/calendar'),
-  onjung('/main/onjung');
+  home('/home'),
+  myOnjung('/myOnjung'),
+  onjungStatistics('/onjungStatistics'),
+  address('/address'),
+  calendar('/calendar'),
+  onjung('/onjung'),
+  amountInput('/amountInput'),
+  memberDetail('/memberDetail');
 
-  final String path; // 경로 정보를 저장
+  final String path;
   const AppRoute(this.path);
 }
 
+// 라우터 설정
 final goRouter = GoRouter(
-  initialLocation: AppRoute.loading.path, // 로딩 화면으로 초기 경로 설정
+  initialLocation: AppRoute.loading.path,
+  debugLogDiagnostics: true,
   routes: [
     GoRoute(
       path: AppRoute.loading.path,
       name: AppRoute.loading.name,
-      builder: (context, state) => const LoadingScreen(),
+      builder: (context, state) {
+        debugPrint('🚀 LoadingScreen으로 이동 - state: $state');
+        return const LoadingScreen();
+      },
     ),
     GoRoute(
       path: AppRoute.onboarding.path,
       name: AppRoute.onboarding.name,
-      builder: (context, state) => const OnboardingScreen(),
+      builder: (context, state) {
+        debugPrint('🚀 OnboardingScreen으로 이동 - state: $state');
+        return const OnboardingScreen();
+      },
     ),
     GoRoute(
       path: AppRoute.login.path,
       name: AppRoute.login.name,
-      builder: (context, state) => const LoginScreen(),
+      builder: (context, state) {
+        debugPrint('🚀 LoginScreen으로 이동 - state: $state');
+        return const LoginScreen();
+      },
     ),
     GoRoute(
       path: AppRoute.terms.path,
       name: AppRoute.terms.name,
-      builder: (context, state) => const TermsAndConditionsDialog(),
+      builder: (context, state) {
+        debugPrint('🚀 TermsAndConditionsDialog로 이동 - state: $state');
+        return const TermsAndConditionsDialog();
+      },
     ),
     GoRoute(
       path: AppRoute.signup.path,
       name: AppRoute.signup.name,
-      builder: (context, state) => const SignUpScreen(),
+      builder: (context, state) {
+        debugPrint('🚀 SignUpScreen으로 이동 - state: $state');
+        return const SignUpScreen();
+      },
     ),
     GoRoute(
-      path: AppRoute.main.path,
-      name: AppRoute.main.name,
+      path: AppRoute.home.path,
+      name: AppRoute.home.name,
+      builder: (context, state) => const HomeTabScreen(),
+      pageBuilder: (context, state) => CustomTransitionPage(
+        child: const HomeTabScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+      ),
+    ),
+    GoRoute(
+      path: AppRoute.myOnjung.path,
+      name: AppRoute.myOnjung.name,
       builder: (context, state) {
-        // 전달받은 extra에서 initialIndex를 추출
-        final initialIndex = state.extra is Map<String, dynamic>
-            ? (state.extra as Map<String, dynamic>)['initialIndex'] as int? ?? 0
-            : 0;
-
-        return MainScreen(initialIndex: initialIndex);
+        debugPrint('🚀 MyOnjungScreen으로 이동 - state: $state');
+        return const MyOnjungScreen();
       },
-      routes: [
-        GoRoute(
-          path: AppRoute.home.path.replaceFirst('/main', ''), // 상대 경로 사용
-          name: AppRoute.home.name,
-          builder: (context, state) => const HomeTabScreen(),
-        ),
-        GoRoute(
-          path: AppRoute.myOnjung.path.replaceFirst('/main', ''),
-          name: AppRoute.myOnjung.name,
-          builder: (context, state) => const MyOnjungScreen(),
-        ),
-        GoRoute(
-          path: AppRoute.onjungStatistics.path.replaceFirst('/main', ''),
-          name: AppRoute.onjungStatistics.name,
-          builder: (context, state) => OnjungStatisticsScreen(),
-        ),
-        GoRoute(
-          path: AppRoute.address.path.replaceFirst('/main', ''),
-          name: AppRoute.address.name,
-          builder: (context, state) => const AddressTabScreen(),
-        ),
-        GoRoute(
-          path: AppRoute.calendar.path.replaceFirst('/main', ''),
-          name: AppRoute.calendar.name,
-          builder: (context, state) => const CalendarTabScreen(),
-        ),
-        GoRoute(
-          path: AppRoute.onjung.path.replaceFirst('/main', ''),
-          name: AppRoute.onjung.name,
-          builder: (context, state) => const OnjungTabScreen(),
-        ),
-      ],
+    ),
+    GoRoute(
+      path: AppRoute.onjungStatistics.path,
+      name: AppRoute.onjungStatistics.name,
+      builder: (context, state) {
+        debugPrint('🚀 OnjungStatisticsScreen으로 이동 - state: $state');
+        return OnjungStatisticsScreen();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.address.path,
+      name: AppRoute.address.name,
+      builder: (context, state) => const AddressTabScreen(),
+      pageBuilder: (context, state) => CustomTransitionPage(
+        child: const AddressTabScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+      ),
+    ),
+    GoRoute(
+      path: AppRoute.calendar.path,
+      name: AppRoute.calendar.name,
+      builder: (context, state) => const CalendarTabScreen(),
+      pageBuilder: (context, state) => CustomTransitionPage(
+        child: const CalendarTabScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+      ),
+    ),
+    GoRoute(
+      path: AppRoute.onjung.path,
+      name: AppRoute.onjung.name,
+      builder: (context, state) => const OnjungTabScreen(),
+      pageBuilder: (context, state) => CustomTransitionPage(
+        child: const OnjungTabScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+      ),
+    ),
+    GoRoute(
+      path: AppRoute.amountInput.path,
+      name: AppRoute.amountInput.name,
+      builder: (context, state) {
+        debugPrint('🚀 AmountInputScreen으로 이동 - state: $state');
+        return const AmountInputScreen();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.memberDetail.path,
+      name: AppRoute.memberDetail.name,
+      builder: (context, state) {
+        debugPrint('🚀 MemberDetailScreen으로 이동 - state: $state');
+        return const MemberDetailScreen();
+      },
     ),
   ],
 );
