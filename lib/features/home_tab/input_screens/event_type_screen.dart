@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/services/database_provider.dart';
-import 'package:flutter_onjung_v1/data/gift_record.dart';
+import 'package:flutter_onjung_v1/data/home_tab/payment_record.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/date_selection_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class EventTypeScreen extends StatefulWidget {
   final int amount;
@@ -68,12 +69,20 @@ class _EventTypeScreenState extends State<EventTypeScreen> {
       return;
     }
 
-    final record = GiftRecord(
+    // ID 생성 (예: UUID 또는 특정 규칙에 따라 생성)
+    final String recordId =
+        DateTime.now().millisecondsSinceEpoch.toString(); // 임시 ID 생성 방식
+    final PaymentMethod method =
+        PaymentMethod.cash; // 사용 가능한 결제 수단으로 설정 (예: cash)
+
+    final record = PaymentRecord(
+      id: recordId, // 필수 매개변수 id 추가
+      receiverName: widget.receiverName, // 필수 매개변수 receiverName 추가
       amount: widget.amount,
-      receiverName: widget.receiverName,
       isSent: widget.isSent,
       eventType: selectedEvent!,
       date: selectedDate,
+      method: method, // 필수 매개변수 method 추가
       didVisit: null,
       gift: null,
       memo: null,
@@ -98,8 +107,7 @@ class _EventTypeScreenState extends State<EventTypeScreen> {
 
       debugPrint('메인 화면으로 이동 시도');
       if (context.mounted) {
-        // 방법 1: Navigator.popUntil 사용
-        Navigator.of(context).popUntil((route) => route.isFirst);
+        context.go('/home'); // 홈 화면으로 직접 이동
         debugPrint('메인 화면으로 이동 완료 (popUntil)');
 
         // 또는 방법 2: go + pushReplacement 사용
