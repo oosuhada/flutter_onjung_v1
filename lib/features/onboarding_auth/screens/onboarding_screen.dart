@@ -56,7 +56,7 @@ class OnboardingScreen extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.orange[800],
                         minimumSize: const Size(double.infinity, 48),
                       ),
                       child: const Text("로그인"),

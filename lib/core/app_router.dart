@@ -1,9 +1,9 @@
 // lib/core/routes/app_router.dart
 import 'package:flutter_onjung_v1/features/address_tab/screens/address_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
-import 'package:flutter_onjung_v1/features/home_tab/screens/home_tab_screen.dart';
-import 'package:flutter_onjung_v1/features/home_tab/screens/my_onjung_screen.dart';
-import 'package:flutter_onjung_v1/features/home_tab/screens/onjung_average_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/my_onjung_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/onjung_statistics_screen.dart';
 import 'package:flutter_onjung_v1/features/main_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/loading_screen.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
@@ -23,7 +23,7 @@ enum AppRoute {
   //홈탭
   home,
   myOnjung, // 나의 온정
-  onjungAverage, // 온정 평균
+  onjungStatistics, // 온정 평균
   //주소록탭
   address,
   //캘린더탭
@@ -76,9 +76,9 @@ final goRouter = GoRouter(
       builder: (context, state) => const MyOnjungScreen(),
     ),
     GoRoute(
-      path: '/onjungAverage',
-      name: AppRoute.onjungAverage.name,
-      builder: (context, state) => const OnjungAverageScreen(),
+      path: '/onjungStatistics',
+      name: AppRoute.onjungStatistics.name,
+      builder: (context, state) => OnjungStatisticsScreen(),
     ),
     // 새로운 탭 라우트들 추가
     GoRoute(

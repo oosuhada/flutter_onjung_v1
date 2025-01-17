@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/%08shared/widgets/bottom_navigation_bar.dart';
 import 'package:flutter_onjung_v1/features/address_tab/screens/address_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
-import 'package:flutter_onjung_v1/features/home_tab/screens/home_tab_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/onjung_tab/screens/onjung_tab_screen.dart';
 
 class MainScreen extends StatefulWidget {
