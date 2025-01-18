@@ -1,12 +1,13 @@
 // home_tab_screen.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/data/statistics_models.dart'
+import 'package:flutter_onjung_v1/%08shared/widgets/bottom_navigation_bar.dart';
+import 'package:flutter_onjung_v1/data/home_tab/statistics_models.dart'
     as statistics_model;
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tabbed_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/my_recent_statistics_summary.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/my_recent_usage_chart.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/onjung_statistics_card.dart';
-import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeTabScreen extends StatefulWidget {
   const HomeTabScreen({Key? key}) : super(key: key);
@@ -61,6 +62,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('🏠 HomeTabScreen: Building HomeTabScreen');
     // 로딩 중일 때는 로딩 인디케이터 표시
     if (isLoading) {
       return const Scaffold(
@@ -71,19 +73,40 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
       body: _buildHomeContent(context),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // 빠른등록 버튼 클릭 시 금액 입력 스크린으로 이동
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AmountInputScreen(),
-            ),
-          );
+          debugPrint('FloatingActionButton pressed');
+          try {
+            debugPrint('Attempting to navigate to amount input screen...');
+
+            context.go('/amountInput'); // 올바른 경로로 이동
+            debugPrint('Navigation successful');
+          } catch (e) {
+            debugPrint('Navigation error occurred: $e');
+          }
         },
-        backgroundColor: Colors.orange[800], // 버튼 배경색
-        label: const Text('빠른등록', style: TextStyle(fontSize: 16.0)), // 버튼 텍스트
-        icon: const Icon(Icons.add), // 플러스 아이콘
+        backgroundColor: Colors.orange[800],
+        label: const Text('빠른등록', style: TextStyle(fontSize: 16.0)),
+        icon: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: 0, // 현재 탭 인덱스
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              context.go('/home');
+              break;
+            case 1:
+              context.go('/address');
+              break;
+            case 2:
+              context.go('/calendar');
+              break;
+            case 3:
+              context.go('/onjung');
+              break;
+          }
+        },
+      ),
     );
   }
 

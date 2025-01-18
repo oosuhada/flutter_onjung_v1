@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/event_type_screen.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 // 검색 결과를 위한 데이터 모델
@@ -146,7 +147,9 @@ class _AmountInputScreenState extends State<AmountInputScreen>
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            context.go('/home'); // 홈 화면으로 직접 이동
+          },
         ),
         bottom: TabBar(
           controller: _tabController,

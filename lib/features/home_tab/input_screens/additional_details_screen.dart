@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/services/database_provider.dart';
-import 'package:flutter_onjung_v1/data/gift_record.dart';
+import 'package:flutter_onjung_v1/data/home_tab/payment_record.dart';
 
 class AdditionalDetailsScreen extends StatefulWidget {
   final int amount; // 금액
@@ -39,16 +39,24 @@ class _AdditionalDetailsScreenState extends State<AdditionalDetailsScreen> {
   }
 
   Future<void> _saveRecord() async {
-    final record = GiftRecord(
+    // ID 생성 (예: UUID 또는 특정 규칙에 따라 생성)
+    final String recordId =
+        DateTime.now().millisecondsSinceEpoch.toString(); // 임시 ID 생성 방식
+    final PaymentMethod method =
+        PaymentMethod.cash; // 사용 가능한 결제 수단으로 설정 (예: cash)
+
+    final record = PaymentRecord(
+      id: recordId, // 필수 매개변수 id 추가
+      receiverName: widget.receiverName, // 필수 매개변수 receiverName 추가
       amount: widget.amount,
-      receiverName: widget.receiverName,
       isSent: widget.isSent,
       eventType: widget.eventType,
       date: widget.date,
-      didVisit: didVisit,
-      gift: giftController.text,
-      memo: memoController.text,
-      contact: contactController.text,
+      method: method, // 필수 매개변수 method 추가
+      didVisit: null,
+      gift: null,
+      memo: null,
+      contact: null,
     );
 
     try {

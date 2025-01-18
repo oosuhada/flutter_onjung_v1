@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/core/config/app_theme.dart';
+import 'package:flutter_onjung_v1/core/services/database_mobile.dart'; // MobileDatabaseHelper 추가
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
 
 void main() async {
   // async 추가
   // Flutter 엔진 초기화
   WidgetsFlutterBinding.ensureInitialized();
 
-  // SQLite 초기화
-  try {
-    final databasesPath = await getDatabasesPath();
-    debugPrint('SQLite 초기화 - 데이터베이스 경로: $databasesPath');
+// // 데이터베이스 삭제 개발용 코드
+//   await DatabaseProvider.instance.deleteDatabase();
 
-    // 데이터베이스 경로 확인
-    final path = join(databasesPath, 'gift_records.db');
-    debugPrint('데이터베이스 파일 경로: $path');
-  } catch (e) {
-    debugPrint('SQLite 초기화 중 오류 발생: $e');
+  // MobileDatabaseHelper 초기화 호출
+  try {
+    debugPrint('MobileDatabaseHelper 초기화 시작');
+    await MobileDatabaseHelper().initialize(); // 데이터베이스 초기화 명시적 호출
+    debugPrint('MobileDatabaseHelper 초기화 성공');
+  } catch (e, stackTrace) {
+    debugPrint('MobileDatabaseHelper 초기화 실패: $e');
+    debugPrint('스택트레이스: $stackTrace');
   }
 
   // ProviderScope로 앱을 감싸서 Riverpod 사용 가능하게 함
