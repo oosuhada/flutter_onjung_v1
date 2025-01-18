@@ -159,11 +159,12 @@ final goRouter = GoRouter(
       },
     ),
     GoRoute(
-      path: AppRoute.memberDetail.path,
-      name: AppRoute.memberDetail.name,
+      path: AppRoute.memberDetail.path, // '/members/:id'
+      name: AppRoute.memberDetail.name, // 'member-detail'
       builder: (context, state) {
+        final id = state.pathParameters['id'] ?? '';
         debugPrint('🚀 MemberDetailScreen으로 이동 - state: $state');
-        return const MemberDetailScreen();
+        return MemberDetailScreen();
       },
     ),
   ],
