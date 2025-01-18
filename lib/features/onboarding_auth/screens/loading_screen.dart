@@ -1,6 +1,6 @@
 // lib/features/splash/screens/loading_screen.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/core/app_router.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 

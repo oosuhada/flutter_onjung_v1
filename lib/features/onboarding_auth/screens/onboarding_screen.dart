@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/core/app_router.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/screens/terms_and_conditions_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/onboarding_view_widget.dart';
@@ -22,8 +22,11 @@ class OnboardingScreen extends StatelessWidget {
                   bottom: 32,
                   child: TextButton(
                     onPressed: () {
-                      // "둘러보기" 버튼 클릭 시 메인 화면으로 이동
-                      context.goNamed(AppRoute.main.name);
+                      // "둘러보기" 버튼 클릭 시 메인 화면의 0번째 인덱스로 이동
+                      context.goNamed(
+                        AppRoute.main.name,
+                        extra: {'initialIndex': 0}, // initialIndex를 명시적으로 전달
+                      );
                     },
                     child: const Text(
                       '둘러보기',

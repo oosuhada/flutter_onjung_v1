@@ -242,45 +242,53 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                   itemCount: filteredTransactions.length,
                   itemBuilder: (context, index) {
                     final transaction = filteredTransactions[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 24.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 2, // 이름이 조금 더 넓게 차지하도록 설정
-                            child: Text(
-                              transaction.counterpart,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                    return InkWell(
+                      onTap: () {
+                        // counterpart 이름을 TextField에 자동으로 채워줌
+                        setState(() {
+                          _nameController.text = transaction.counterpart;
+                        });
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 16.0, horizontal: 24.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 2, // 이름이 조금 더 넓게 차지하도록 설정
+                              child: Text(
+                                transaction.counterpart,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                          Expanded(
-                            flex: 4, // 최근 거래 정보
-                            child: Text(
-                              transaction.relationDetail.isNotEmpty
-                                  ? ' ${transaction.relation} • ${transaction.relationDetail}  ${transaction.label}'
-                                  : ' ${transaction.relation}  ${transaction.label}',
-                              style: const TextStyle(fontSize: 14),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              ' ${transaction.date}',
-                              style: const TextStyle(
-                                fontSize: 14,
-                                color: Colors.grey,
+                            Expanded(
+                              flex: 4, // 최근 거래 정보
+                              child: Text(
+                                transaction.relationDetail.isNotEmpty
+                                    ? ' ${transaction.relation} • ${transaction.relationDetail}  ${transaction.label}'
+                                    : ' ${transaction.relation}  ${transaction.label}',
+                                style: const TextStyle(fontSize: 14),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                        ],
+                            Expanded(
+                              flex: 3,
+                              child: Text(
+                                ' ${transaction.date}',
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -296,7 +304,13 @@ class _AmountInputScreenState extends State<AmountInputScreen>
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const EventTypeScreen()),
+                    builder: (context) => EventTypeScreen(
+                      amount: int.tryParse(_amountController.text) ??
+                          0, // 금액 입력값 전달
+                      receiverName: _nameController.text, // 이름 입력값 전달
+                      isSent: _tabController.index == 0, // 탭 인덱스에 따라 송금 여부 전달
+                    ),
+                  ),
                 );
               },
               style: ElevatedButton.styleFrom(
