@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_onjung_v1/data/%08shared/member.dart';
+import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_history_tab.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MemberProfileTab extends StatelessWidget {
+class MemberProfileTab extends ConsumerWidget {
   final String counterpartId;
 
   const MemberProfileTab({
@@ -9,17 +12,47 @@ class MemberProfileTab extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // AddressBookProvider에서 데이터 가져오기
+    final addressBook = ref.watch(addressBookProvider);
+
+    // 해당 counterpartId에 대한 정보를 가져오기
+    final member = addressBook.members.firstWhere(
+      (member) => member.id == counterpartId,
+      orElse: () => Member(
+        id: counterpartId,
+        name: '알 수 없음',
+        registeredDate: DateTime.now(),
+        relationship: Relationship.other,
+        relationDetail: '',
+        transactions: [],
+      ),
+    );
+
     return ListView(
       children: [
         const SizedBox(height: 16),
         _buildSection(
           title: '기본 정보',
           children: [
-            _buildInfoRow('Counterpart ID', counterpartId),
+            _buildInfoRow('이름', member.name),
+            _buildInfoRow('관계', _getRelationshipString(member.relationship)),
+            _buildInfoRow('상세 관계', member.relationDetail ?? '정보 없음'),
+            _buildInfoRow(
+              '등록 날짜',
+              '${member.registeredDate.year}년 ${member.registeredDate.month}월 ${member.registeredDate.day}일',
+            ),
           ],
         ),
-        // 추가 데이터 표시 로직 필요
+        _buildSection(
+          title: '거래 내역',
+          children: member.transactions.map((transaction) {
+            return _buildInfoRow(
+              transaction.label,
+              '${transaction.amount}원 (${transaction.type == "sent" ? "보냄" : "받음"})',
+            );
+          }).toList(),
+        ),
         const SizedBox(height: 16),
       ],
     );
@@ -52,14 +85,16 @@ class MemberProfileTab extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (label.isNotEmpty) ...[
             SizedBox(
-              width: 80,
+              width: 120,
               child: Text(
                 label,
                 style: const TextStyle(
                   fontSize: 14,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -76,5 +111,18 @@ class MemberProfileTab extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _getRelationshipString(Relationship relationship) {
+    switch (relationship) {
+      case Relationship.family:
+        return '가족';
+      case Relationship.friend:
+        return '친구';
+      case Relationship.coworker:
+        return '동료';
+      default:
+        return '기타';
+    }
   }
 }

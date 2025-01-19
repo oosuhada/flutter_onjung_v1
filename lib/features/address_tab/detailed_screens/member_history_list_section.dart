@@ -73,7 +73,6 @@ class MemberHistoryListSection extends StatelessWidget {
           ),
           Text(
             '${_formatAmount(sentTotal)} / ${_formatAmount(receivedTotal)}',
-            style: const TextStyle(color: Colors.black87),
           ),
         ],
       ),
@@ -114,13 +113,13 @@ class MemberHistoryListSection extends StatelessWidget {
     if (date.year == now.year &&
         date.month == now.month &&
         date.day == now.day) {
-      return "${date.day}일 오늘";
+      return "${date.month}월 ${date.day}일 (${_getWeekday(date)}) 오늘";
     } else if (date.year == yesterday.year &&
         date.month == yesterday.month &&
         date.day == yesterday.day) {
-      return "${date.day}일 어제";
+      return "${date.month}월 ${date.day}일 (${_getWeekday(date)}) 어제";
     } else {
-      return "${date.day}일 ${_getWeekday(date)}";
+      return "${date.month}월 ${date.day}일 (${_getWeekday(date)})";
     }
   }
 
