@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 class PersonalHeaderSection extends StatelessWidget {
   final String nickname;
   final int totalContacts;
+  final String sortOption;
+  final ValueChanged<String> onSortChanged; // 정렬 옵션 변경 콜백
 
   const PersonalHeaderSection({
     Key? key,
     required this.nickname,
     required this.totalContacts,
+    required this.sortOption,
+    required this.onSortChanged,
   }) : super(key: key);
 
   @override
@@ -55,14 +59,28 @@ class PersonalHeaderSection extends StatelessWidget {
               Row(
                 children: [
                   TextButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.sort, size: 20),
-                    label: const Text('이름순'),
+                    onPressed: () => onSortChanged('name'),
+                    icon: const Icon(Icons.sort_by_alpha, size: 20),
+                    label: Text(
+                      '이름순',
+                      style: TextStyle(
+                        fontWeight: sortOption == 'name'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
                   ),
                   TextButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.edit, size: 20),
-                    label: const Text('편집'),
+                    onPressed: () => onSortChanged('date'),
+                    icon: const Icon(Icons.date_range, size: 20),
+                    label: Text(
+                      '최신순',
+                      style: TextStyle(
+                        fontWeight: sortOption == 'date'
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
                   ),
                 ],
               ),

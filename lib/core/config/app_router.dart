@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/features/address_tab/screens/address_tab_screen.dart';
-import 'package:flutter_onjung_v1/features/address_tab/screens/member_detail_screen.dart';
+import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_detail_screen.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screens/address_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/my_onjung_screen.dart';
@@ -27,7 +27,7 @@ enum AppRoute {
   calendar('/calendar'),
   onjung('/onjung'),
   amountInput('/amountInput'),
-  memberDetail('/memberDetail');
+  membersDetail('/membersDetail'); // 고정된 경로로 수정
 
   final String path;
   const AppRoute(this.path);
@@ -159,12 +159,11 @@ final goRouter = GoRouter(
       },
     ),
     GoRoute(
-      path: AppRoute.memberDetail.path, // '/members/:id'
-      name: AppRoute.memberDetail.name, // 'member-detail'
+      path: '/membersDetail',
       builder: (context, state) {
-        final id = state.pathParameters['id'] ?? '';
-        debugPrint('🚀 MemberDetailScreen으로 이동 - state: $state');
-        return MemberDetailScreen();
+        // state.extra에서 counterpartId 추출
+        final counterpartId = state.extra as String;
+        return MemberDetailScreen(counterpartId: counterpartId);
       },
     ),
   ],

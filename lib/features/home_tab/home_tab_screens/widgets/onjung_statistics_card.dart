@@ -23,10 +23,9 @@ class _RandomOnjungStatisticsCardState
     final helper = StatisticsMessageHelper();
 
     // 데이터 로드 (경로는 적절히 수정)
-    await helper.loadData(
-      userProfileFilePath: 'assets/user_profiles_network.json',
-      transactionFilePath: 'assets/dummy_transactions_network.json',
-    );
+    await helper.loadData(transactionFilePaths: [
+      'assets/dummy_transactions_network.json',
+    ]);
 
     // 메시지 생성 및 필터링
     final messages = helper.filterMessages();

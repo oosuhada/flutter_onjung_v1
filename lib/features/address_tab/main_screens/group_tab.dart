@@ -20,8 +20,8 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/features/address_tab/widgets/group_header_section.dart';
-import 'package:flutter_onjung_v1/features/address_tab/widgets/group_list_section.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screen_components/group_header_section.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screen_components/group_list_section.dart';
 
 class GroupTab extends StatelessWidget {
   const GroupTab({Key? key}) : super(key: key);

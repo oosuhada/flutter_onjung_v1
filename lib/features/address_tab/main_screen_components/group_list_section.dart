@@ -21,12 +21,25 @@ class _GroupListSectionState extends State<GroupListSection> {
   }
 
   Future<void> _loadGroupData() async {
-    final String jsonString =
-        await rootBundle.loadString('assets/dummy_transactions_group.json');
-    final List<dynamic> jsonData = json.decode(jsonString);
-    setState(() {
-      _groupData = jsonData;
-    });
+    try {
+      // JSON 파일 읽기
+      final String jsonString =
+          await rootBundle.loadString('assets/dummy_transactions_group.json');
+
+      // JSON 디코딩
+      final Map<String, dynamic> jsonData = json.decode(jsonString);
+
+      // 'communities' 키를 통해 그룹 데이터를 가져옴
+      if (jsonData.containsKey('communities')) {
+        setState(() {
+          _groupData = jsonData['communities'] as List<dynamic>;
+        });
+      } else {
+        throw Exception('Invalid JSON structure: "communities" key not found');
+      }
+    } catch (e) {
+      debugPrint('Error loading group data: $e');
+    }
   }
 
   @override
@@ -44,16 +57,20 @@ class _GroupListSectionState extends State<GroupListSection> {
                 child: const Icon(Icons.group, color: Colors.grey),
               ),
               title: Text(
-                group['name'],
+                group['name'], // 그룹 이름
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
               subtitle: Text(
-                '멤버 ${group['memberCount']}명',
+                '멤버 ${group['memberCount']}명', // 멤버 수
                 style: TextStyle(color: Colors.grey[600]),
               ),
               trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // 멤버 정보를 출력하거나 다른 화면으로 이동
+                debugPrint('Tapped on group: ${group['name']}');
+              },
             );
           },
         ),

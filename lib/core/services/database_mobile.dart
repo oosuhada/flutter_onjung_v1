@@ -47,19 +47,20 @@ class MobileDatabaseHelper implements DatabaseInterface {
     debugPrint('테이블 생성 시작');
     try {
       await db.execute('''
-    CREATE TABLE gift_records(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        amount INTEGER NOT NULL,
-        isSent INTEGER NOT NULL,
+      CREATE TABLE transactions(
+        id TEXT PRIMARY KEY,
+        type TEXT NOT NULL,
         date TEXT NOT NULL,
-        method TEXT,
-        receiverName TEXT,
-        eventType TEXT,
-        didVisit INTEGER,
-        gift TEXT,
-        memo TEXT,
-        contact TEXT
-    )
+        title TEXT NOT NULL,
+        amount INTEGER NOT NULL,
+        method TEXT NOT NULL,
+        counterpart TEXT,
+        relation TEXT,
+        relationDetail TEXT,
+        memberInfo TEXT, 
+        scheduleInfo TEXT,
+        activityInfo TEXT
+      )
     ''');
       debugPrint('테이블 생성 완료');
     } catch (e, stackTrace) {
@@ -94,7 +95,6 @@ class MobileDatabaseHelper implements DatabaseInterface {
   //     rethrow;
   //   }
   // }
-
   @override
   Future<int> insertRecord(Map<String, dynamic> record) async {
     final db = _database;
@@ -104,7 +104,7 @@ class MobileDatabaseHelper implements DatabaseInterface {
 
     try {
       debugPrint('저장할 데이터: $record');
-      final id = await db.insert('gift_records', record);
+      final id = await db.insert('transactions', record); // transactions 테이블 사용
       debugPrint('데이터 저장 성공: ID=$id');
       return id;
     } catch (e, stackTrace) {

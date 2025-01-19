@@ -1,8 +1,8 @@
 // address_tab_screen.dart 업데이트
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/%08shared/widgets/bottom_navigation_bar.dart';
-import 'package:flutter_onjung_v1/features/address_tab/screens/group_tab.dart';
-import 'package:flutter_onjung_v1/features/address_tab/screens/personal_tab.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screens/group_tab.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screens/personal_tab.dart';
 import 'package:go_router/go_router.dart';
 
 class AddressTabScreen extends StatefulWidget {
@@ -17,6 +17,7 @@ class _AddressTabScreenState extends State<AddressTabScreen> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('🚀 AddressTabScreen 빌드 시작');
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -45,8 +46,10 @@ class _AddressTabScreenState extends State<AddressTabScreen> {
           bottom: TabBar(
             onTap: (index) {
               setState(() {
-                _currentTabIndex = index; // 현재 탭 업데이트
+                _currentTabIndex = index;
+                debugPrint('🔄 현재 Tab Index: $_currentTabIndex');
               });
+              debugPrint('🔄 Tab 전환: $_currentTabIndex');
             },
             tabs: const [
               Tab(text: '개인'),
@@ -81,17 +84,22 @@ class _AddressTabScreenState extends State<AddressTabScreen> {
         bottomNavigationBar: CustomBottomNavigationBar(
           currentIndex: 1,
           onTap: (index) {
+            debugPrint('🔄 BottomNavigationBar 선택됨: $index');
             switch (index) {
               case 0:
+                debugPrint('📍 /home로 이동');
                 context.go('/home');
                 break;
               case 1:
+                debugPrint('📍 /address로 이동');
                 context.go('/address');
                 break;
               case 2:
+                debugPrint('📍 /calendar로 이동');
                 context.go('/calendar');
                 break;
               case 3:
+                debugPrint('📍 /onjung로 이동');
                 context.go('/onjung');
                 break;
             }

@@ -26,19 +26,42 @@
 //   }
 // }
 
+// personal_tab.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/features/address_tab/widgets/personal_header_section.dart';
-import 'package:flutter_onjung_v1/features/address_tab/widgets/personal_list_section.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screen_components/personal_header_section.dart';
+import 'package:flutter_onjung_v1/features/address_tab/main_screen_components/personal_list_section.dart';
 
-class PersonalTab extends StatelessWidget {
+class PersonalTab extends StatefulWidget {
   const PersonalTab({Key? key}) : super(key: key);
+
+  @override
+  _PersonalTabState createState() => _PersonalTabState();
+}
+
+class _PersonalTabState extends State<PersonalTab> {
+  String _sortOption = 'name';
+
+  void _onSortChanged(String sortOption) {
+    setState(() {
+      _sortOption = sortOption;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        PersonalHeaderSection(nickname: "르탄이", totalContacts: 256),
-        Expanded(child: PersonalListSection()),
+      children: [
+        PersonalHeaderSection(
+          nickname: "르탄이",
+          totalContacts: 256,
+          sortOption: _sortOption,
+          onSortChanged: _onSortChanged,
+        ),
+        Expanded(
+          child: PersonalListSection(
+            sortOption: _sortOption,
+          ),
+        ),
       ],
     );
   }

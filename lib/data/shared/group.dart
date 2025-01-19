@@ -1,5 +1,5 @@
-import 'package:flutter_onjung_v1/data/address_book_tab/member.dart';
-import 'package:flutter_onjung_v1/data/schedule.dart';
+import 'package:flutter_onjung_v1/data/%08shared/member.dart';
+import 'package:flutter_onjung_v1/data/%08shared/schedule.dart';
 
 class Group {
   final String id; // 그룹 고유 ID
