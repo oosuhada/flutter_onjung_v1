@@ -129,7 +129,7 @@ class _AddressTabScreenState extends State<AddressTabScreen>
               context.go('/calendar');
               break;
             case 3:
-              context.go('/onjung');
+              context.go('/myOnjung');
               break;
           }
         },

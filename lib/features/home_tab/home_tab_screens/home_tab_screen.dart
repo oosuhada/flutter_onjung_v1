@@ -104,7 +104,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               context.go('/calendar');
               break;
             case 3:
-              context.go('/onjung');
+              context.go('/myOnjung');
               break;
           }
         },
