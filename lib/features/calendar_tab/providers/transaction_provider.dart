@@ -14,33 +14,48 @@ class TransactionProvider extends ChangeNotifier {
   List<UnifiedTransaction> get transactions => _transactions;
   Future<void> initializeTransactions() async {
     try {
-      // JSON 파일 로드
-      final String jsonString = await rootBundle.loadString(
+      // 개인 거래 데이터 로드
+      final personalDataString = await rootBundle.loadString(
         'assets/dummy_transactions_personal.json',
       );
-
-      // JSON 데이터를 Map으로 디코드
-      final Map<String, dynamic> jsonData = json.decode(jsonString);
-
-      // transactions 키에서 리스트 데이터를 추출
-      final List<dynamic> transactionsData = jsonData['transactions'];
-
-      // transactions 데이터를 UnifiedTransaction 리스트로 변환
-      _transactions = transactionsData
+      final personalData =
+          json.decode(personalDataString) as Map<String, dynamic>;
+      final personalTransactions = (personalData['transactions'] as List)
           .map((item) => UnifiedTransaction.fromJson(item))
           .toList();
 
-      // 로드된 거래 수 출력
-      debugPrint('✅ Transactions loaded: ${_transactions.length}');
-      for (var transaction in _transactions) {
-        debugPrint('🧾 Transaction: ${transaction.toJson()}');
+      // 그룹 거래 데이터 로드
+      final groupDataString = await rootBundle.loadString(
+        'assets/dummy_transactions_group.json',
+      );
+      final groupData = json.decode(groupDataString) as Map<String, dynamic>;
+      final groupTransactions = <UnifiedTransaction>[];
+
+      for (var community in (groupData['communities'] as List)) {
+        for (var transaction in (community['transactions'] as List)) {
+          groupTransactions.add(
+            UnifiedTransaction.fromJson({
+              'id': transaction['groupTransactionId'],
+              'date': transaction['groupTransactionDate'],
+              'amount': transaction['groupTransactionAmount'],
+              'type': transaction['groupTransactionIsReceived']
+                  ? 'received'
+                  : 'sent',
+              'counterpart': community['name'],
+              'label': transaction['groupTransactionEventType'],
+              'memo': transaction['groupTransactionMemo'],
+            }),
+          );
+        }
       }
 
-      // 상태 변경 알림
+      // 데이터를 통합
+      _transactions = [...personalTransactions, ...groupTransactions];
+
+      debugPrint('✅ 총 로드된 거래 수: ${_transactions.length}');
       notifyListeners();
     } catch (e) {
-      // 오류 발생 시 로그 출력
-      debugPrint('❌ Error loading transactions: $e');
+      debugPrint('❌ 거래 데이터 로드 실패: $e');
     }
   }
 

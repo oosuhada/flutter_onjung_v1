@@ -102,9 +102,6 @@ class CalendarProvider extends ChangeNotifier {
   }
 
   void updateEvents(List<UnifiedTransaction> transactions) {
-    debugPrint('🔄 updateEvents 시작');
-
-    // 거래 데이터를 날짜별로 그룹화
     final newEvents = <DateTime, List<UnifiedTransaction>>{};
     for (var transaction in transactions) {
       final date = DateTime(
@@ -119,17 +116,8 @@ class CalendarProvider extends ChangeNotifier {
       newEvents[date]!.add(transaction);
     }
 
-    // 디버그 출력: 새로운 이벤트 데이터
-    debugPrint('🔄 새 이벤트 데이터:');
-    newEvents.forEach((key, value) {
-      debugPrint('📅 $key: ${value.length}건');
-    });
-
-    // 데이터를 강제로 덮어쓰기
     _events.clear();
     _events.addAll(newEvents);
-
-    debugPrint('✅ 이벤트 데이터가 업데이트되었습니다: ${_events.length}개의 날짜');
     notifyListeners();
   }
 

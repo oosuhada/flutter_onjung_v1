@@ -31,6 +31,9 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
     endYear = widget.statistics.period.endYear;
     endMonth = widget.statistics.period.endMonth;
     debugPrint('Initial Period: $startYear/$startMonth ~ $endYear/$endMonth');
+
+    // 디버깅: 초기 StatisticsSummary 데이터를 출력
+    debugPrint('Initial Statistics Data: ${widget.statistics.toJson()}');
   }
 
   Widget _buildPeriodSelector() {
@@ -120,6 +123,9 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
 
   @override
   Widget build(BuildContext context) {
+    // 디버깅: 렌더링 시점의 StatisticsSummary 데이터를 출력
+    debugPrint('Rendering Statistics Data: ${widget.statistics.toJson()}');
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(12.0),
       child: Container(
@@ -145,13 +151,6 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
                     color: Colors.black87,
                   ),
                 ),
-                // const Text(
-                //   '총 ',
-                //   style: TextStyle(
-                //     fontSize: 16,
-                //     color: Colors.black87,
-                //   ),
-                // ),
                 Text(
                   '${widget.statistics.totalCount}명',
                   style: const TextStyle(
@@ -189,7 +188,7 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 8.0),
+                  const SizedBox(height: 8.0),
                   Row(
                     children: [
                       Text(
@@ -208,7 +207,7 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
                   ),
                   const SizedBox(height: 8.0),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // 왼쪽 정렬
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 8.0),
                       Text(
@@ -222,7 +221,6 @@ class _RecentStatisticsSummaryState extends State<RecentStatisticsSummary> {
                       if (widget.statistics.sentAmount > 0 ||
                           widget.statistics.receivedAmount > 0)
                         Align(
-                          // alignment: Alignment.centerRight, // 우측 정렬
                           child: Text(
                             '(보냄 ${_formatNumber(widget.statistics.sentAmount)}원 / 받음 ${_formatNumber(widget.statistics.receivedAmount)}원)',
                             style: const TextStyle(

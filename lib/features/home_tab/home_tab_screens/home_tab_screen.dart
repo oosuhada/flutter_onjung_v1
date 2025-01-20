@@ -20,13 +20,15 @@ class HomeTabScreen extends StatefulWidget {
 class _HomeTabScreenState extends State<HomeTabScreen> {
   late statistics_model.StatisticsSummary currentStatistics;
   bool isLoading = true;
+  statistics_model.StatisticsType currentType =
+      statistics_model.StatisticsType.combined;
 
   @override
   void initState() {
     super.initState();
-    currentStatistics = const statistics_model.StatisticsSummary(
+    currentStatistics = statistics_model.StatisticsSummary(
       nickname: '르탄이',
-      period: statistics_model.PeriodRange(
+      period: const statistics_model.PeriodRange(
           startYear: 2024, startMonth: 1, endYear: 2024, endMonth: 12),
       totalCount: 0,
       sentCount: 0,
@@ -35,6 +37,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
       sentAmount: 0,
       receivedAmount: 0,
       monthlyAmounts: {},
+      transactions: [], // 빈 리스트로 초기화
+      type: statistics_model.StatisticsType.combined, // 초기 타입 설정
     );
 
     _loadStatistics();
@@ -42,21 +46,25 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
   Future<void> _loadStatistics({
     statistics_model.PeriodRange? period,
+    statistics_model.StatisticsType? type,
   }) async {
     setState(() {
       isLoading = true;
     });
 
-    // 기간이 전달되지 않으면 초기 기간 사용
+    // 기간과 타입이 전달되지 않으면 현재 값 사용
     final targetPeriod = period ?? currentStatistics.period;
+    final targetType = type ?? currentType;
 
     // 데이터를 비동기로 로드
     final updatedStatistics = await statistics_model.generateStatisticsSummary(
       period: targetPeriod,
+      type: targetType,
     );
 
     setState(() {
       currentStatistics = updatedStatistics;
+      currentType = targetType;
       isLoading = false;
     });
   }
@@ -64,12 +72,13 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
   @override
   Widget build(BuildContext context) {
     debugPrint('🏠 HomeTabScreen: Building HomeTabScreen');
-    // 로딩 중일 때는 로딩 인디케이터 표시
+
     if (isLoading) {
       return const Scaffold(
         body: Center(child: CircularProgressIndicator()),
       );
     }
+
     return Scaffold(
       body: _buildHomeContent(context),
       floatingActionButton: FloatingActionButton.extended(
@@ -77,10 +86,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           debugPrint('FloatingActionButton pressed');
           try {
             debugPrint('Attempting to navigate to amount input screen...');
-
-            // 스택에 쌓이도록 push 사용
             context.push('/amountInput');
-
             debugPrint('Navigation successful');
           } catch (e) {
             debugPrint('Navigation error occurred: $e');
@@ -92,7 +98,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: CustomBottomNavigationBar(
-        currentIndex: 0, // 현재 탭 인덱스
+        currentIndex: 0,
         onTap: (index) {
           switch (index) {
             case 0:
@@ -124,17 +130,20 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             RecentStatisticsSummary(
               statistics: currentStatistics,
               onPeriodChanged: (statistics_model.PeriodRange newPeriod) {
-                _loadStatistics(period: newPeriod); // period 파라미터로 직접 전달
+                _loadStatistics(period: newPeriod);
                 debugPrint('Period changed: ${newPeriod.toFormattedString()}');
               },
+              // onTypeChanged: (statistics_model.StatisticsType newType) {
+              //   _loadStatistics(type: newType);
+              //   debugPrint('Type changed to: ${newType.name}');
+              // },
             ),
             const SizedBox(height: 16.0),
             const SizedBox(height: 16.0),
             RecentUsageChart(
               jsonData: currentStatistics.toJson()['monthlyAmounts'],
               period: currentStatistics.period,
-              onTap: () =>
-                  _navigateToTabbedScreen(context, 0), // "나의 온정" 탭으로 이동
+              onTap: () => _navigateToTabbedScreen(context, 0),
             ),
             const SizedBox(height: 16.0),
             const SizedBox(height: 16.0),
@@ -143,21 +152,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               child: const RandomOnjungStatisticsCard(),
             ),
             const SizedBox(height: 16.0),
-            // const SizedBox(height: 16.0),
-            // const RelationshipAverageList(),
             const SizedBox(height: 16.0),
           ],
         ),
       ),
     );
   }
-
-  // String _formatAmount(int amount) {
-  //   return amount.toString().replaceAllMapped(
-  //         RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-  //         (Match m) => '${m[1]},',
-  //       );
-  // }
 
   void _navigateToTabbedScreen(BuildContext context, int initialIndex) {
     Navigator.push(
