@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyOnjungScreen extends StatelessWidget {
-  const MyOnjungScreen({Key? key}) : super(key: key);
+class HomeOnjungSummaryScreen extends StatelessWidget {
+  const HomeOnjungSummaryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

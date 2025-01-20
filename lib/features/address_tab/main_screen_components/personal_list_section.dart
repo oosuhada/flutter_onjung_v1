@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/data/%08shared/member.dart';
 import 'package:go_router/go_router.dart';
 
@@ -187,12 +188,17 @@ class PersonalListSectionState extends State<PersonalListSection> {
           isThreeLine: true,
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
-            final counterpartId = data['counterpartId']; // 고유 ID
-            final transactions = data['transactions'];
-            context.push('/membersDetail', extra: {
-              'counterpartId': counterpartId,
-              'transactions': transactions,
-            });
+            final counterpartId = data['counterpartId'] as String; // 고유 ID
+            final transactions = data['transactions'] as List;
+
+            // GoRouter를 사용해 AppRoute enum으로 경로 지정
+            context.push(
+              AppRoute.addressMemberDetail.path, // AppRoute enum 활용
+              extra: {
+                'counterpartId': counterpartId,
+                'transactions': transactions,
+              },
+            );
           },
         );
       },

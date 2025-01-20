@@ -121,20 +121,26 @@ class _MemberHistoryTabState extends ConsumerState<MemberHistoryTab> {
               const SizedBox(height: 8),
               Row(
                 children: [
-                  GestureDetector(
-                    onTap: _selectStartDate,
-                    child: Text(
-                      '${startDate.year}년▼${startDate.month}월▼',
-                      style: const TextStyle(fontSize: 18),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: _selectStartDate,
+                      child: Text(
+                        '${startDate.year}년▼${startDate.month}월▼',
+                        style: const TextStyle(fontSize: 18),
+                        overflow: TextOverflow.ellipsis, // 텍스트가 너무 길 경우 줄임표 처리
+                      ),
                     ),
                   ),
                   const Text('부터', style: TextStyle(fontSize: 18)),
                   const SizedBox(width: 8),
-                  GestureDetector(
-                    onTap: _selectEndDate,
-                    child: Text(
-                      '${endDate.year}년▼${endDate.month}월▼',
-                      style: const TextStyle(fontSize: 18),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: _selectEndDate,
+                      child: Text(
+                        '${endDate.year}년▼${endDate.month}월▼',
+                        style: const TextStyle(fontSize: 18),
+                        overflow: TextOverflow.ellipsis, // 텍스트가 너무 길 경우 줄임표 처리
+                      ),
                     ),
                   ),
                   const Text('까지', style: TextStyle(fontSize: 18)),

@@ -23,7 +23,7 @@ class _LoadingScreenState extends ConsumerState<LoadingScreen> {
     if (!mounted) return;
 
     // AppRoute의 onboarding 경로로 이동
-    context.goNamed(AppRoute.onboarding.name);
+    context.goNamed(AppRoute.authOnboarding.name);
   }
 
   @override

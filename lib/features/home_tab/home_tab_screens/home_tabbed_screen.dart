@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'my_onjung_screen.dart';
+import 'home_onjung_summary_screen.dart.dart';
 import 'onjung_statistics_screen.dart';
 
 class HomeTabbedScreen extends StatelessWidget {
@@ -31,7 +31,7 @@ class HomeTabbedScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            const MyOnjungScreen(),
+            const HomeOnjungSummaryScreen(),
             OnjungStatisticsScreen(),
           ],
         ),

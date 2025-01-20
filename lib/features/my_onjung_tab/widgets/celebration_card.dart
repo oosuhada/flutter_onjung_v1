@@ -24,11 +24,26 @@ class CelebrationCard extends StatelessWidget {
             ClipRRect(
               borderRadius:
                   const BorderRadius.vertical(top: Radius.circular(12)),
-              child: Image.network(
-                event.imageUrl,
+              child: Image.asset(
+                'assets/wedding_hall.png', // 로컬 파일 경로
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  debugPrint(
+                      'Error loading image: assets/wedding_hall.png, Error: $error');
+                  return Container(
+                    height: 200,
+                    color: Colors.grey[300],
+                    child: const Center(
+                      child: Icon(
+                        Icons.broken_image,
+                        size: 50,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
             Padding(

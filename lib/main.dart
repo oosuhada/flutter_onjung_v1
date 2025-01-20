@@ -48,8 +48,8 @@ class MyApp extends ConsumerWidget {
     return MaterialApp.router(
       title: '온정',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme(),
-      darkTheme: AppTheme.darkTheme(),
+      theme: AppTheme.lightTheme1(),
+      darkTheme: AppTheme.darkTheme1(),
       routerConfig: goRouter, // app_router.dart에서 정의한 라우터 설정 사용
     );
   }

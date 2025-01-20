@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_detail_screen.dart';
 import 'package:flutter_onjung_v1/features/address_tab/main_screens/address_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/calendar_tab_screen.dart';
+import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_onjung_summary_screen.dart.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/onjung_statistics_screen.dart';
 import 'package:flutter_onjung_v1/features/home_tab/input_screens/amount_input_screen.dart';
@@ -15,18 +16,18 @@ import 'package:go_router/go_router.dart';
 
 enum AppRoute {
   loading('/'),
-  onboarding('/onboarding'),
-  login('/login'),
-  terms('/terms'),
-  signup('/signup'),
-  home('/home'),
-  myOnjung('/myOnjung'),
-  onjungStatistics('/onjungStatistics'),
-  address('/address'),
-  calendar('/calendar'),
-  onjung('/onjung'),
-  amountInput('/amountInput'),
-  membersDetail('/membersDetail'); // 고정된 경로로 수정
+  authOnboarding('/authOnboarding'),
+  authLogin('/authLogin'),
+  authTerms('/authTerms'),
+  authSignup('/authSignup'),
+  homeTab('/homeTab'),
+  homeOnjungSummary('/homeOnjungSummary'),
+  homeOnjungStatistics('/homeOnjungStatistics'),
+  addressTab('/addressTab'),
+  addressMemberDetail('/addressMemberDetail'),
+  calendarTab('/calendarTab'),
+  onjungTab('/onjungTab'),
+  amountInput('/amountInput');
 
   final String path;
   const AppRoute(this.path);
@@ -46,40 +47,40 @@ final goRouter = GoRouter(
       },
     ),
     GoRoute(
-      path: AppRoute.onboarding.path,
-      name: AppRoute.onboarding.name,
+      path: AppRoute.authOnboarding.path,
+      name: AppRoute.authOnboarding.name,
       builder: (context, state) {
         debugPrint('🚀 OnboardingScreen으로 이동 - state: $state');
         return const OnboardingScreen();
       },
     ),
     GoRoute(
-      path: AppRoute.login.path,
-      name: AppRoute.login.name,
+      path: AppRoute.authLogin.path,
+      name: AppRoute.authLogin.name,
       builder: (context, state) {
         debugPrint('🚀 LoginScreen으로 이동 - state: $state');
         return const LoginScreen();
       },
     ),
     GoRoute(
-      path: AppRoute.terms.path,
-      name: AppRoute.terms.name,
+      path: AppRoute.authTerms.path,
+      name: AppRoute.authTerms.name,
       builder: (context, state) {
         debugPrint('🚀 TermsAndConditionsDialog로 이동 - state: $state');
         return const TermsAndConditionsDialog();
       },
     ),
     GoRoute(
-      path: AppRoute.signup.path,
-      name: AppRoute.signup.name,
+      path: AppRoute.authSignup.path,
+      name: AppRoute.authSignup.name,
       builder: (context, state) {
         debugPrint('🚀 SignUpScreen으로 이동 - state: $state');
         return const SignUpScreen();
       },
     ),
     GoRoute(
-      path: AppRoute.home.path,
-      name: AppRoute.home.name,
+      path: AppRoute.homeTab.path,
+      name: AppRoute.homeTab.name,
       builder: (context, state) => const HomeTabScreen(),
       pageBuilder: (context, state) => CustomTransitionPage(
         child: const HomeTabScreen(),
@@ -92,24 +93,24 @@ final goRouter = GoRouter(
       ),
     ),
     GoRoute(
-      path: AppRoute.myOnjung.path,
-      name: AppRoute.myOnjung.name,
+      path: AppRoute.homeOnjungSummary.path,
+      name: AppRoute.homeOnjungSummary.name,
       builder: (context, state) {
-        debugPrint('🚀 MyOnjungScreen으로 이동 - state: $state');
-        return MyOnjungTabScreen();
+        debugPrint('🚀 HomeOnjungSummary로 이동 - state: $state');
+        return const HomeOnjungSummaryScreen();
       },
     ),
     GoRoute(
-      path: AppRoute.onjungStatistics.path,
-      name: AppRoute.onjungStatistics.name,
+      path: AppRoute.homeOnjungStatistics.path,
+      name: AppRoute.homeOnjungStatistics.name,
       builder: (context, state) {
-        debugPrint('🚀 OnjungStatisticsScreen으로 이동 - state: $state');
+        debugPrint('🚀 HomeOnjungStatistics로 이동 - state: $state');
         return OnjungStatisticsScreen();
       },
     ),
     GoRoute(
-      path: AppRoute.address.path,
-      name: AppRoute.address.name,
+      path: AppRoute.addressTab.path,
+      name: AppRoute.addressTab.name,
       builder: (context, state) => const AddressTabScreen(),
       pageBuilder: (context, state) => CustomTransitionPage(
         child: const AddressTabScreen(),
@@ -122,8 +123,8 @@ final goRouter = GoRouter(
       ),
     ),
     GoRoute(
-      path: AppRoute.calendar.path,
-      name: AppRoute.calendar.name,
+      path: AppRoute.calendarTab.path,
+      name: AppRoute.calendarTab.name,
       builder: (context, state) => const CalendarTabScreen(),
       pageBuilder: (context, state) => CustomTransitionPage(
         child: const CalendarTabScreen(),
@@ -135,20 +136,14 @@ final goRouter = GoRouter(
         },
       ),
     ),
-    // GoRoute(
-    //   path: AppRoute.onjung.path,
-    //   name: AppRoute.onjung.name,
-    //   builder: (context, state) => const OnjungTabScreen(),
-    //   pageBuilder: (context, state) => CustomTransitionPage(
-    //     child: const OnjungTabScreen(),
-    //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-    //       return FadeTransition(
-    //         opacity: animation,
-    //         child: child,
-    //       );
-    //     },
-    //   ),
-    // ),
+    GoRoute(
+      path: AppRoute.onjungTab.path,
+      name: AppRoute.onjungTab.name,
+      builder: (context, state) {
+        debugPrint('🚀 OnjungTabScreen으로 이동 - state: $state');
+        return MyOnjungTabScreen();
+      },
+    ),
     GoRoute(
       path: AppRoute.amountInput.path,
       name: AppRoute.amountInput.name,
@@ -158,7 +153,7 @@ final goRouter = GoRouter(
       },
     ),
     GoRoute(
-      path: '/membersDetail',
+      path: AppRoute.addressMemberDetail.path,
       builder: (context, state) {
         final extra = state.extra as Map<String, dynamic>?;
 
@@ -173,7 +168,7 @@ final goRouter = GoRouter(
 
         return MemberDetailScreen(
           counterpartId: counterpartId,
-          transactions: transactions, // transactions 전달
+          transactions: transactions,
         );
       },
     ),
