@@ -1,6 +1,7 @@
-import 'package:flutter_onjung_v1/data/%08shared/activity.dart';
-import 'package:flutter_onjung_v1/data/%08shared/member.dart';
-import 'package:flutter_onjung_v1/data/%08shared/schedule.dart';
+// TODO Implement this library.
+import 'package:flutter_onjung_v1/data/shared/activity.dart';
+import 'package:flutter_onjung_v1/data/shared/member.dart';
+import 'package:flutter_onjung_v1/data/shared/schedule.dart';
 
 class UnifiedTransaction {
   final String id;

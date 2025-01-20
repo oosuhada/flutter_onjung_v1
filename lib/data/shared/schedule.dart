@@ -1,4 +1,4 @@
-import 'package:flutter_onjung_v1/data/%08shared/activity.dart';
+import 'package:flutter_onjung_v1/data/shared/activity.dart';
 
 class Schedule {
   final String id;

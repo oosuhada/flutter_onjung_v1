@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/data/%08shared/member.dart';
+import 'package:flutter_onjung_v1/data/shared/member.dart';
 import 'package:flutter_onjung_v1/features/address_tab/detailed_screens/member_history_tab.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

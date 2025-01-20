@@ -57,5 +57,17 @@
 	<!-- 쓰기 및 읽기 권한이 필요한 경우 명시적으로 추가 -->
 	<key>UIFileSharingEnabled</key>
 	<true/>
+
+	<!-- Google Maps 및 Flutter 관련 설정 -->
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>앱 사용 중 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>항상 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
+
+	<!-- 연락처 접근 권한 요청 -->
+	<key>NSContactsUsageDescription</key>
+	<string>앱에서 연락처 정보를 사용하려면 권한이 필요합니다.</string>
 </dict>
 </plist>

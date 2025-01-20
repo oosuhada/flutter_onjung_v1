@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/services/database_provider.dart';
-import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 
 class AdditionalDetailsScreen extends StatefulWidget {
   final int amount; // 금액

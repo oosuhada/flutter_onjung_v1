@@ -1,4 +1,4 @@
-import 'unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 
 enum Relationship { family, friend, coworker, other }
 

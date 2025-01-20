@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_onjung_v1/data/%08shared/group.dart';
-import 'package:flutter_onjung_v1/data/%08shared/member.dart';
-import 'package:flutter_onjung_v1/data/%08shared/unified_transaction.dart';
+import 'package:flutter_onjung_v1/data/shared/group.dart';
+import 'package:flutter_onjung_v1/data/shared/member.dart';
+import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // 기본 AddressBook 관리를 위한 프로바이더
