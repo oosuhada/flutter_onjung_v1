@@ -29,7 +29,9 @@ class RightDrawerMenu extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft, // 좌측 상단 정렬
                       child: Image.asset(
-                        'assets/logo_clear.png', // 로고 이미지 경로
+                        Theme.of(context).brightness == Brightness.dark
+                            ? 'assets/logo_clear_white.png' // 다크 테마일 때 로고 이미지 경로
+                            : 'assets/logo_clear.png', // 라이트 테마일 때 로고 이미지 경로
                         width: 130, // 원하는 너비로 조정
                         height: 60, // 원하는 높이로 조정
                         fit: BoxFit.contain, // 이미지를 컨테이너에 맞게 조정
