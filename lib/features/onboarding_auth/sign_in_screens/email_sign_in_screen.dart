@@ -38,31 +38,39 @@ class _EmailSignInScreenState extends ConsumerState<EmailSignInScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  CustomTextFormField(
-                    name: 'email',
-                    controller: _emailController,
-                    label: '이메일',
-                    hint: 'example@email.com',
-                    keyboardType: TextInputType.emailAddress,
-                    validator: (value) => LocalValidatorHelper.validateEmail(
-                      value,
-                      'ko',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: CustomTextFormField(
+                      name: 'email',
+                      controller: _emailController,
+                      label: '이메일',
+                      hint: 'example@email.com',
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) => LocalValidatorHelper.validateEmail(
+                        value,
+                        'ko',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                     ),
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
                   const SizedBox(height: 16),
-                  CustomTextFormField(
-                    name: 'password',
-                    controller: _passwordController,
-                    label: '비밀번호',
-                    hint: '비밀번호를 입력해주세요',
-                    obscureText: true,
-                    validator: (value) => LocalValidatorHelper.validatePassword(
-                      value,
-                      'ko',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: CustomTextFormField(
+                      name: 'password',
+                      controller: _passwordController,
+                      label: '비밀번호',
+                      hint: '비밀번호를 입력해주세요',
+                      obscureText: true,
+                      validator: (value) =>
+                          LocalValidatorHelper.validatePassword(
+                        value,
+                        'ko',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                     ),
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
+                  const SizedBox(height: 16),
                   const SizedBox(height: 16),
                   SizedBox(
                     height: 50,
@@ -84,10 +92,10 @@ class _EmailSignInScreenState extends ConsumerState<EmailSignInScreen> {
                   const SizedBox(height: 16),
                   TextButton(
                     onPressed: () {
-                      context.go(AppRoute.emailSignup.name);
-                      // AppRoute.emailSignup.path는 '/email-signup' 경로를 나타냄
+                      context.pushNamed(
+                          AppRoute.emailSignup.name); // 경로 이동 시 push를 사용
                     },
-                    child: const Text('계정이 없으신가요? 회원가입'),
+                    child: const Text('아직 계정이 없으신가요? 회원가입하기'),
                   ),
                 ],
               ),

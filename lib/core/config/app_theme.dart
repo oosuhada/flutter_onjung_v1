@@ -197,4 +197,83 @@ class AppTheme {
       ),
     );
   }
+
+  static ThemeData darkTheme2() {
+    return ThemeData(
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: Colors.black,
+      primaryColor: warmWhite,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: warmWhite,
+        brightness: Brightness.dark,
+        primary: warmWhite,
+        surface: Colors.black,
+        secondary: Colors.orange,
+        onSurfaceVariant: Colors.grey[800]!,
+        tertiary: Colors.orange,
+      ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        titleTextStyle: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+          color: Colors.white,
+        ),
+      ),
+      textTheme: _buildTextTheme(Colors.grey),
+      chipTheme: ChipThemeData(
+        backgroundColor: Colors.grey[800],
+        selectedColor: Colors.orange.withAlpha(51),
+        labelStyle: TextStyle(
+          color: Colors.grey[300],
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(Colors.orange),
+          overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+            if (states.contains(WidgetState.pressed)) {
+              return Colors.orange.withAlpha(26);
+            } else if (states.contains(WidgetState.hovered)) {
+              return Colors.orange.withAlpha(13);
+            }
+            return null;
+          }),
+          padding: const WidgetStatePropertyAll(
+            EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          ),
+          shape: WidgetStatePropertyAll(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+          fixedSize: const WidgetStatePropertyAll(Size(350, 48)),
+          textStyle: const WidgetStatePropertyAll(
+            TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: Colors.orange,
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          minimumSize: const Size(0, 48),
+          maximumSize: const Size(200, 48),
+          textStyle: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
 }
