@@ -32,6 +32,10 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // 현재 테마의 폰트 패밀리 출력
+    debugPrint(
+        '현재 폰트 패밀리: ${AppTheme.lightTheme1().textTheme.bodyLarge?.fontFamily}');
+
     final appSettings = ref.watch(appSettingsProvider);
 
     return MaterialApp.router(

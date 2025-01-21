@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/terms_and_conditions_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/signIn_screens/login_options_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/signUp_screens/terms_and_conditions_dialog.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/onboarding_view_widget.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart'; // 이 import 추가
 import 'package:go_router/go_router.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends ConsumerWidget {
   const OnboardingScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -34,11 +35,12 @@ class OnboardingScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.vertical(
                                     top: Radius.circular(16)),
                               ),
-                              builder: (context) => const LoginOptionsDialog(),
+                              builder: (context) =>
+                                  LoginOptionsDialog(ref: ref),
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange[800],
+                            backgroundColor: Colors.orange,
                             minimumSize: const Size(double.infinity, 48),
                           ),
                           child: const Text("로그인"),
@@ -72,6 +74,7 @@ class OnboardingScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                const SizedBox(height: 16),
                 const SizedBox(height: 16),
                 GestureDetector(
                   onTap: () {

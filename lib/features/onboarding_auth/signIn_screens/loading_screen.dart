@@ -12,17 +12,26 @@ class LoadingScreen extends ConsumerStatefulWidget {
 }
 
 class _LoadingScreenState extends ConsumerState<LoadingScreen> {
+  bool _isLoading = true;
+
   @override
   void initState() {
     super.initState();
-    _initializeApp();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _initializeApp();
+    });
   }
 
   Future<void> _initializeApp() async {
+    debugPrint('Initialization started');
     await Future.delayed(const Duration(seconds: 2)); // 2초 대기
     if (!mounted) return;
 
-    // AppRoute의 onboarding 경로로 이동
+    debugPrint('Initialization completed');
+    setState(() {
+      _isLoading = false; // 로딩 상태 종료
+    });
+
     context.goNamed(AppRoute.authOnboarding.name);
   }
 
@@ -36,8 +45,8 @@ class _LoadingScreenState extends ConsumerState<LoadingScreen> {
           children: [
             const SizedBox(height: 200),
             Image.asset(
-              'assets/logo.png', // 로고 이미지 경로
-              width: 200, // 이미지 크기 설정
+              'assets/logo/onjung_logo_clear_dark.png', // 로고 이미지 경로
+              width: 200,
               height: 100,
             ),
             Text(
@@ -56,8 +65,8 @@ class _LoadingScreenState extends ConsumerState<LoadingScreen> {
               ),
             ),
             const SizedBox(height: 48),
-            const SizedBox(height: 48),
-            const CircularProgressIndicator(),
+            if (_isLoading)
+              const CircularProgressIndicator(color: Colors.orange), // 로딩 인디케이터
             const SizedBox(height: 24),
             const Text(
               '잠시만 기다려주세요...',
