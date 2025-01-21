@@ -7,7 +7,7 @@ import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/home_tabbed
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/my_recent_statistics_summary.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/my_recent_usage_chart.dart';
 import 'package:flutter_onjung_v1/features/home_tab/home_tab_screens/widgets/onjung_statistics_card.dart';
-import 'package:flutter_onjung_v1/shared/widgets/bottom_navigation_bar.dart';
+import 'package:flutter_onjung_v1/shared/shared_widgets/bottom_navigation_bar.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeTabScreen extends StatefulWidget {

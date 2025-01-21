@@ -3,7 +3,7 @@ import 'package:flutter_onjung_v1/data/shared/unified_transaction.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/providers/transaction_provider.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/screens/transaction_detail_screen.dart';
 import 'package:flutter_onjung_v1/features/calendar_tab/widgets/monthly_stats_summary.dart';
-import 'package:flutter_onjung_v1/shared/widgets/custom_date_picker.dart';
+import 'package:flutter_onjung_v1/shared/shared_widgets/custom_date_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 

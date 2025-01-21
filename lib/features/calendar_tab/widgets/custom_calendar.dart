@@ -118,7 +118,9 @@ class CustomCalendarState extends State<CustomCalendar> {
                   ? Colors.red
                   : weekday == 6
                       ? Colors.blue
-                      : Colors.white);
+                      : Theme.of(context).brightness == Brightness.dark
+                          ? Colors.white
+                          : Colors.black);
 
               final transactions = _getTransactionsForDay(displayDate);
               final sentCount = transactions
