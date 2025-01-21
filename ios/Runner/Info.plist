@@ -2,76 +2,85 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>Flutter Onjung V1</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>flutter_onjung_v1</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-
-	<!-- 저장 권한 관련 추가 설정 -->
-	<key>NSFileProtectionKey</key>
-	<string>NSFileProtectionCompleteUntilFirstUserAuthentication</string>
-	
-	<!-- Application Support 경로를 보호 -->
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
-
-	<!-- 쓰기 및 읽기 권한이 필요한 경우 명시적으로 추가 -->
-	<key>UIFileSharingEnabled</key>
-	<true/>
-
-	<!-- Google Maps 및 Flutter 관련 설정 -->
-	<key>io.flutter.embedded_views_preview</key>
-	<true/>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>앱 사용 중 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>항상 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
-
-	<!-- 연락처 접근 권한 요청 -->
-	<key>NSContactsUsageDescription</key>
-	<string>앱에서 연락처 정보를 사용하려면 권한이 필요합니다.</string>
-
-	<!-- 사용자 추적 권한 요청 -->
-	<key>NSUserTrackingUsageDescription</key>
-	<string>앱 설정을 저장하기 위해 이 식별자가 사용됩니다.</string>
+<key>CFBundleDevelopmentRegion</key>
+<string>$(DEVELOPMENT_LANGUAGE)</string>
+<key>CFBundleDisplayName</key>
+<string>Flutter Onjung V1</string>
+<key>CFBundleExecutable</key>
+<string>$(EXECUTABLE_NAME)</string>
+<key>CFBundleIdentifier</key>
+<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+<key>CFBundleInfoDictionaryVersion</key>
+<string>6.0</string>
+<key>CFBundleName</key>
+<string>flutter_onjung_v1</string>
+<key>CFBundlePackageType</key>
+<string>APPL</string>
+<key>CFBundleShortVersionString</key>
+<string>$(FLUTTER_BUILD_NAME)</string>
+<key>CFBundleSignature</key>
+<string>????</string>
+<key>CFBundleVersion</key>
+<string>$(FLUTTER_BUILD_NUMBER)</string>
+<key>LSRequiresIPhoneOS</key>
+<true/>
+<key>UILaunchStoryboardName</key>
+<string>LaunchScreen</string>
+<key>UIMainStoryboardFile</key>
+<string>Main</string>
+<key>UISupportedInterfaceOrientations</key>
+<array>
+<string>UIInterfaceOrientationPortrait</string>
+<string>UIInterfaceOrientationLandscapeLeft</string>
+<string>UIInterfaceOrientationLandscapeRight</string>
+</array>
+<key>UISupportedInterfaceOrientations~ipad</key>
+<array>
+<string>UIInterfaceOrientationPortrait</string>
+<string>UIInterfaceOrientationPortraitUpsideDown</string>
+<string>UIInterfaceOrientationLandscapeLeft</string>
+<string>UIInterfaceOrientationLandscapeRight</string>
+</array>
+<key>CADisableMinimumFrameDurationOnPhone</key>
+<true/>
+<key>UIApplicationSupportsIndirectInputEvents</key>
+<true/>
+<!-- Firebase 관련 설정 추가 -->
+<key>FirebaseAppDelegateProxyEnabled</key>
+<false/>
+<!-- 저장 권한 관련 추가 설정 -->
+<key>NSFileProtectionKey</key>
+<string>NSFileProtectionCompleteUntilFirstUserAuthentication</string>
+<!-- Application Support 경로를 보호 -->
+<key>LSSupportsOpeningDocumentsInPlace</key>
+<true/>
+<!-- 쓰기 및 읽기 권한이 필요한 경우 명시적으로 추가 -->
+<key>UIFileSharingEnabled</key>
+<true/>
+<!-- Google Maps 및 Flutter 관련 설정 -->
+<key>io.flutter.embedded_views_preview</key>
+<true/>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>앱 사용 중 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>항상 위치 서비스를 사용할 수 있도록 허용해주세요.</string>
+<!-- 연락처 접근 권한 요청 -->
+<key>NSContactsUsageDescription</key>
+<string>앱에서 연락처 정보를 사용하려면 권한이 필요합니다.</string>
+<!-- 사용자 추적 권한 요청 -->
+<key>NSUserTrackingUsageDescription</key>
+<string>앱 설정을 저장하기 위해 이 식별자가 사용됩니다.</string>
+<!-- Google Sign-In URL Scheme -->
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>com.googleusercontent.apps.796275430988-eieam1n6c5kl9ks98thha5a060b688ef</string>
+        </array>
+        <key>CFBundleURLType</key>
+        <string>Editor</string>
+    </dict>
+</array>
 </dict>
 </plist>

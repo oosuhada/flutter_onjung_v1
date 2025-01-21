@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onjung_v1/core/services/firebase_auth_service.dart';
+import 'package:flutter_onjung_v1/core/auth_services/firebase_auth_service.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/providers/user_profile_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 // User Profile Model
 class UserProfile {
@@ -10,12 +13,14 @@ class UserProfile {
   final String nickname;
   final int age;
   final String location;
+  final String email;
 
   UserProfile({
     required this.uid,
     required this.nickname,
     required this.age,
     required this.location,
+    required this.email,
   });
 
   Map<String, dynamic> toMap() {
@@ -24,6 +29,7 @@ class UserProfile {
       'nickname': nickname,
       'age': age,
       'location': location,
+      'email': email,
     };
   }
 }
@@ -115,6 +121,7 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
           nickname: _nicknameController.text,
           age: int.parse(_ageController.text),
           location: _locationController.text,
+          email: user.email ?? '', // 이메일 추가
         );
 
         try {
@@ -124,9 +131,12 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
               .doc(user.uid)
               .set(userProfile.toMap());
 
+          // Provider와 SharedPreferences에 저장
+          await ref.read(userProfileProvider.notifier).setProfile(userProfile);
+
           if (mounted) {
-            // 메인 화면으로 이동
-            Navigator.pushReplacementNamed(context, '/main');
+            // 홈 화면으로 이동
+            context.goNamed(AppRoute.homeTab.name);
           }
         } catch (e) {
           if (mounted) {

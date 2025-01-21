@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_onjung_v1/core/auth_services/firebase_auth_service.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
-import 'package:flutter_onjung_v1/core/services/firebase_auth_service.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/profile_set_up_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -152,20 +152,29 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
       final authService = ref.read(authServiceProvider);
       final userCredential = await authService.signInWithGoogle();
 
-      if (userCredential != null) {
-        if (context.mounted) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const ProfileSetupScreen()),
-          );
-        }
+      if (userCredential != null && context.mounted) {
+        context.go(AppRoute.profileSetup.path);
       }
+    } on PlatformException catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('구글 로그인 설정 오류: ${e.message}'),
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
+      debugPrint('Google Sign In PlatformException: ${e.message}');
     } catch (e) {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('구글 회원가입에 실패했습니다.')),
+          const SnackBar(
+            content: Text('구글 회원가입 중 오류가 발생했습니다.'),
+            duration: Duration(seconds: 3),
+          ),
         );
       }
+      debugPrint('Google Sign In Error: $e');
     }
   }
 

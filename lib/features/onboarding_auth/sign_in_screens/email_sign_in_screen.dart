@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_onjung_v1/core/auth_services/firebase_auth_service.dart';
 import 'package:flutter_onjung_v1/core/config/app_router.dart';
-import 'package:flutter_onjung_v1/core/services/firebase_auth_service.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/local_validator.dart';
 import 'package:flutter_onjung_v1/features/onboarding_auth/widgets/network_validator.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
