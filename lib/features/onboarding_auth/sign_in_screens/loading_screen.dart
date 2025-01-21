@@ -36,7 +36,7 @@ class _LoadingScreenState extends ConsumerState<LoadingScreen> {
           children: [
             const SizedBox(height: 200),
             Image.asset(
-              'assets/logo.png', // 로고 이미지 경로
+              'assets/logo/onjung_logo_clear_dark.png', // 로고 이미지 경로
               width: 200, // 이미지 크기 설정
               height: 100,
             ),

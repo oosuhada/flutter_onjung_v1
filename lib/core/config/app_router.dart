@@ -11,11 +11,12 @@ import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/event_details_s
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/guest_management_screen.dart';
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/my_onjung_tab_screen.dart';
 import 'package:flutter_onjung_v1/features/my_onjung_tab/screens/visitor_log_screen.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/loading_screen.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/login_options_dialog.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/onboarding_screen.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/signup_screen.dart';
-import 'package:flutter_onjung_v1/features/onboarding_auth/screens/terms_and_conditions_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/loading_screen.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/login_options_dialog.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_in_screens/onboarding_screen.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/email_sign_up_screen.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/signup_screen.dart';
+import 'package:flutter_onjung_v1/features/onboarding_auth/sign_up_screens/terms_and_conditions_dialog.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoute {
@@ -24,6 +25,7 @@ enum AppRoute {
   authLogin('/authLogin'),
   authTerms('/authTerms'),
   authSignup('/authSignup'),
+  emailSignup('/emailSignup'),
   homeTab('/homeTab'),
   homeOnjungSummary('/homeOnjungSummary'),
   homeOnjungStatistics('/homeOnjungStatistics'),
@@ -84,6 +86,14 @@ final goRouter = GoRouter(
       builder: (context, state) {
         debugPrint('🚀 SignUpScreen으로 이동 - state: $state');
         return const SignUpScreen();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.emailSignup.path,
+      name: AppRoute.emailSignup.name,
+      builder: (context, state) {
+        debugPrint('🚀 EmailSignUpScreen으로 이동 - state: $state');
+        return const EmailSignUpScreen();
       },
     ),
     GoRoute(
