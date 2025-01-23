@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/%08shared/widgets/bottom_navigation_bar.dart';
+import 'package:flutter_onjung_v1/%08shared/widgets/drawer_menu.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/data/%08my_onjung_tab/celebration_event.dart';
 import 'package:go_router/go_router.dart';
 
 import '../widgets/celebration_card.dart';
 
 class MyOnjungTabScreen extends StatelessWidget {
-  final List<CelebrationEvent> events = [
+  final List events = [
     CelebrationEvent(
       title: '민수 & 예은',
       date: DateTime(2025, 1, 1),
       amount: 36350000,
-      imageUrl: 'wedding_hall_image_url',
+      imageUrl: 'assets/wedding_hall.png', // 이미지 경로
       guestCount: 156,
     ),
     // Add more sample events as needed
@@ -22,6 +24,7 @@ class MyOnjungTabScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: const RightDrawerMenu(),
       appBar: AppBar(
         title: const Text('나의 온정'),
         actions: [
@@ -75,7 +78,7 @@ class MyOnjungTabScreen extends StatelessWidget {
             event: events[index],
             onTap: () {
               // Navigate to event details screen
-              context.push('/onjung/event/${index}');
+              context.push('/onjung/event/${index.toString()}');
             },
           );
         },
@@ -85,16 +88,16 @@ class MyOnjungTabScreen extends StatelessWidget {
         onTap: (index) {
           switch (index) {
             case 0:
-              context.go('/home');
+              context.goNamed(AppRoute.homeTab.name);
               break;
             case 1:
-              context.go('/address');
+              context.goNamed(AppRoute.addressTab.name);
               break;
             case 2:
-              context.go('/calendar');
+              context.goNamed(AppRoute.calendarTab.name);
               break;
             case 3:
-              context.go('/myOnjung');
+              context.goNamed(AppRoute.onjungTab.name);
               break;
           }
         },
