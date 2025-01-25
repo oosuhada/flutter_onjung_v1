@@ -167,6 +167,7 @@ class _DatePickerState extends State<DatePicker> {
             }
           },
           child: Container(
+            width: MediaQuery.of(context).size.width * 0.8, // 가로 길이 제한
             padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey),
