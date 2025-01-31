@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onjung_v1/%08shared/widgets/bottom_navigation_bar.dart';
+import 'package:flutter_onjung_v1/%08shared/widgets/drawer_menu.dart';
+import 'package:flutter_onjung_v1/core/config/app_router.dart';
 import 'package:flutter_onjung_v1/features/address_tab/main_screens/group_tab.dart';
 import 'package:flutter_onjung_v1/features/address_tab/main_screens/personal_tab.dart';
-import 'package:flutter_onjung_v1/features/calendar_tab/widgets/drawer_menu.dart';
 import 'package:go_router/go_router.dart';
 
 class AddressTabScreen extends StatefulWidget {
@@ -120,16 +121,16 @@ class _AddressTabScreenState extends State<AddressTabScreen>
         onTap: (index) {
           switch (index) {
             case 0:
-              context.go('/home');
+              context.goNamed(AppRoute.homeTab.name);
               break;
             case 1:
-              context.go('/address');
+              context.goNamed(AppRoute.addressTab.name);
               break;
             case 2:
-              context.go('/calendar');
+              context.goNamed(AppRoute.calendarTab.name);
               break;
             case 3:
-              context.go('/myOnjung');
+              context.goNamed(AppRoute.onjungTab.name);
               break;
           }
         },
