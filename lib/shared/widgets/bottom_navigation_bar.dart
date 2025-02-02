@@ -15,6 +15,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: currentIndex, // 현재 활성화된 탭
       onTap: onTap, // 탭 변경 시 호출되는 콜백
+      type: BottomNavigationBarType.fixed, // 모든 탭 크기 고정
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -33,7 +34,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           label: '온정',
         ),
       ],
-      selectedItemColor: Colors.orange, // 선택된 아이템 색상
+      selectedItemColor: Colors.orange[800], // 선택된 아이템 색상
       unselectedItemColor: Colors.grey, // 선택되지 않은 아이템 색상
       showUnselectedLabels: true, // 비활성 상태에서도 라벨 표시
     );
