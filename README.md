@@ -42,10 +42,6 @@ The current `main` keeps the original product direction while providing a determ
   <strong>05 · My Onjung / 내 온정</strong>
 </p>
 
-All preview images were captured directly from an **Android 15 / API 35 emulator at 1080×2400**. Flutter Web screenshots are not used.
-
-모든 Preview 이미지는 **Android 15 / API 35 Emulator, 1080×2400**에서 직접 캡처했습니다. Flutter Web screenshot은 사용하지 않았습니다.
-
 ## What it does · 주요 기능
 
 - **Home summary / 홈 요약** — See this month's sent/received care and recent records at a glance. / 이번 달 보낸·받은 온정과 최근 기록을 한눈에 확인합니다.
@@ -60,10 +56,6 @@ All preview images were captured directly from an **Android 15 / API 35 emulator
 `Home → Records → Record detail → Quick record → Save → Updated records → My Onjung / Calendar`
 
 `홈 → 온정록 → 온정 상세 → 빠른 온정 기록 → 저장 → 갱신된 온정록 → 내 온정 / 캘린더`
-
-During Android Emulator QA, the app started with five records, saved a new wedding record, and immediately updated the list to **six records**.
-
-Android Emulator QA에서는 초기 5개 기록에서 새 결혼식 기록을 저장한 뒤 **6개 기록으로 즉시 갱신**되는 state update까지 확인했습니다.
 
 ## Architecture · 아키텍처
 
