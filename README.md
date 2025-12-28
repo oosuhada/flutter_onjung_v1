@@ -98,6 +98,13 @@ Onjung began as a product for remembering the money and care exchanged in Korean
 
 온정은 marketplace나 SNS가 아니라, 한국의 경조사 문화에서 오가는 금액과 마음을 **관계의 맥락으로 기억하기 위한 앱**으로 시작했습니다. 이번 정리는 그 목적을 바꾸지 않고 기존 아이디어를 지금도 실행하고 탐색할 수 있는 작은 모바일 제품으로 마무리한 작업입니다.
 
-## Topics
+## Architecture & Topics / 아키텍처 및 주제
 
-[`dart`](https://github.com/topics/dart) · [`event-ledger`](https://github.com/topics/event-ledger) · [`firebase`](https://github.com/topics/firebase) · [`flutter`](https://github.com/topics/flutter) · [`go-router`](https://github.com/topics/go-router) · [`mobile-app`](https://github.com/topics/mobile-app) · [`riverpod`](https://github.com/topics/riverpod) · [`sqflite`](https://github.com/topics/sqflite) · [`ledger`](https://github.com/topics/ledger) · [`mobile-development`](https://github.com/topics/mobile-development) · [`state-management`](https://github.com/topics/state-management) · [`local-database`](https://github.com/topics/local-database) · [`flutter-app`](https://github.com/topics/flutter-app) · [`cross-platform`](https://github.com/topics/cross-platform) · [`flutter-development`](https://github.com/topics/flutter-development) · [`personal-finance`](https://github.com/topics/personal-finance)
+**Architecture / 아키텍처**<br>
+[`local-first`](https://github.com/topics/local-first) · [`offline-first`](https://github.com/topics/offline-first) · [`reactive-state-management`](https://github.com/topics/reactive-state-management) · [`event-ledger`](https://github.com/topics/event-ledger) · [`unidirectional-data-flow`](https://github.com/topics/unidirectional-data-flow) · [`declarative-routing`](https://github.com/topics/declarative-routing)
+
+**Project context / 프로젝트 맥락**<br>
+[`cross-platform`](https://github.com/topics/cross-platform) · [`flutter-app`](https://github.com/topics/flutter-app) · [`flutter-development`](https://github.com/topics/flutter-development) · [`go-router`](https://github.com/topics/go-router) · [`ledger`](https://github.com/topics/ledger) · [`local-database`](https://github.com/topics/local-database) · [`mobile-app`](https://github.com/topics/mobile-app) · [`mobile-development`](https://github.com/topics/mobile-development) · [`personal-finance`](https://github.com/topics/personal-finance) · [`sqflite`](https://github.com/topics/sqflite) · [`state-management`](https://github.com/topics/state-management)
+
+**Implementation stack / 구현 스택**<br>
+[`dart`](https://github.com/topics/dart) · [`firebase`](https://github.com/topics/firebase) · [`flutter`](https://github.com/topics/flutter) · [`riverpod`](https://github.com/topics/riverpod)
