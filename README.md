@@ -100,24 +100,6 @@ flutter run
 The portfolio/demo flow does not require an API key or login account.
 Portfolio/demo 흐름은 별도 API key나 로그인 계정 없이 실행할 수 있습니다.
 
-## Validation · 검증
-
-Validated on **2026-08-21** with the following commands and Android Emulator flow.
-**2026-08-21** 기준 아래 명령과 Android Emulator 사용자 흐름을 실제로 검증했습니다.
-
-```bash
-flutter pub get
-flutter analyze
-flutter test
-flutter build apk --debug
-```
-
-- `flutter analyze` — **No issues found / 이슈 없음**
-- `flutter test` — Core journey widget test passed / 핵심 사용자 흐름 widget test 통과
-- Android debug build — APK build succeeded / APK 생성 성공
-- Android Emulator — API 35 / 1080×2400 end-to-end flow verified / 전체 사용자 흐름 확인
-- Runtime QA — No Flutter exception, RenderFlex overflow, or asset load failure / Flutter exception, RenderFlex overflow, asset load failure 없음
-
 ## Product history · 제품 배경
 
 Onjung began as a product for remembering the money and care exchanged in Korean life-event culture **through the context of relationships**, not as a marketplace or social network. This refresh keeps that original idea and turns it into a small mobile product that can still be run and explored today.
