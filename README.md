@@ -3,9 +3,13 @@
 > **A relationship-first ledger for remembering the care exchanged around life events.**
 > **경조사에서 주고받은 마음을 사람·관계·상황과 함께 기억하는 관계 중심 장부입니다.**
 
+## About Onjung · 제품 소개
+
 Onjung is a Flutter mobile app for recording and revisiting the money and care exchanged around weddings, funerals, first-birthday celebrations, birthdays, openings, and other important life events. Instead of treating each entry as a simple amount, it keeps the **relationship context**—who the person is, what happened, when it happened, and what you want to remember.
 
 온정은 결혼식, 장례식, 돌잔치, 생일, 개업 등 경조사에서 오간 금액과 마음을 기록하고 다시 찾기 위한 Flutter 모바일 앱입니다. 단순한 금액 장부가 아니라 **누구와 어떤 관계인지, 어떤 경조사였는지, 언제 있었는지, 무엇을 기억할지**를 함께 남기는 것이 핵심입니다.
+
+## Demo Runtime · 데모 실행 환경
 
 The current `main` keeps the original product direction while providing a deterministic demo runtime, so the core mobile flow remains usable even when the legacy Firebase/backend environment is unavailable.
 
