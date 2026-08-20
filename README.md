@@ -23,14 +23,24 @@ The current `main` keeps the original product direction while providing a determ
   <img src=".github/assets/portfolio/03-record-detail.png" width="210" alt="Onjung record detail" />
 </p>
 
-<p align="center"><sub>Home / 홈 · Records / 온정록 · Record detail / 온정 상세</sub></p>
+<p align="center">
+  <strong>01 · Home / 홈</strong>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>02 · Records / 온정록</strong>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>03 · Record Detail / 온정 상세</strong>
+</p>
 
 <p align="center">
   <img src=".github/assets/portfolio/04-add-record.png" width="240" alt="Add an Onjung record" />
   <img src=".github/assets/portfolio/05-my-onjung.png" width="240" alt="My Onjung insights" />
 </p>
 
-<p align="center"><sub>Quick record / 빠른 온정 기록 · My Onjung / 내 온정</sub></p>
+<p align="center">
+  <strong>04 · Quick Record / 빠른 온정 기록</strong>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>05 · My Onjung / 내 온정</strong>
+</p>
 
 All preview images were captured directly from an **Android 15 / API 35 emulator at 1080×2400**. Flutter Web screenshots are not used.
 
