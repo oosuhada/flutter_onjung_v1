@@ -55,7 +55,8 @@ class V2GlassTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white.withValues(alpha: .82),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(18),
           borderSide: BorderSide(color: ink.withValues(alpha: .08)),
@@ -66,13 +67,15 @@ class V2GlassTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(18),
-          borderSide: BorderSide(color: seed.withValues(alpha: .72), width: 1.3),
+          borderSide:
+              BorderSide(color: seed.withValues(alpha: .72), width: 1.3),
         ),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           minimumSize: const Size(48, 50),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
           textStyle: const TextStyle(fontWeight: FontWeight.w800),
         ),
       ),
@@ -245,7 +248,8 @@ class AppGlassNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     final scheme = Theme.of(context).colorScheme;
 
     return SafeArea(
@@ -270,10 +274,13 @@ class AppGlassNavigationBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(24),
                     onTap: () => onSelected(index),
                     child: AnimatedContainer(
-                      duration: reduceMotion ? Duration.zero : const Duration(milliseconds: 240),
+                      duration: reduceMotion
+                          ? Duration.zero
+                          : const Duration(milliseconds: 240),
                       curve: Curves.easeOutCubic,
                       constraints: const BoxConstraints(minHeight: 54),
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 7),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6, vertical: 7),
                       decoration: BoxDecoration(
                         color: selected
                             ? scheme.primary.withValues(alpha: .11)
@@ -284,9 +291,13 @@ class AppGlassNavigationBar extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(
-                            selected ? (item.selectedIcon ?? item.icon) : item.icon,
+                            selected
+                                ? (item.selectedIcon ?? item.icon)
+                                : item.icon,
                             size: 22,
-                            color: selected ? scheme.primary : scheme.onSurfaceVariant,
+                            color: selected
+                                ? scheme.primary
+                                : scheme.onSurfaceVariant,
                           ),
                           const SizedBox(height: 3),
                           Text(
@@ -295,8 +306,11 @@ class AppGlassNavigationBar extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontSize: 10.5,
-                              fontWeight: selected ? FontWeight.w800 : FontWeight.w600,
-                              color: selected ? scheme.primary : scheme.onSurfaceVariant,
+                              fontWeight:
+                                  selected ? FontWeight.w800 : FontWeight.w600,
+                              color: selected
+                                  ? scheme.primary
+                                  : scheme.onSurfaceVariant,
                             ),
                           ),
                         ],
@@ -335,7 +349,8 @@ class AppGlassActionButton extends StatelessWidget {
       semanticLabel: semanticLabel ?? label,
       borderRadius: BorderRadius.circular(24),
       blurSigma: 18,
-      padding: EdgeInsets.symmetric(horizontal: label == null ? 16 : 18, vertical: 14),
+      padding: EdgeInsets.symmetric(
+          horizontal: label == null ? 16 : 18, vertical: 14),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -395,6 +410,186 @@ class AppGlassSearchButton extends StatelessWidget {
             trailing!,
           ],
         ],
+      ),
+    );
+  }
+}
+
+class AppGlassTextField extends StatelessWidget {
+  const AppGlassTextField({
+    super.key,
+    required this.hintText,
+    this.controller,
+    this.onChanged,
+    this.prefixIcon = Icons.search_rounded,
+    this.textInputAction,
+    this.maxLines = 1,
+    this.semanticLabel,
+  });
+
+  final String hintText;
+  final TextEditingController? controller;
+  final ValueChanged<String>? onChanged;
+  final IconData prefixIcon;
+  final TextInputAction? textInputAction;
+  final int maxLines;
+  final String? semanticLabel;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return AppGlassSurface(
+      semanticLabel: semanticLabel ?? hintText,
+      borderRadius: BorderRadius.circular(22),
+      blurSigma: 16,
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: TextField(
+        controller: controller,
+        onChanged: onChanged,
+        textInputAction: textInputAction,
+        maxLines: maxLines,
+        decoration: InputDecoration(
+          prefixIcon: Icon(prefixIcon, color: scheme.onSurfaceVariant),
+          hintText: hintText,
+          filled: false,
+          border: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+        ),
+      ),
+    );
+  }
+}
+
+class AppGlassSegmentedControl<T> extends StatelessWidget {
+  const AppGlassSegmentedControl({
+    super.key,
+    required this.values,
+    required this.selected,
+    required this.labelBuilder,
+    required this.onSelected,
+  });
+
+  final List<T> values;
+  final T selected;
+  final String Function(T value) labelBuilder;
+  final ValueChanged<T> onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final scheme = Theme.of(context).colorScheme;
+    return AppGlassSurface(
+      borderRadius: BorderRadius.circular(22),
+      blurSigma: 14,
+      padding: const EdgeInsets.all(5),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: values.map((value) {
+          final isSelected = value == selected;
+          final label = labelBuilder(value);
+          return Semantics(
+            selected: isSelected,
+            button: true,
+            label: label,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(17),
+                onTap: () => onSelected(value),
+                child: AnimatedContainer(
+                  duration: reduceMotion
+                      ? Duration.zero
+                      : const Duration(milliseconds: 210),
+                  curve: Curves.easeOutCubic,
+                  constraints:
+                      const BoxConstraints(minHeight: 42, minWidth: 58),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? scheme.primary.withValues(alpha: .12)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(17),
+                  ),
+                  child: Text(
+                    label,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color:
+                          isSelected ? scheme.primary : scheme.onSurfaceVariant,
+                      fontWeight:
+                          isSelected ? FontWeight.w800 : FontWeight.w600,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ),
+    );
+  }
+}
+
+class AppGlassToolbar extends StatelessWidget {
+  const AppGlassToolbar({
+    super.key,
+    required this.title,
+    this.onBack,
+    this.trailing,
+  });
+
+  final String title;
+  final VoidCallback? onBack;
+  final Widget? trailing;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return SafeArea(
+      bottom: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+        child: AppGlassSurface(
+          borderRadius: BorderRadius.circular(24),
+          blurSigma: 18,
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+          child: Row(
+            children: [
+              if (onBack != null)
+                Semantics(
+                  button: true,
+                  label: '뒤로 가기',
+                  child: IconButton(
+                    tooltip: 'Back',
+                    onPressed: onBack,
+                    icon: const Icon(Icons.arrow_back_ios_new_rounded),
+                  ),
+                )
+              else
+                const SizedBox(width: 48),
+              Expanded(
+                child: Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: scheme.onSurface,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+              SizedBox(width: 48, child: trailing),
+            ],
+          ),
+        ),
       ),
     );
   }
