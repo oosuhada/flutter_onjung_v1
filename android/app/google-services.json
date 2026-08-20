@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "796275430988",
+    "project_id": "flutter-onjung-project-6d13f",
+    "storage_bucket": "flutter-onjung-project-6d13f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796275430988:android:80fffe34b88386878786e9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_onjung_v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796275430988-3v26t2or6pthjnu2lj0lgcbs7j7dnbro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDedrOa3POGTdj2JmVKbWXpFGqXKMIuDQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796275430988-3v26t2or6pthjnu2lj0lgcbs7j7dnbro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
