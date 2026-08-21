@@ -5,7 +5,7 @@
 
 This is a **2026 UX renewal** of the Flutter project I first built while learning mobile product development in 2024. The goal is not to cover every screen with blur, but to revisit the same product with a clearer interaction hierarchy, adaptive controls, motion/accessibility fallbacks, platform conventions, and rendering-cost awareness.
 
-2024년에 Flutter를 처음 배우며 기능 구현 중심으로 만들었던 프로젝트를, 2026년에 **interaction hierarchy, adaptive UI, motion, accessibility, platform convention, rendering cost**를 기준으로 다시 설계한 UX renewal입니다. 모든 화면을 반투명하게 만드는 것이 아니라, 콘텐츠는 읽기 쉽게 유지하고 navigation/action/search 같은 control layer만 선택적으로 떠 있게 만들었습니다.
+2024년에 Flutter를 처음 배우며 기능 구현 중심으로 만들었던 프로젝트를, 2026년에 **interaction hierarchy, adaptive UI, motion, accessibility, platform convention, rendering cost**를 기준으로 다시 설계한 UX renewal입니다. 모든 화면을 반투명하게 만드는 것이 아니라, 기록 리스트·사진처럼 읽기 중요한 콘텐츠는 선명하게 유지하고 navigation/action/search와 summary·metadata·insight surface를 강도별 glass hierarchy로 분리했습니다.
 
 **Branches / 버전** · [`v1` · original portfolio version](https://github.com/oosuhada/flutter_onjung_v1/tree/v1) · [`main` · v2 renewal](https://github.com/oosuhada/flutter_onjung_v1)
 
@@ -19,7 +19,7 @@ This is a **2026 UX renewal** of the Flutter project I first built while learnin
 | Search & filters | Static/basic controls | Searchable records + compact segmented control |
 | Motion | Default widget transitions | Reduced-motion-aware implicit animation |
 | Accessibility | Basic Material semantics | Selected-state semantics, minimum tap targets, high-contrast fallback |
-| Rendering | Visual styling first | Blur limited to compact control surfaces |
+| Rendering | Visual styling first | Glass-themed surface hierarchy for controls, summaries, metadata, and insights while record lists/photos stay sharp |
 
 > **Why did I change it? / 왜 바꿨나요?**  
 > In v1 I was mainly focused on making screens and features work. In v2 I kept the same product idea and reworked the experience around interaction hierarchy, motion, accessibility, platform conventions, and rendering cost.  
@@ -111,14 +111,14 @@ The portfolio runtime is intentionally small: Flutter/Material UI, Riverpod stat
 
 ## v2 visual system · v2 디자인 시스템
 
-The v2 glass layer is intentionally restricted to **navigation and controls**. The balance hero, record cards, photos, memo surfaces, calendar data, and relationship insights stay solid so the information remains legible and the app does not become a glassmorphism demo.
+The v2 glass layer separates **controls from contextual summary surfaces**. Record list rows, photos, and dense calendar data stay sharp, while record-count metadata, detail summary/amount/memo panels, quick-record guidance, My Onjung totals, upcoming-event context, and relationship insights use lower-intensity translucent surfaces.
 
-v2의 glass layer는 **navigation과 control**에만 제한적으로 사용합니다. 잔액 hero, 기록 카드, 사진, 메모, 캘린더 데이터, 관계 인사이트는 solid surface로 유지해 정보 가독성을 우선하고 과도한 glassmorphism을 피했습니다.
+v2의 glass layer는 **control과 보조 summary surface를 서로 다른 강도로 계층화**합니다. 기록 목록, 사진, 밀도 높은 캘린더 데이터는 선명하게 유지하고, 기록 개수 metadata, 상세 요약·금액·메모 panel, 빠른 기록 안내, 내 온정 합계, 다가오는 일정, 관계 insight에는 낮은 강도의 adaptive translucent layer를 적용했습니다.
 
 - **Adaptive transparency / 적응형 투명도** — `MediaQuery.highContrast`에서는 blur를 제거하고 surface opacity를 높입니다.
 - **Reduced motion / 모션 감소** — `MediaQuery.disableAnimations`에서는 navigation/filter transition duration을 0으로 줄입니다.
 - **Accessible controls / 접근 가능한 컨트롤** — selected semantics와 42–54px 이상의 control height를 사용합니다.
-- **Rendering-cost aware blur / 렌더링 비용 고려** — list item마다 `BackdropFilter`를 만들지 않고 navigation/search/toolbar 같은 작은 영역에만 blur를 적용합니다.
+- **Rendering-cost aware blur / 렌더링 비용 고려** — 반복되는 record list item이나 calendar cell마다 `BackdropFilter`를 만들지 않고 navigation/search/toolbar와 의미 있는 summary surface에만 선택적으로 blur를 적용합니다.
 - **Future renderer boundary / 확장 가능한 경계** — UI는 `AppGlass*` contract를 통해 사용하므로 향후 native material 또는 shader 구현으로 교체해도 product screen 코드는 크게 바꾸지 않도록 구성했습니다.
 
 ## Tech Stack · 기술 스택

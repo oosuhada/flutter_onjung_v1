@@ -359,17 +359,25 @@ class _RecordsScreenState extends ConsumerState<RecordsScreen> {
                   ),
                 ),
                 const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Text(
-                      '${records.length}개의 기록',
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.w800,
-                          ),
-                    ),
-                    const Spacer(),
-                    const Text('최근순', style: TextStyle(color: Colors.black54)),
-                  ],
+                AppGlassSurface(
+                  borderRadius: BorderRadius.circular(18),
+                  blurSigma: 10,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                  child: Row(
+                    children: [
+                      Text(
+                        '${records.length}개의 기록',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.w800,
+                                ),
+                      ),
+                      const Spacer(),
+                      const Text('최근순',
+                          style: TextStyle(color: Colors.black54)),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 12),
                 ...records.map(
@@ -510,51 +518,58 @@ class RecordDetailScreen extends StatelessWidget {
                       ),
                     ),
                   if (record.assetPath != null) const SizedBox(height: 22),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(record.event,
-                                style: const TextStyle(
-                                    color: _brand,
-                                    fontWeight: FontWeight.w700)),
-                            const SizedBox(height: 5),
-                            Text(
-                              record.person,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineMedium
-                                  ?.copyWith(fontWeight: FontWeight.w900),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(record.relation,
-                                style: const TextStyle(color: Colors.black54)),
-                          ],
+                  AppGlassSurface(
+                    borderRadius: BorderRadius.circular(22),
+                    blurSigma: 12,
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(record.event,
+                                  style: const TextStyle(
+                                      color: _brand,
+                                      fontWeight: FontWeight.w700)),
+                              const SizedBox(height: 5),
+                              Text(
+                                record.person,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium
+                                    ?.copyWith(fontWeight: FontWeight.w900),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(record.relation,
+                                  style:
+                                      const TextStyle(color: Colors.black54)),
+                            ],
+                          ),
                         ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 7),
-                        decoration: BoxDecoration(
-                          color: record.isSent
-                              ? const Color(0xFFFFE9DF)
-                              : const Color(0xFFE4F1EB),
-                          borderRadius: BorderRadius.circular(999),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 7),
+                          decoration: BoxDecoration(
+                            color: record.isSent
+                                ? const Color(0xFFFFE9DF)
+                                : const Color(0xFFE4F1EB),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text(record.isSent ? '보낸 온정' : '받은 온정',
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w700)),
                         ),
-                        child: Text(record.isSent ? '보낸 온정' : '받은 온정',
-                            style:
-                                const TextStyle(fontWeight: FontWeight.w700)),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(height: 28),
-                  Container(
+                  AppGlassSurface(
+                    tint: _ink,
+                    borderRadius: BorderRadius.circular(24),
+                    blurSigma: 14,
                     padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: _ink, borderRadius: BorderRadius.circular(24)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -592,10 +607,11 @@ class RecordDetailScreen extends StatelessWidget {
                           .titleMedium
                           ?.copyWith(fontWeight: FontWeight.w800)),
                   const SizedBox(height: 10),
-                  Container(
+                  AppGlassSurface(
+                    tint: _cream,
+                    borderRadius: BorderRadius.circular(20),
+                    blurSigma: 10,
                     padding: const EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                        color: _cream, borderRadius: BorderRadius.circular(20)),
                     child:
                         Text(record.note, style: const TextStyle(height: 1.6)),
                   ),
@@ -730,11 +746,11 @@ class _AddRecordScreenState extends ConsumerState<AddRecordScreen> {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 32),
                 children: [
-                  Container(
+                  AppGlassSurface(
+                    tint: const Color(0xFFFFEADF),
+                    borderRadius: BorderRadius.circular(24),
+                    blurSigma: 12,
                     padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: const Color(0xFFFFEADF),
-                        borderRadius: BorderRadius.circular(24)),
                     child: const Row(
                       children: [
                         CircleAvatar(
@@ -981,10 +997,11 @@ class MyOnjungScreen extends ConsumerWidget {
         children: [
           const _BrandHeader(eyebrow: '나의 관계와 온정 패턴', title: '내 온정'),
           const SizedBox(height: 22),
-          Container(
+          AppGlassSurface(
+            tint: _ink,
+            borderRadius: BorderRadius.circular(26),
+            blurSigma: 14,
             padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                color: _ink, borderRadius: BorderRadius.circular(26)),
             child: Row(
               children: [
                 const CircleAvatar(
@@ -1078,10 +1095,10 @@ class _SummaryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AppGlassSurface(
+      borderRadius: BorderRadius.circular(20),
+      blurSigma: 11,
       padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -1112,10 +1129,10 @@ class _PersonInsight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AppGlassSurface(
+      borderRadius: BorderRadius.circular(20),
+      blurSigma: 10,
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(20)),
       child: Row(
         children: [
           CircleAvatar(
@@ -1180,49 +1197,51 @@ class _UpcomingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(24)),
-      child: Row(
-        children: [
-          SizedBox(
-              width: 112,
-              height: 130,
-              child: Image.asset(event.assetPath, fit: BoxFit.cover)),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                      '${DateFormat('M월 d일').format(event.date)} · ${event.relation}',
-                      style: const TextStyle(
-                          color: _brand,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 12)),
-                  const SizedBox(height: 6),
-                  Text(event.title,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w900, fontSize: 16)),
-                  const SizedBox(height: 6),
-                  Text(event.location,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style:
-                          const TextStyle(color: Colors.black54, fontSize: 12)),
-                  const SizedBox(height: 9),
-                  const Text('이전 기록을 참고해 금액 결정하기 →',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
-                ],
+    return AppGlassSurface(
+      borderRadius: BorderRadius.circular(24),
+      blurSigma: 10,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(24),
+        child: Row(
+          children: [
+            SizedBox(
+                width: 112,
+                height: 130,
+                child: Image.asset(event.assetPath, fit: BoxFit.cover)),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                        '${DateFormat('M월 d일').format(event.date)} · ${event.relation}',
+                        style: const TextStyle(
+                            color: _brand,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12)),
+                    const SizedBox(height: 6),
+                    Text(event.title,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900, fontSize: 16)),
+                    const SizedBox(height: 6),
+                    Text(event.location,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                            color: Colors.black54, fontSize: 12)),
+                    const SizedBox(height: 9),
+                    const Text('이전 기록을 참고해 금액 결정하기 →',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 12)),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -1233,11 +1252,11 @@ class _RelationshipInsight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AppGlassSurface(
+      tint: const Color(0xFFF1F5EC),
+      borderRadius: BorderRadius.circular(24),
+      blurSigma: 11,
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-          color: const Color(0xFFF1F5EC),
-          borderRadius: BorderRadius.circular(24)),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
