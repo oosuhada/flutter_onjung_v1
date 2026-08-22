@@ -1,29 +1,7 @@
-# Onjung v2 · 온정
+# Onjung · 온정
 
 > **A relationship-first ledger for remembering the care exchanged around life events.**
 > **경조사에서 주고받은 마음을 사람·관계·상황과 함께 기억하는 관계 중심 장부입니다.**
-
-This is a **2026 UX renewal** of the Flutter project I first built while learning mobile product development in 2024. The goal is not to cover every screen with blur, but to revisit the same product with a clearer interaction hierarchy, adaptive controls, motion/accessibility fallbacks, platform conventions, and rendering-cost awareness.
-
-2024년에 Flutter를 처음 배우며 기능 구현 중심으로 만들었던 프로젝트를, 2026년에 **interaction hierarchy, adaptive UI, motion, accessibility, platform convention, rendering cost**를 기준으로 다시 설계한 UX renewal입니다. 모든 화면을 반투명하게 만드는 것이 아니라, 기록 리스트·사진처럼 읽기 중요한 콘텐츠는 선명하게 유지하고 navigation/action/search와 summary·metadata·insight surface를 강도별 glass hierarchy로 분리했습니다.
-
-**Branches / 버전** · [`v1` · original portfolio version](https://github.com/oosuhada/flutter_onjung_v1/tree/v1) · [`main` · v2 renewal](https://github.com/oosuhada/flutter_onjung_v1)
-
-## v1 → v2 · 성장 과정
-
-| | v1 · 2024 | v2 · 2026 |
-| --- | --- | --- |
-| Focus / 초점 | Feature implementation / 기능 구현 학습 | Product UX renewal / 제품 UX 재설계 |
-| Hierarchy / 위계 | Screen-by-screen Material UI | Content vs. control separation |
-| Navigation | Standard Material navigation | Floating adaptive glass navigation |
-| Search & filters | Static/basic controls | Searchable records + compact segmented control |
-| Motion | Default widget transitions | Reduced-motion-aware implicit animation |
-| Accessibility | Basic Material semantics | Selected-state semantics, minimum tap targets, high-contrast fallback |
-| Rendering | Visual styling first | Glass-themed surface hierarchy for controls, summaries, metadata, and insights while record lists/photos stay sharp |
-
-> **Why did I change it? / 왜 바꿨나요?**  
-> In v1 I was mainly focused on making screens and features work. In v2 I kept the same product idea and reworked the experience around interaction hierarchy, motion, accessibility, platform conventions, and rendering cost.  
-> v1에서는 화면과 기능을 동작시키는 데 집중했다면, v2에서는 같은 제품을 유지하면서 interaction hierarchy, motion, accessibility, platform convention, rendering cost까지 함께 고려했습니다.
 
 ## About Onjung · 제품 소개
 
@@ -71,7 +49,7 @@ All preview images were captured directly from an **Android 15 / API 35 emulator
 ## What it does · 주요 기능
 
 - **Home summary / 홈 요약** — See this month's sent/received care and recent records at a glance. / 이번 달 보낸·받은 온정과 최근 기록을 한눈에 확인합니다.
-- **Onjung records / 온정록** — Search by person, relationship, event, or memo, then narrow the list with sent/received filtering. / 이름, 관계, 경조사, 메모를 검색하고 보냄/받음 필터로 기록을 좁힙니다.
+- **Onjung records / 온정록** — Browse records by person, relationship, event, and date, with sent/received filtering. / 사람, 관계, 경조사, 날짜를 기준으로 기록을 탐색하고 보냄/받음을 구분합니다.
 - **Record detail / 온정 상세** — Review the amount together with notes and relationship context. / 금액뿐 아니라 당시 메모와 관계 맥락을 함께 확인합니다.
 - **Quick record / 빠른 기록** — Enter direction, person, relationship, event, amount, and memo in one flow, then update the list immediately. / 방향, 상대, 관계, 경조사, 금액, 메모를 한 흐름에서 입력하고 저장 즉시 목록에 반영합니다.
 - **Calendar & My Onjung / 캘린더 & 내 온정** — Review date-based records, upcoming events, totals, and relationship insights. / 날짜별 기록, 다가오는 경조사, 보낸·받은 총액과 관계 인사이트를 확인합니다.
@@ -93,14 +71,8 @@ Android Emulator QA에서는 초기 5개 기록에서 새 결혼식 기록을 �
 lib/main.dart
   └─ ProviderScope
       └─ lib/portfolio/onjung_portfolio_app.dart
-          ├─ solid content surfaces + product flow
+          ├─ Material 3 UI + navigation
           ├─ Riverpod StateNotifier
-          ├─ lib/v2/v2_glass.dart
-          │   ├─ V2GlassTheme
-          │   ├─ AppGlassSurface
-          │   ├─ AppGlassNavigationBar / ActionButton
-          │   ├─ AppGlassTextField / SegmentedControl
-          │   └─ AppGlassToolbar
           └─ lib/portfolio/data/onjung_demo_repository.dart
               └─ deterministic domain sample data
 ```
@@ -108,18 +80,6 @@ lib/main.dart
 The portfolio runtime is intentionally small: Flutter/Material UI, Riverpod state, and a deterministic repository provide the current runnable experience. The original `lib/core`, `lib/data`, `lib/features`, and `lib/shared` code remains in the repository and contains the earlier Firebase/Auth, SQLite, address-book, calendar, statistics, and guest-management implementation.
 
 현재 portfolio runtime은 Flutter/Material UI, Riverpod 상태 관리, deterministic repository를 중심으로 작게 구성했습니다. 기존 `lib/core`, `lib/data`, `lib/features`, `lib/shared`에는 Firebase/Auth, SQLite, 주소록, 캘린더, 통계, 하객 관리 등 원래 앱의 구현이 보존되어 있습니다.
-
-## v2 visual system · v2 디자인 시스템
-
-The v2 glass layer separates **controls from contextual summary surfaces**. Record list rows, photos, and dense calendar data stay sharp, while record-count metadata, detail summary/amount/memo panels, quick-record guidance, My Onjung totals, upcoming-event context, and relationship insights use lower-intensity translucent surfaces.
-
-v2의 glass layer는 **control과 보조 summary surface를 서로 다른 강도로 계층화**합니다. 기록 목록, 사진, 밀도 높은 캘린더 데이터는 선명하게 유지하고, 기록 개수 metadata, 상세 요약·금액·메모 panel, 빠른 기록 안내, 내 온정 합계, 다가오는 일정, 관계 insight에는 낮은 강도의 adaptive translucent layer를 적용했습니다.
-
-- **Adaptive transparency / 적응형 투명도** — `MediaQuery.highContrast`에서는 blur를 제거하고 surface opacity를 높입니다.
-- **Reduced motion / 모션 감소** — `MediaQuery.disableAnimations`에서는 navigation/filter transition duration을 0으로 줄입니다.
-- **Accessible controls / 접근 가능한 컨트롤** — selected semantics와 42–54px 이상의 control height를 사용합니다.
-- **Rendering-cost aware blur / 렌더링 비용 고려** — 반복되는 record list item이나 calendar cell마다 `BackdropFilter`를 만들지 않고 navigation/search/toolbar와 의미 있는 summary surface에만 선택적으로 blur를 적용합니다.
-- **Future renderer boundary / 확장 가능한 경계** — UI는 `AppGlass*` contract를 통해 사용하므로 향후 native material 또는 shader 구현으로 교체해도 product screen 코드는 크게 바꾸지 않도록 구성했습니다.
 
 ## Tech Stack · 기술 스택
 
