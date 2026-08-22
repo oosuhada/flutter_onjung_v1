@@ -97,3 +97,7 @@ Portfolio/demo 흐름은 별도 API key나 로그인 계정 없이 실행할 수
 Onjung began as a product for remembering the money and care exchanged in Korean life-event culture **through the context of relationships**, not as a marketplace or social network. This refresh keeps that original idea and turns it into a small mobile product that can still be run and explored today.
 
 온정은 marketplace나 SNS가 아니라, 한국의 경조사 문화에서 오가는 금액과 마음을 **관계의 맥락으로 기억하기 위한 앱**으로 시작했습니다. 이번 정리는 그 목적을 바꾸지 않고 기존 아이디어를 지금도 실행하고 탐색할 수 있는 작은 모바일 제품으로 마무리한 작업입니다.
+
+## Topics
+
+[`dart`](https://github.com/topics/dart) · [`event-ledger`](https://github.com/topics/event-ledger) · [`firebase`](https://github.com/topics/firebase) · [`flutter`](https://github.com/topics/flutter) · [`go-router`](https://github.com/topics/go-router) · [`mobile-app`](https://github.com/topics/mobile-app) · [`riverpod`](https://github.com/topics/riverpod) · [`sqflite`](https://github.com/topics/sqflite)
