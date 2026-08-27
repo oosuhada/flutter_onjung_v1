@@ -92,6 +92,8 @@ flutter run
 The portfolio/demo flow does not require an API key or login account.
 Portfolio/demo 흐름은 별도 API key나 로그인 계정 없이 실행할 수 있습니다.
 
+기존 Firebase 연동 코드를 실행할 때는 `lib/firebase_options.example.dart`를 `lib/firebase_options.dart`로 복사한 뒤 자신의 Firebase 프로젝트 값으로 설정하거나 `flutterfire configure`를 실행하세요. 생성된 Firebase 설정 파일은 Git에서 제외됩니다.
+
 ## Product history · 제품 배경
 
 Onjung began as a product for remembering the money and care exchanged in Korean life-event culture **through the context of relationships**, not as a marketplace or social network. This refresh keeps that original idea and turns it into a small mobile product that can still be run and explored today.
